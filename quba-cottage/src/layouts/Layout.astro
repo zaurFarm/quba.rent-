@@ -1,0 +1,159 @@
+---
+import { languages, ui, defaultLang } from '../i18n/translations';
+
+interface Props {
+  lang?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const { lang = defaultLang, title = 'Quba Mountain Cottage', description = 'Unforgettable relaxation in nature\'s embrace. Eco-friendly mountain cottage in Kusnet Qazma village, Quba district, Azerbaijan.', image = '/og-image.jpg' } = Astro.props;
+
+const t = ui[lang as keyof typeof ui] || ui[defaultLang];
+
+const isRTL = lang === 'ar' || lang === 'fa';
+
+const languageNames: Record<string, string> = {
+  az: 'AZ',
+  en: 'EN',
+  ar: 'العربية',
+  fr: 'FR',
+  de: 'DE',
+  zh: '中文',
+  fa: 'فارسی',
+  tr: 'TÜRK',
+};
+
+const pageUrls = Object.keys(languages).reduce((acc, l) => {
+  acc[l] = l === defaultLang ? Astro.site ? `${Astro.site}` : `/${l}/` : `/${l}/`;
+  return acc;
+}, {} as Record<string, string>);
+---
+
+<!doctype html>
+<html lang={lang} dir={isRTL ? 'rtl' : 'ltr'} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Quba mountain cottage, eco cottage Azerbaijan, Kusnet Qazma, mountain house rental, eco tourism, forest cottage, river cottage Azerbaijan, hiking cabin" />
+    <meta name="author" content="Quba Mountain Cottage" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={pageUrls[lang]} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={pageUrls[lang]} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    
+    <!-- Hreflang Tags for SEO -->
+    {Object.entries(languages).map(([l, name]) => (
+      <link rel="alternate" hreflang={l} href={pageUrls[l]} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={pageUrls[defaultLang]} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={pageUrls[lang]} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Quba Mountain Cottage",
+      "description": "Eco-friendly mountain cottage in Kusnet Qazma village, Quba district, Azerbaijan",
+      "url": pageUrls[lang],
+      "telephone": "+994501234567",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kusnet Qazma",
+        "addressRegion": "Quba",
+        "addressCountry": "AZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.0,
+        "longitude": 48.5
+      },
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Free Wi-Fi"},
+        {"@type": "LocationFeatureSpecification", "name": "Free Parking"},
+        {"@type": "LocationFeatureSpecification", "name": "Fireplace"},
+        {"@type": "LocationFeatureSpecification", "name": "River Access"}
+      ],
+      "image": ["/images/cottage-1.jpg", "/images/cottage-2.jpg"]
+    })} />
+  </head>
+  <body class="font-sans bg-earth-50 text-earth-900 antialiased">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-forest: #2F5233;
+    --color-river: #3B82F6;
+    --color-earth: #ac8f6c;
+  }
+  
+  html[dir="rtl"] {
+    font-family: 'Noto Sans Arabic', 'Noto Sans', sans-serif;
+  }
+  
+  html[lang="zh"] {
+    font-family: 'Noto Sans SC', 'Noto Sans', sans-serif;
+  }
+  
+  html[lang="ar"], html[lang="fa"] {
+    font-family: 'Noto Sans Arabic', 'Noto Sans', sans-serif;
+  }
+  
+  html:not([lang="zh"]):not([lang="ar"]):not([lang="fa"]) {
+    font-family: 'Noto Sans', 'Inter', system-ui, sans-serif;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
