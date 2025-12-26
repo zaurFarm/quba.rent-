@@ -1,71 +1,74 @@
 const { chromium } = require('playwright');
 
 (async () => {
-  const browser = await chromium.launch();
-  const context = await browser.newContext();
+  const browser = await chromium.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--ignore-certificate-errors']
+  });
+  const context = await browser.newContext({
+    ignoreHTTPSErrors: true
+  });
   const page = await context.newPage();
-  
+
   console.log('Testing website: https://quba.rent/');
-  
+
   const errors = [];
-  
+
   // Capture console errors
   page.on('console', msg => {
     if (msg.type() === 'error') {
       errors.push(`Console Error: ${msg.text()}`);
     }
   });
-  
+
   page.on('pageerror', err => {
     errors.push(`Page Error: ${err.message}`);
   });
-  
+
   try {
-    // Test main page with domcontentloaded
-    console.log('\n1. Testing main page (index.html)...');
-    await page.goto('https://quba.rent/', { 
-      waitUntil: 'domcontentloaded',
-      timeout: 15000 
+    // Test main page
+    console.log('\n1. Testing main page...');
+    await page.goto('https://quba.rent/', {
+      waitUntil: 'networkidle',
+      timeout: 30000
     });
-    
-    // Wait a bit for content
-    await page.waitForTimeout(3000);
-    
+
     const title = await page.title();
     console.log(`   Title: ${title}`);
-    
-    // Get page content length to see if it loaded
-    const content = await page.content();
-    console.log(`   Content length: ${content.length} characters`);
-    
-    // Check if we have basic HTML structure
-    const hasDoctype = content.includes('<!DOCTYPE html>');
-    const hasHtmlClose = content.includes('</html>');
-    const hasBodyClose = content.includes('</body>');
-    
-    console.log(`   Has DOCTYPE: ${hasDoctype}`);
-    console.log(`   Has </html>: ${hasHtmlClose}`);
-    console.log(`   Has </body>: ${hasBodyClose}`);
-    
-    // Check for key elements
-    const heroSection = await page.$('section.hero');
-    console.log(`   Hero section: ${heroSection ? 'Found' : 'NOT FOUND'}`);
-    
-    const navMenu = await page.$('nav');
-    console.log(`   Navigation: ${navMenu ? 'Found' : 'NOT FOUND'}`);
-    
-    // Check for potential issues
-    const iframes = await page.$$('iframe');
-    console.log(`   Iframes found: ${iframes.length}`);
-    
-    // Test tours page
-    console.log('\n2. Testing tours page...');
-    const toursResponse = await page.goto('https://quba.rent/tours.html', { 
-      waitUntil: 'networkidle',
-      timeout: 30000 
-    });
-    console.log(`   Status: ${toursResponse.status()}`);
-    
+
+    // Check hero background image
+    const heroImg = await page.$('.hero-bg img');
+    console.log(`   Hero image: ${heroImg ? 'Found' : 'NOT FOUND'}`);
+    if (heroImg) {
+      const src = await heroImg.getAttribute('src');
+      console.log(`   Hero src: ${src}`);
+    }
+
+    // Check owner image in about section
+    console.log('\n2. Checking owner image...');
+    const ownerContainer = await page.$('.owner-image-container');
+    console.log(`   Owner container: ${ownerContainer ? 'Found' : 'NOT FOUND'}`);
+
+    if (ownerContainer) {
+      const ownerImg = await page.$('.owner-image-container img');
+      console.log(`   Owner image: ${ownerImg ? 'Found' : 'NOT FOUND'}`);
+      if (ownerImg) {
+        const src = await ownerImg.getAttribute('src');
+        console.log(`   Owner src: ${src}`);
+      }
+    }
+
+    // Check gallery images
+    console.log('\n3. Checking gallery...');
+    const galleryImages = await page.$$('.gallery-grid img');
+    console.log(`   Gallery images count: ${galleryImages.length}`);
+
+    // Print gallery image sources
+    for (let i = 0; i < galleryImages.length; i++) {
+      const src = await galleryImages[i].getAttribute('src');
+      console.log(`   Gallery image ${i + 1}: ${src}`);
+    }
+
     // Report errors
     console.log('\n=== ERRORS FOUND ===');
     if (errors.length === 0) {
@@ -73,7 +76,9 @@ const { chromium } = require('playwright');
     } else {
       errors.forEach(err => console.log(err));
     }
-    
+
+    console.log('\nTest completed successfully!');
+
   } catch (err) {
     console.error('Test failed:', err.message);
   } finally {
