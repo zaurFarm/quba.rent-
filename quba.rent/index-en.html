@@ -1145,6 +1145,256 @@
       }
     }
     
+    /* Booking Widget Styles - Always Visible Section */
+    .booking-widget-section {
+      padding: 96px 0;
+      background: #F4EBD9;
+    }
+    
+    .booking-widget {
+      background: #003580;
+      border-radius: 16px;
+      box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+      max-width: 1140px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    .booking-widget-header {
+      background: #febb02;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .booking-widget-badge {
+      color: #003580;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .booking-form {
+      padding: 24px;
+    }
+    
+    .booking-dates {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    @media (min-width: 769px) {
+      .booking-dates {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+    
+    .booking-field {
+      margin-bottom: 15px;
+    }
+    
+    .booking-field label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .booking-field input,
+    .booking-field select,
+    .booking-field textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #febb02;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      background: white;
+      box-sizing: border-box;
+    }
+    
+    .booking-field input:focus,
+    .booking-field select:focus,
+    .booking-field textarea:focus {
+      outline: none;
+      border-color: #fff;
+      box-shadow: 0 0 0 3px rgba(254,187,2,0.3);
+    }
+    
+    .booking-field textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    .booking-submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .booking-submit-btn:hover {
+      background: #20c05a;
+      transform: translateY(-2px);
+    }
+    
+    .booking-submit-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .booking-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 15px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .booking-widget-section {
+        padding: 60px 15px;
+      }
+      
+      .booking-widget {
+        border-radius: 12px;
+      }
+      
+      .booking-widget-header {
+        padding: 12px 18px;
+      }
+      
+      .booking-widget-badge {
+        font-size: 1rem;
+      }
+      
+      .booking-form {
+        padding: 20px;
+      }
+      
+      .booking-dates {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      
+      .booking-field {
+        margin-bottom: 12px;
+      }
+      
+      .booking-field input,
+      .booking-field select,
+      .booking-field textarea {
+        padding: 12px 14px;
+        font-size: 1rem;
+      }
+      
+      .booking-submit-btn {
+        padding: 14px;
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .booking-widget {
+        border-radius: 10px;
+      }
+      
+      .booking-widget-header {
+        padding: 10px 14px;
+      }
+      
+      .booking-widget-badge {
+        font-size: 0.9rem;
+      }
+      
+      .booking-form {
+        padding: 16px 14px;
+      }
+    }
+    
+    /* WhatsApp Popup Button */
+    .whatsapp-popup {
+      position: fixed;
+      right: 20px;
+      bottom: 180px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .whatsapp-popup-text {
+      background: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      font-weight: 600;
+      color: var(--forest);
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-popup:hover .whatsapp-popup-text {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .whatsapp-popup-btn {
+      width: 65px;
+      height: 65px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+    .whatsapp-popup-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    }
+    
+    .whatsapp-popup-btn svg {
+      width: 35px;
+      height: 35px;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    
   </style>
 </head>
 <body>
@@ -1428,6 +1678,27 @@
         </div>
         
         <div class="booking-field">
+          <label for="guest-name">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            Your Name
+          </label>
+          <input type="text" id="guest-name" name="guest-name" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="booking-field">
+          <label for="guest-phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Phone Number
+          </label>
+          <input type="tel" id="guest-phone" name="guest-phone" placeholder="+994 XX XXX XX XX" required>
+        </div>
+        
+        <div class="booking-field">
           <label for="notes">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -1502,6 +1773,16 @@
       </svg>
     </a>
   </div>
+  
+  <!-- WhatsApp Popup Button -->
+  <div class="whatsapp-popup">
+    <span class="whatsapp-popup-text">Quick Booking via WhatsApp 💬</span>
+    <a href="https://wa.me/994702555909?text=Hello,%20I%20would%20like%20to%20book%20a%20stay%20at%20Quba%20Cottage" target="_blank" class="whatsapp-popup-btn" aria-label="Book via WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
 
   <script src="js/booking.js" defer></script>
 
@@ -1519,6 +1800,46 @@
         }
       });
     });
+    // WhatsApp booking function
+    function sendBookingToWhatsApp() {
+      const checkin = document.getElementById('checkin') ? document.getElementById('checkin').value : '';
+      const checkout = document.getElementById('checkout') ? document.getElementById('checkout').value : '';
+      const guests = document.getElementById('guests') ? document.getElementById('guests').value : '';
+      const name = document.getElementById('guest-name') ? document.getElementById('guest-name').value : '';
+      const phone = document.getElementById('guest-phone') ? document.getElementById('guest-phone').value : '';
+      const notes = document.getElementById('guest-notes') ? document.getElementById('guest-notes').value : '';
+      
+      // Validate required fields
+      if (!checkin || !checkout || !name || !phone) {
+        alert('Please fill in all required fields!');
+        return;
+      }
+      
+      // Format dates for display
+      const formatDate = (dateStr) => {
+        if (!dateStr) return 'Not specified';
+        const date = new Date(dateStr);
+        return date.toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      };
+      
+      // Create booking message
+      let message = '🏠 *Quba Cottage Booking*%0A%0A';
+      message += '📅 *Check-in:* ' + formatDate(checkin) + '%0A';
+      message += '📅 *Check-out:* ' + formatDate(checkout) + '%0A';
+      message += '👥 *Guests:* ' + (guests ? guests + ' guests' : 'Not specified') + '%0A';
+      message += '👤 *Name:* ' + name + '%0A';
+      message += '📞 *Phone:* ' + phone + '%0A';
+      
+      if (notes) {
+        message += '📝 *Notes:* ' + notes + '%0A';
+      }
+      
+      message += '%0A---
+%0A📱 *Sent from website*';
+      
+      // Redirect to WhatsApp
+      window.open('https://wa.me/994702555909?text=' + message, '_blank');
+    }
   </script>
   
   <!-- Calendly Script -->
