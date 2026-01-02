@@ -1168,164 +1168,6 @@
       margin-top: 15px;
     }
     
-    /* Floating Widget Styles */
-    .booking-widget {
-      position: fixed;
-      left: 20px;
-      right: auto;
-      bottom: 100px;
-      z-index: 999;
-      width: 380px;
-      max-width: calc(100vw - 40px);
-      background: linear-gradient(135deg, var(--forest) 0%, #1a3a20 100%);
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-      overflow: hidden;
-      animation: slideUp 0.3s ease;
-    }
-    
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .booking-widget-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .booking-widget-badge {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .booking-widget-close {
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      color: white;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
-    }
-    
-    .booking-widget-close:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-    
-    /* Trigger Button */
-    .booking-trigger-btn {
-      position: fixed;
-      left: 20px;
-      right: auto;
-      bottom: 20px;
-      z-index: 997;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 16px 24px;
-      background: linear-gradient(135deg, var(--forest) 0%, #1a3a20 100%);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
-    
-    .booking-trigger-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
-    }
-    
-    .booking-trigger-btn svg {
-      width: 20px;
-      height: 20px;
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .booking-widget-section {
-        padding: 60px 15px;
-      }
-      
-      .booking-widget {
-        border-radius: 12px;
-      }
-      
-      .booking-widget-header {
-        padding: 12px 18px;
-      }
-      
-      .booking-widget-badge {
-        font-size: 1rem;
-      }
-      
-      .booking-form {
-        padding: 20px;
-      }
-      
-      .booking-dates {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      
-      .booking-field {
-        margin-bottom: 12px;
-      }
-      
-      .booking-field input,
-      .booking-field select,
-      .booking-field textarea {
-        padding: 12px 14px;
-        font-size: 1rem;
-      }
-      
-      .booking-submit-btn {
-        padding: 14px;
-        font-size: 1rem;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .booking-widget {
-        border-radius: 10px;
-      }
-      
-      .booking-widget-header {
-        padding: 10px 14px;
-      }
-      
-      .booking-widget-badge {
-        font-size: 0.9rem;
-      }
-      
-      .booking-form {
-        padding: 16px 14px;
-      }
-    }
-    
     /* WhatsApp Popup Button */
     .whatsapp-popup {
       position: fixed;
@@ -1612,118 +1454,249 @@
     </div>
   </section>
 
-  <!-- Booking Widget - Floating/Dismissible -->
-  <div id="booking-widget" class="booking-widget" style="display: none;">
-    <div class="booking-widget-header">
-      <span class="booking-widget-badge">📅 الحجز السريع</span>
-      <button class="booking-widget-close" onclick="closeBookingWidget()" aria-label="إغلاق">✕</button>
-    </div>
-    
-    <form id="booking-form" class="booking-form" onsubmit="event.preventDefault(); sendBookingToWhatsApp();">
-      <div class="booking-dates">
-        <div class="booking-field">
-          <label for="checkin">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8" y1="2" x2="8" y2="6"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
-            </svg>
-            تاريخ الوصول
-          </label>
-          <input type="date" id="checkin" name="checkin" required>
+<!-- Booking Widget Section - Above Footer -->
+<section class="booking-section" style="background: linear-gradient(135deg, #003580 0%, #0056b3 100%); padding: 50px 0 70px;">
+  <div class="container">
+    <div class="booking-widget-container" style="background: #003580; border-radius: 16px; box-shadow: 0 10px 50px rgba(0,0,0,0.3); overflow: hidden; max-width: 1140px; margin: 0 auto;">
+      <div class="booking-widget-header" style="background: #febb02; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <span style="color: #003580; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px;">
+          <svg viewBox="0 0 24 24" fill="#003580" width="22" height="22"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+          حجز كوتج كوبة
+        </span>
+        <span style="color: #003580; font-size: 0.85rem; font-weight: 600;">👍 مثالي للعائلات!</span>
+      </div>
+      
+      <form onsubmit="handleBookingSubmit(event)" class="booking-form" style="padding: 20px 24px;">
+        <div class="booking-form-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-items: end;">
+          <div class="booking-field" style="margin: 0;">
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: rgba(255,255,255,0.9); margin-bottom: 6px; font-weight: 500;">
+              <svg viewBox="0 0 24 24" fill="white" width="14" height="14"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+              تاريخ الوصول
+            </label>
+            <input type="date" id="booking-checkin" style="width: 100%; padding: 12px 14px; border: 2px solid #febb02; border-radius: 8px; font-size: 0.95rem; background: white; box-sizing: border-box; text-align: right;" dir="rtl">
+          </div>
+          
+          <div class="booking-field" style="margin: 0;">
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: rgba(255,255,255,0.9); margin-bottom: 6px; font-weight: 500;">
+              <svg viewBox="0 0 24 24" fill="white" width="14" height="14"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+              تاريخ المغادرة
+            </label>
+            <input type="date" id="booking-checkout" style="width: 100%; padding: 12px 14px; border: 2px solid #febb02; border-radius: 8px; font-size: 0.95rem; background: white; box-sizing: border-box; text-align: right;" dir="rtl">
+          </div>
+          
+          <div class="booking-field" style="margin: 0;">
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: rgba(255,255,255,0.9); margin-bottom: 6px; font-weight: 500;">
+              <svg viewBox="0 0 24 24" fill="white" width="14" height="14"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              الضيوف
+            </label>
+            <select id="booking-guests" style="width: 100%; padding: 12px 14px; border: 2px solid #febb02; border-radius: 8px; font-size: 0.95rem; background: white; box-sizing: border-box;" dir="rtl">
+              <option value="">اختيار</option>
+              <option value="1">1 ضيف</option>
+              <option value="2">2 ضيوف</option>
+              <option value="3">3 ضيوف</option>
+              <option value="4">4 ضيوف</option>
+              <option value="5">5 ضيوف</option>
+              <option value="6+">6+ ضيوف</option>
+            </select>
+          </div>
+          
+          <div class="booking-field" style="margin: 0;">
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: rgba(255,255,255,0.9); margin-bottom: 6px; font-weight: 500;">
+              <svg viewBox="0 0 24 24" fill="white" width="14" height="14"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              اسمك
+            </label>
+            <input type="text" id="booking-name" placeholder="اسمك" style="width: 100%; padding: 12px 14px; border: 2px solid #febb02; border-radius: 8px; font-size: 0.95rem; background: white; box-sizing: border-box; text-align: right;" dir="rtl">
+          </div>
+          
+          <button type="submit" class="booking-submit-btn" style="background: #25D366; color: white; border: none; border-radius: 8px; padding: 14px 20px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; min-width: 120px;">
+            <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            احجز الآن
+          </button>
         </div>
         
-        <div class="booking-field">
-          <label for="checkout">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8" y1="2" x2="8" y2="6"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
-            </svg>
-            تاريخ المغادرة
-          </label>
-          <input type="date" id="checkout" name="checkout" required>
+        <div class="booking-footer" style="padding: 12px 0 0; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.8rem; color: rgba(255,255,255,0.7);">
+          <svg viewBox="0 0 24 24" fill="#25D366" width="14" height="14"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          حجز سريع عبر واتساب
         </div>
-      </div>
-      
-      <div class="booking-field">
-        <label for="guests">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-          الضيوف
-        </label>
-        <select id="guests" name="guests">
-          <option value="1">1 ضيف</option>
-          <option value="2" selected>2 ضيوف</option>
-          <option value="3">3 ضيوف</option>
-          <option value="4">4 ضيوف</option>
-          <option value="5">5 ضيوف</option>
-          <option value="6">6 ضيوف</option>
-        </select>
-      </div>
-      
-      <div class="booking-field">
-        <label for="guest-name">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          اسمك الكامل
-        </label>
-        <input type="text" id="guest-name" name="guest-name" placeholder="أدخل اسمك الكامل" required>
-      </div>
-      
-      <div class="booking-field">
-        <label for="guest-phone">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          رقم الهاتف
-        </label>
-        <input type="tel" id="guest-phone" name="guest-phone" placeholder="+966 XX XXX XXXX" required>
-      </div>
-      
-      <div class="booking-field">
-        <label for="notes">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          </svg>
-          ملاحظات (اختياري)
-        </label>
-        <textarea id="notes" name="notes" placeholder="تفضيلاتك، أسئلتك..."></textarea>
-      </div>
-      
-      <button type="submit" class="booking-submit-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-        احجز عبر واتساب
-      </button>
-      
-      <div class="booking-info">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-        الرد خلال 15 دقيقة
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
+</section>
 
-  <!-- Booking Widget Trigger Button -->
-  <button class="booking-trigger-btn" onclick="openBookingWidget()" aria-label="فتح الحجز">
-    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-    </svg>
-    <span>احجز الآن</span>
-  </button>
+<!-- Mobile Responsive Styles for Booking Widget -->
+<style>
+@media (max-width: 1024px) {
+  .booking-form-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+  
+  .booking-field {
+    min-width: 0;
+  }
+  
+  .booking-field input,
+  .booking-field select {
+    padding: 10px 12px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .booking-submit-btn {
+    grid-column: span 3 !important;
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px !important;
+  }
+}
 
-  <!-- Footer -->
+@media (max-width: 768px) {
+  .booking-section {
+    padding: 40px 0 50px !important;
+  }
+  
+  .booking-widget-container {
+    border-radius: 12px !important;
+    margin: 0 10px !important;
+  }
+  
+  .booking-widget-header {
+    padding: 12px 16px !important;
+  }
+  
+  .booking-widget-header span:first-child {
+    font-size: 1rem !important;
+  }
+  
+  .booking-widget-header span:last-child {
+    font-size: 0.8rem !important;
+  }
+  
+  .booking-form {
+    padding: 16px !important;
+  }
+  
+  .booking-form-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  
+  .booking-field label {
+    font-size: 0.75rem !important;
+  }
+  
+  .booking-field input,
+  .booking-field select {
+    padding: 10px 12px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .booking-submit-btn {
+    grid-column: span 2 !important;
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 1rem !important;
+  }
+  
+  .booking-footer {
+    font-size: 0.75rem !important;
+    padding-top: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-section {
+    padding: 30px 0 40px !important;
+  }
+  
+  .booking-widget-header {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+  
+  .booking-widget-header span:first-child {
+    font-size: 0.95rem !important;
+  }
+  
+  .booking-widget-header svg {
+    display: none !important;
+  }
+  
+  .booking-form {
+    padding: 16px 12px !important;
+  }
+  
+  .booking-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  
+  .booking-field {
+    width: 100% !important;
+  }
+  
+  .booking-field label {
+    font-size: 0.8rem !important;
+    margin-bottom: 4px !important;
+  }
+  
+  .booking-field input,
+  .booking-field select {
+    padding: 12px 14px !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+  }
+  
+  .booking-submit-btn {
+    grid-column: span 1 !important;
+    width: 100% !important;
+    padding: 16px !important;
+    font-size: 1.1rem !important;
+    margin-top: 8px !important;
+  }
+  
+  .booking-footer {
+    font-size: 0.7rem !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    text-align: center !important;
+  }
+}
+</style>
+
+<script>
+  function handleBookingSubmit(event) {
+    event.preventDefault();
+    
+    const checkin = document.getElementById('booking-checkin').value;
+    const checkout = document.getElementById('booking-checkout').value;
+    const guests = document.getElementById('booking-guests').value;
+    const name = document.getElementById('booking-name').value;
+    
+    if (!checkin || !checkout || !name) {
+      alert('يرجى ملء جميع الحقول المطلوبة!');
+      return;
+    }
+    
+    const formatDate = (dateStr) => {
+      if (!dateStr) return 'غير محدد';
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('ar-SA', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    };
+    
+    let message = '🏠 *حجز كوتج كوبة*%0A%0A';
+    message += '📅 *تاريخ الوصول:* ' + formatDate(checkin) + '%0A';
+    message += '📅 *تاريخ المغادرة:* ' + formatDate(checkout) + '%0A';
+    message += '👥 *الضيوف:* ' + (guests ? guests + ' ضيف' : 'غير محدد') + '%0A';
+    message += '👤 *الاسم:* ' + name + '%0A';
+    message += '%0A---
+%0A📱 *تم إرسال الرسالة من quba.rent*';
+    
+    window.open('https://wa.me/994702555909?text=' + message, '_blank');
+  }
+</script>
+
+<!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -1798,66 +1771,6 @@
         }
       });
     });
-    
-    // Floating Booking Widget Functions
-    function openBookingWidget() {
-      const widget = document.getElementById('booking-widget');
-      const trigger = document.querySelector('.booking-trigger-btn');
-      if (widget) {
-        widget.style.display = 'block';
-        if (trigger) trigger.style.display = 'none';
-      }
-    }
-    
-    function closeBookingWidget() {
-      const widget = document.getElementById('booking-widget');
-      const trigger = document.querySelector('.booking-trigger-btn');
-      if (widget) {
-        widget.style.display = 'none';
-        if (trigger) trigger.style.display = 'flex';
-      }
-    }
-    
-    // WhatsApp booking function
-    function sendBookingToWhatsApp() {
-      const checkin = document.getElementById('checkin') ? document.getElementById('checkin').value : '';
-      const checkout = document.getElementById('checkout') ? document.getElementById('checkout').value : '';
-      const guests = document.getElementById('guests') ? document.getElementById('guests').value : '';
-      const name = document.getElementById('guest-name') ? document.getElementById('guest-name').value : '';
-      const phone = document.getElementById('guest-phone') ? document.getElementById('guest-phone').value : '';
-      const notes = document.getElementById('notes') ? document.getElementById('notes').value : '';
-      
-      // Validate required fields
-      if (!checkin || !checkout || !name || !phone) {
-        alert('الرجاء ملء جميع الحقول المطلوبة!');
-        return;
-      }
-      
-      // Format dates for display
-      const formatDate = (dateStr) => {
-        if (!dateStr) return 'غير محدد';
-        const date = new Date(dateStr);
-        return date.toLocaleDateString('ar-SA', { day: '2-digit', month: '2-digit', year: 'numeric' });
-      };
-      
-      // Create booking message
-      let message = '🏠 *حجز كوخ كوبا*%0A%0A';
-      message += '📅 *تاريخ الوصول:* ' + formatDate(checkin) + '%0A';
-      message += '📅 *تاريخ المغادرة:* ' + formatDate(checkout) + '%0A';
-      message += '👥 *عدد الضيوف:* ' + (guests ? guests + ' ضيوف' : 'غير محدد') + '%0A';
-      message += '👤 *الاسم:* ' + name + '%0A';
-      message += '📞 *الهاتف:* ' + phone + '%0A';
-      
-      if (notes) {
-        message += '📝 *ملاحظات:* ' + notes + '%0A';
-      }
-      
-      message += '%0A---
-%0A📱 *تم الإرسال من الموقع*';
-      
-      // Redirect to WhatsApp
-      window.open('https://wa.me/994702555909?text=' + message, '_blank');
-    }
   </script>
 </body>
 </html>
