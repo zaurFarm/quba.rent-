@@ -9,8 +9,8 @@ FTP_USER = 'www-data'
 FTP_PASS = '0R6dXU1YnwSEl1OnURos'
 
 # File to upload
-LOCAL_FILE = '/workspace/quba.rent/index-ar.html'
-REMOTE_PATH = '/quba.rent/index-ar.html'
+LOCAL_FILE = '/workspace/quba.rent/index.html'
+REMOTE_PATH = '/quba.rent/index.html'
 
 print(f"Connecting to {FTP_HOST}:{FTP_PORT}...")
 
@@ -19,7 +19,7 @@ with ftplib.FTP() as ftp:
     ftp.connect(FTP_HOST, FTP_PORT)
     ftp.login(FTP_USER, FTP_PASS)
     
-    print("Connected! Uploading index-ar.html...")
+    print("Connected! Uploading index.html (Azerbaijani main version)...")
     
     # Upload the file
     with open(LOCAL_FILE, 'rb') as f:
