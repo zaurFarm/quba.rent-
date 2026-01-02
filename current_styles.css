@@ -1013,10 +1013,9 @@ body {
 }
 
 .amenities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-auto-rows: minmax(auto, auto);
-    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 20px;
     margin-top: var(--spacing-xl);
 }
@@ -1028,9 +1027,9 @@ body {
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
+    flex: 1 1 180px;
+    max-width: 250px;
+    min-width: 180px;
 }
 
 .amenity-card:hover {
