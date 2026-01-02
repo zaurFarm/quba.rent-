@@ -13,8 +13,8 @@ FTP_USER = 'www-data'
 FTP_PASSWORD = '0R6dXU1YnwSEl1OnURos'
 
 # File to upload
-LOCAL_FILE = '/workspace/user_input_files/yandex_c80da51a3c27a7e9.html'
-REMOTE_FILE = 'yandex_c80da51a3c27a7e9.html'
+LOCAL_FILE = '/workspace/quba.rent/yandex_c80da51a3c27a7e9.html'
+REMOTE_FILE = '/quba.rent/yandex_c80da51a3c27a7e9.html'
 
 def upload_file():
     """Upload the Yandex verification file to FTP server"""
@@ -27,29 +27,22 @@ def upload_file():
             ftp.login(FTP_USER, FTP_PASSWORD)
             print("✓ Connected successfully!")
             
-            # Change to root directory
-            ftp.cwd('/')
-            print(f"Current directory: {ftp.pwd()}")
-            
             # Read local file and upload
             print(f"Uploading {LOCAL_FILE}...")
             with open(LOCAL_FILE, 'rb') as f:
                 ftp.storbinary(f'STOR {REMOTE_FILE}', f)
             
-            print(f"✓ Successfully uploaded {REMOTE_FILE} to FTP root!")
+            print(f"✓ Successfully uploaded to {REMOTE_FILE}!")
             
             # Verify the file exists
-            files = ftp.nlst()
-            if REMOTE_FILE in files:
-                print(f"✓ Verification: File {REMOTE_FILE} is now on the server!")
-            else:
-                print(f"✗ Warning: File {REMOTE_FILE} not found in listing")
+            size = ftp.size(REMOTE_FILE)
+            print(f"✓ File size on server: {size} bytes")
                 
             # Show the verification URL
             print(f"\n📋 Yandex Verification Details:")
             print(f"   File: {REMOTE_FILE}")
             print(f"   Token: c80da51a3c27a7e9")
-            print(f"   Verification URL: https://quba.rent/{REMOTE_FILE}")
+            print(f"   Verification URL: https://quba.rent/yandex_c80da51a3c27a7e9.html")
                 
     except ftplib.error_perm as e:
         print(f"FTP Permission Error: {e}")
