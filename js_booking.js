@@ -1,5 +1,6 @@
 // Booking Form Handler - WhatsApp Integration
 // Processes the booking form and opens WhatsApp with pre-filled message
+// Works with the simplified booking form (guestName, guestPhone, checkIn, checkOut, guests, comments)
 
 document.addEventListener('DOMContentLoaded', function() {
     const bookingForm = document.getElementById('booking-form');
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             confirmation: '✅ Bron sorğunuz hazırlandı! WhatsApp açılacaq.',
             support: '📞 Dəstək: +994 70 255 59 09 (Neriman) | 07:00 - 24:00',
             nights: 'gecə',
-            nights_one: 'gecə'
+            nights_one: 'geecə'
         },
         ru: {
             nameLabel: 'Ваше имя',
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const opt = document.createElement('option');
             opt.value = index + 1;
             opt.textContent = option;
-            if (index === 1) opt.selected = true;
+            if (index === 1) opt.selected = true; // Default to 2 guests
             guestsSelect.appendChild(opt);
         });
     }
@@ -114,8 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set minimum date to today
     const today = new Date().toISOString().split('T')[0];
-    const checkInField = document.getElementById('checkin');
-    const checkOutField = document.getElementById('checkout');
+    const checkInField = document.getElementById('check-in');
+    const checkOutField = document.getElementById('check-out');
     
     if (checkInField) {
         checkInField.setAttribute('min', today);
@@ -160,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Calculate number of nights
         const nights = Math.ceil((new Date(checkOut) - new Date(checkIn)) / (1000 * 60 * 60 * 24));
         
-        // Format dates for display
+        // Format dates for display based on language
         const formatDate = (dateStr) => {
             if (!dateStr) return '';
             const date = new Date(dateStr);
@@ -192,10 +193,29 @@ document.addEventListener('DOMContentLoaded', function() {
         message += `👥 *Qonaq sayı:* ${guestTextAz}\n`;
         
         if (comments) {
+            // Add language indicator for comments
             message += `\n📝 *Qeydlər (${langNamesAz[lang] || lang}):*\n${comments}`;
         }
         
         // Add timestamp
+        const now = new Date();
+        const timestamp = now.toLocaleDateString('az-AZ', {
+            year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+        });
+        message += `\n\n⏰ ${timestamp}`;
+            message = `🏔️ *Quba Mountain House - Booking Request*\n\n`;
+            message += `👤 *Name:* ${guestName}\n`;
+            message += `📞 *Phone:* ${guestPhone}\n`;
+            message += `📅 *Check-in:* ${formatDate(checkIn)}\n`;
+            message += `🚪 *Check-out:* ${formatDate(checkOut)}\n`;
+            message += `🌙 *Number of nights:* ${nights}\n`;
+            message += `👥 *Number of guests:* ${guestTextAz}\n`;
+            if (comments) {
+                message += `\n📝 *Notes (${langNamesAz[lang] || lang}):*\n${comments}`;
+            }
+        }
+        
+        // Add timestamp (always Azerbaijani format)
         const now = new Date();
         const timestamp = now.toLocaleDateString('az-AZ', {
             year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
@@ -212,8 +232,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, '_blank');
         
-        // Show confirmation
+        // Show confirmation (always in Azerbaijani)
         console.log('Booking request prepared and WhatsApp opened!');
-        alert(t.confirmation);
+        alert('✅ Bron sorğunuz hazırlandı! WhatsApp açılacaq.');
     });
 });
