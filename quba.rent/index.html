@@ -1631,9 +1631,9 @@ n      margin-bottom: 0;
           </div>
         </div>
         
-        <button type="submit" class="booking-widget-submit">
-          Axtar
-        </button>
+        <button type="button" class="booking-widget-submit" onclick="sendBookingToWhatsApp()" style="background: #febb02; border: none; padding: 18px 35px; font-size: 1.1rem; font-weight: 700; color: #003580; cursor: pointer; transition: background 0.2s; text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0;">
+            WhatsApp ilə Bron Et
+          </button>
       </div>
       
       <div class="booking-widget-row">
@@ -1684,8 +1684,23 @@ n      margin-bottom: 0;
           </svg>
         </div>
         <div class="booking-widget-mobile-field-content">
-          <label class="booking-widget-mobile-field-label">Giriş - Çıxış</label>
-          <input type="text" class="booking-widget-mobile-field-input" placeholder="Tarix seçin" onclick="this.type='date'" readonly>
+          <label class="booking-widget-mobile-field-label">Giriş</label>
+          <input type="date" id="mobile-checkin" class="booking-widget-mobile-field-input">
+        </div>
+      </div>
+      
+      <div class="booking-widget-mobile-field">
+        <div class="booking-widget-mobile-field-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div class="booking-widget-mobile-field-content">
+          <label class="booking-widget-mobile-field-label">Çıxış</label>
+          <input type="date" id="mobile-checkout" class="booking-widget-mobile-field-input">
         </div>
       </div>
       
@@ -1698,7 +1713,7 @@ n      margin-bottom: 0;
         </div>
         <div class="booking-widget-mobile-field-content">
           <label class="booking-widget-mobile-field-label">Qonaqlar</label>
-          <select class="booking-widget-mobile-field-select">
+          <select id="mobile-guests" class="booking-widget-mobile-field-select">
             <option value="1">1 nəfər</option>
             <option value="2" selected>2 nəfər</option>
             <option value="3">3 nəfər</option>
@@ -1718,7 +1733,7 @@ n      margin-bottom: 0;
         </svg>
         <div class="booking-widget-mobile-detail-content">
           <div class="booking-widget-mobile-detail-label">Adınız</div>
-          <input type="text" class="booking-widget-mobile-detail-value" placeholder="Adınızı yazın" style="border: none; width: 100%; outline: none; padding: 0;">
+          <input type="text" id="mobile-name" class="booking-widget-mobile-detail-value" placeholder="Adınızı yazın" style="border: none; width: 100%; outline: none; padding: 0;">
         </div>
       </div>
       
@@ -1728,7 +1743,7 @@ n      margin-bottom: 0;
         </svg>
         <div class="booking-widget-mobile-detail-content">
           <div class="booking-widget-mobile-detail-label">Telefon</div>
-          <input type="tel" class="booking-widget-mobile-detail-value" placeholder="+994 XX XXX XX XX" style="border: none; width: 100%; outline: none; padding: 0;">
+          <input type="tel" id="mobile-phone" class="booking-widget-mobile-detail-value" placeholder="+994 XX XXX XX XX" style="border: none; width: 100%; outline: none; padding: 0;">
         </div>
       </div>
     </div>
@@ -1769,19 +1784,41 @@ n      margin-bottom: 0;
 
     // WhatsApp booking function
     function sendBookingToWhatsApp() {
-      const checkin = document.getElementById('desktop-checkin') ? document.getElementById('desktop-checkin').value : '';
-      const checkout = document.getElementById('desktop-checkout') ? document.getElementById('desktop-checkout').value : '';
-      const guests = document.getElementById('desktop-guests') ? document.getElementById('desktop-guests').value : '';
-      const name = document.getElementById('desktop-name') ? document.getElementById('desktop-name').value : '';
-      const phone = document.getElementById('desktop-phone') ? document.getElementById('desktop-phone').value : '';
+      // Get values from desktop fields first, fall back to mobile fields
+      const checkinEl = document.getElementById('desktop-checkin') || document.getElementById('mobile-checkin');
+      const checkoutEl = document.getElementById('desktop-checkout') || document.getElementById('mobile-checkout');
+      const guestsEl = document.getElementById('desktop-guests') || document.getElementById('mobile-guests');
+      const nameEl = document.getElementById('desktop-name') || document.getElementById('mobile-name');
+      const phoneEl = document.getElementById('desktop-phone') || document.getElementById('mobile-phone');
+      
+      const checkin = checkinEl ? checkinEl.value : '';
+      const checkout = checkoutEl ? checkoutEl.value : '';
+      const guests = guestsEl ? guestsEl.value : '';
+      const name = nameEl ? nameEl.value : '';
+      const phone = phoneEl ? phoneEl.value : '';
+      
+      // Validate required fields
+      if (!checkin || !checkout || !name || !phone) {
+        alert('Zəhmət olmasa bütün sahələri doldurun!');
+        return;
+      }
+      
+      // Format dates for display
+      const formatDate = (dateStr) => {
+        if (!dateStr) return 'Qeyd edilməyib';
+        const date = new Date(dateStr);
+        return date.toLocaleDateString('az-AZ', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      };
       
       // Create booking message
       let message = '🏠 *Quba Dağ Evi Bron*%0A%0A';
-      message += '📅 *Giriş:* ' + (checkin || 'Qeyd edilməyib') + '%0A';
-      message += '📅 *Çıxış:* ' + (checkout || 'Qeyd edilməyib') + '%0A';
+      message += '📅 *Giriş:* ' + formatDate(checkin) + '%0A';
+      message += '📅 *Çıxış:* ' + formatDate(checkout) + '%0A';
       message += '👥 *Qonaq sayı:* ' + (guests ? guests + ' nəfər' : 'Qeyd edilməyib') + '%0A';
-      message += '👤 *Ad:* ' + (name || 'Qeyd edilməyib') + '%0A';
-      message += '📞 *Telefon:* ' + (phone || 'Qeyd edilməyib') + '%0A';
+      message += '👤 *Ad:* ' + name + '%0A';
+      message += '📞 *Telefon:* ' + phone + '%0A';
+      message += '%0A---
+%0A📱 *Bu mesaj veb-saytdan göndərilib*';
       
       // Redirect to WhatsApp
       window.open('https://wa.me/994702555909?text=' + message, '_blank');
