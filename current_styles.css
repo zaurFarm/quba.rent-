@@ -5,6 +5,20 @@
     box-sizing: border-box;
 }
 
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 :root {
     /* Colors */
     --bg-primary: #09090B;
@@ -1264,6 +1278,176 @@ body {
     color: var(--text-muted);
     font-size: 14px;
     margin-bottom: 0;
+}
+
+/* Standard Site Footer - Sticky Footer */
+.site-footer {
+    background: linear-gradient(180deg, #1e3a29 0%, #2d5a3d 50%, #1e3a29 100%);
+    padding: 60px 0 30px;
+    color: white;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4ade80, #22c55e, #16a34a, #4ade80);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footer-logo {
+    color: #4ade80;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.footer-brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    font-family: var(--font-heading);
+}
+
+.footer-brand-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+    background: #229ED9;
+    transform: translateY(-3px);
+}
+
+.footer-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #4ade80;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-list a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-list a::before {
+    content: '›';
+    margin-right: 8px;
+    color: #4ade80;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.footer-list a:hover {
+    color: #4ade80;
+    padding-left: 15px;
+}
+
+.footer-list a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.site-footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .site-footer .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.site-footer .footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-credit {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
 }
 
 /* Mobile Sticky CTA */
