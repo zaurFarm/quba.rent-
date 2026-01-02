@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كوتج كوبة الجبلي | جولات ومعالم</title>
+  <meta name="description" content="جولات ورحلات استكشافية حول مدينة كوبة والمناطق المحيطة. ركوب الخيل، رحلات على الدراجات النارية، مغامرات في الطبيعة مع مرشد محلي يظهر الكنوز المخفية بحب ورعاية.">
+  <meta name="keywords" content="جولات كوبة، رحلة، ركوب خيل، ATV، طبيعة، أذربيجان، كوبة">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="كوتج كوبة الجبلي - جولات ومعالم">
+  <meta property="og:description" content="تجربة سفر لا تُنسى يقودها السكان المحليون">
+  <meta property="og:image" content="/images/hero-bg.jpg">
+  
+  <!-- Hreflang for SEO -->
+  <link rel="alternate" hreflang="ar" href="/ar/tours/">
+  <link rel="alternate" hreflang="az" href="/az/tours/">
+  <link rel="alternate" hreflang="en" href="/en/tours/">
+  <link rel="alternate" hreflang="ru" href="/ru/tours/">
+  <link rel="alternate" hreflang="x-default" href="/ar/tours/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --river: #3B82F6;
+      --earth: #ac8f6c;
+      --earth-light: #F4EBD9;
+      --text: #1F2937;
+      --accent: #ffd700;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Noto Sans Arabic', 'Noto Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.8;
+    }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    
+    .logo svg {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--forest);
+    }
+    
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .lang-switch a {
+      padding: 8px 16px;
+      background: var(--forest);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    
+    .lang-switch a:hover {
+      background: var(--forest-light);
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--forest) 0%, #1a3a20 100%);
+    }
+    
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(47, 82, 51, 0.3) 0%, rgba(31, 58, 41, 0.7) 50%, rgba(244, 235, 217, 0.9) 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+    
+    .hero p {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: rgba(255,255,255,0.9);
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--river);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+    }
+    
+    /* Sections */
+    section {
+      padding: 100px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-badge {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e8f5e9;
+      color: var(--forest);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--forest);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Activities Grid */
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .activity-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    
+    .activity-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .activity-content {
+      padding: 30px;
+    }
+    
+    .activity-title {
+      font-size: 1.5rem;
+      color: var(--forest);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .activity-description {
+      color: #6b7280;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .activity-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    
+    .activity-features li {
+      padding: 8px 0;
+      color: #4b5563;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .activity-features li::before {
+      content: "✅";
+      font-size: 1.1rem;
+    }
+    
+    .activity-price {
+      font-size: 1.8rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .activity-btn {
+      width: 100%;
+      padding: 12px 24px;
+      background: var(--forest);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.3s;
+      display: block;
+    }
+    
+    .activity-btn:hover {
+      background: var(--forest-light);
+    }
+    
+    /* Local Guide Section */
+    .local-guide {
+      background: linear-gradient(135deg, var(--forest) 0%, #1a3a20 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    .local-guide h2 {
+      color: white;
+      margin-bottom: 30px;
+    }
+    
+    .local-guide p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+    
+    .guide-benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .benefit-item {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .benefit-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .benefit-description {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+    
+    /* RTL Support for Arabic */
+    html[dir="rtl"] {
+      text-align: right;
+    }
+    
+    html[dir="rtl"] .nav-links {
+      flex-direction: row-reverse;
+    }
+    
+    html[dir="rtl"] .hero-buttons {
+      flex-direction: row-reverse;
+    }
+    
+    html[dir="rtl"] .about-grid,
+    html[dir="rtl"] .location-grid,
+    html[dir="rtl"] .contact-grid {
+      direction: rtl;
+    }
+    
+    html[dir="rtl"] .features-grid,
+    html[dir="rtl"] .amenities-grid,
+    html[dir="rtl"] .activities-grid {
+      direction: rtl;
+    }
+    
+    html[dir="rtl"] .footer-grid {
+      direction: rtl;
+    }
+    
+    html[dir="rtl"] .footer-bottom {
+      flex-direction: row-reverse;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .activities-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .guide-benefits {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+          <path d="M9 14h6v5H9z"/>
+        </svg>
+        <span>كوتج كوبة</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="/">الرئيسية</a></li>
+        <li><a href="#activities">الأنشطة</a></li>
+        <li><a href="#guide">المرشد</a></li>
+        <li><a href="/">الرئيسية</a></li>
+      </ul>
+      
+      <div class="lang-switch">
+        <a href="/ar/tours/" class="lang-btn" data-lang="ar">عربي</a>
+        <a href="/az/tours/" class="lang-btn" data-lang="az">AZ</a>
+        <a href="/en/tours/" class="lang-btn" data-lang="en">EN</a>
+        <a href="/ru/tours/" class="lang-btn" data-lang="ru">RU</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/images/hero-bg.jpg" alt="جبال كوبة" onerror="this.style.display='none'">
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <h1>رحلات لا تُنسى في منطقة كوبة</h1>
+      <p>جولات ورحلات استكشافية آمنة ومثيرة مع <strong style="color: #ffd700;">مرشد محلي</strong></p>
+      <p style="font-size: 1rem; opacity: 0.9; margin-top: -30px; margin-bottom: 30px;">🏔️ ركوب الخيل | مغامرات ATV | رحلات الطبيعة</p>
+      <a href="#activities" class="cta-btn">
+        اكتشف الجولات
+      </a>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="activities" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">🏔️ جولات والأنشطة</span>
+        <h2 class="section-title">الرحلات المغامرة</h2>
+        <p class="section-subtitle">مجموعة متنوعة من الأنشطة المثيرة في كوبة والمناطق المحيطة</p>
+      </div>
+      
+      <div class="activities-grid">
+        <!-- Horse Riding -->
+        <div class="activity-card">
+          <img src="/images/photo-2.jpg" alt="ركوب الخيل" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏇 ركوب الخيل</h3>
+            <p class="activity-description">استكشف جمال الطبيعة على ظهور الخيل. رحلة آمنة مع مرشد محترف.</p>
+            <ul class="activity-features">
+              <li>خيل ومعدات محترفة</li>
+              <li>إرشاد مرشد ذو خبرة</li>
+              <li>جولات من 2-6 ساعات</li>
+              <li>مناسبة لجميع المستويات</li>
+            </ul>
+            <div class="activity-price">25-45$</div>
+            <a href="https://wa.me/994702555909?text=🏔️ مرحباً! أحتاج معلومات حول الجولات في منطقة كوبة" target="_blank" class="activity-btn">احجز الآن</a>
+          </div>
+        </div>
+
+        <!-- ATV Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-7.jpg" alt="مغامرات ATV" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏍️ مغامرات ATV</h3>
+            <p class="activity-description">رحلة مليئة بالأدرينالين عبر المناطق الجبلية على الدراجات النارية.</p>
+            <ul class="activity-features">
+              <li>معدات ATV محترفة</li>
+              <li>خوذة ومعدات الحماية</li>
+              <li>جولات من 1-4 ساعات</li>
+              <li>مستويات صعوبة متنوعة</li>
+            </ul>
+            <div class="activity-price">20-40$</div>
+            <a href="https://wa.me/994702555909?text=🏔️ مرحباً! أحتاج معلومات حول الجولات في منطقة كوبة" target="_blank" class="activity-btn">احجز الآن</a>
+          </div>
+        </div>
+
+        <!-- Nature Hiking -->
+        <div class="activity-card">
+          <img src="/images/photo-3.jpg" alt="رحلات الطبيعة" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🥾 رحلات الطبيعة</h3>
+            <p class="activity-description">رحلات سيراً على الأقدام إلى الزوايا المخفية لجبال كوبة.</p>
+            <ul class="activity-features">
+              <li>إرشاد مرشد محلي</li>
+              <li>ينابيع ووجهات مناظر مخفية</li>
+              <li>أماكن التصوير</li>
+              <li>استراحات للنزهة والاسترخاء</li>
+            </ul>
+            <div class="activity-price">15-30$</div>
+            <a href="https://wa.me/994702555909?text=🏔️ مرحباً! أحتاج معلومات حول الجولات في منطقة كوبة" target="_blank" class="activity-btn">احجز الآن</a>
+          </div>
+        </div>
+
+        <!-- City Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-4.jpg" alt="جولات المدينة" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏛️ رحلات المدينة</h3>
+            <p class="activity-description">اكتشف المواقع التاريخية لمدينة كوبة والقرى المحيطة.</p>
+            <ul class="activity-features">
+              <li>آثار تاريخية وثقافة</li>
+              <li>تقاليد وعادات محلية</li>
+              <li>الحرف اليدوية</li>
+              <li>تجارب المطبخ المحلي</li>
+            </ul>
+            <div class="activity-price">18-35$</div>
+            <a href="https://wa.me/994702555909?text=🏔️ مرحباً! أحتاج معلومات حول الجولات في منطقة كوبة" target="_blank" class="activity-btn">احجز الآن</a>
+          </div>
+        </div>
+
+        <!-- Photography Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-6.jpg" alt="جولات التصوير" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">📸 جولات التصوير</h3>
+            <p class="activity-description">السفر إلى أفضل مواقع التصوير مع مصور محترف.</p>
+            <ul class="activity-features">
+              <li>تصوير الغروب والشروق</li>
+              <li>مساعدة مصور محترف</li>
+              <li>أفضل نقاط الرؤية</li>
+              <li>نصائح تحرير الصور</li>
+            </ul>
+            <div class="activity-price">25-45$</div>
+            <a href="https://wa.me/994702555909?text=🏔️ مرحباً! أحتاج معلومات حول الجولات في منطقة كوبة" target="_blank" class="activity-btn">احجز الآن</a>
+          </div>
+        </div>
+
+        <!-- Cultural Experience -->
+        <div class="activity-card">
+          <img src="/images/photo-5.jpg" alt="الخبرة الثقافية" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🎭 الخبرة الثقافية</h3>
+            <p class="activity-description">اختبر التقاليد المحلية وتذوق الثقافة الأذرية الأصيلة.</p>
+            <ul class="activity-features">
+              <li>لقاء العائلات المحلية</li>
+              <li>تجارب المطبخ التقليدي</li>
+              <li>نسج السجاد والفنون</li>
+              <li>عروض موسيقية ورقص شعبية</li>
+            </ul>
+            <div class="activity-price">20-38$</div>
+            <a href="https://wa.me/994702555909?text=🏔️ مرحباً! أحتاج معلومات حول الجولات في منطقة كوبة" target="_blank" class="activity-btn">احجز الآن</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Guide Section -->
+  <section id="guide" class="local-guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">👨‍💼 المرشد المحلي</span>
+        <h2 class="section-title">بقلب وحب السكان المحليين</h2>
+      </div>
+      
+      <p>أنا <strong>نيريمان</strong>، مقيم محلي لجبال كوبة. أعرف هذه الأماكن الجميلة منذ 25 عاماً وأستمتع بعرض جمال موطني لكل ضيف بحب ورعاية.</p>
+      
+      <div class="guide-benefits">
+        <div class="benefit-item">
+          <div class="benefit-icon">🗺️</div>
+          <h3 class="benefit-title">يعرف الزوايا المخفية</h3>
+          <p class="benefit-description">مواقع طبيعية مخفية وأماكن تاريخية لا يعرفها السياح.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">🛡️</div>
+          <h3 class="benefit-title">الأمان والرعاية</h3>
+          <p class="benefit-description">أتحمل المسؤولية الكاملة عن سلامة وراحة كل ضيف.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">❤️</div>
+          <h3 class="benefit-title">الحب والصدق</h3>
+          <p class="benefit-description">كل رحلة تترك ذكريات جميلة في قلوب ضيوفنا.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">🏛️</div>
+          <h3 class="benefit-title">التاريخ والثقافة</h3>
+          <p class="benefit-description">سأخبركم بالتاريخ الغني وتقاليد هذه الأرض.</p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 50px;">
+        <a href="https://wa.me/994702555909?text=🏔️ مرحباً! أحتاج معلومات حول الجولات في منطقة كوبة" target="_blank" class="cta-btn">اتصل بي</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Booking Section -->
+  <section id="contact" style="background: var(--forest);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background: rgba(255,255,255,0.1); color: white;">📞 الحجز والسؤال</span>
+        <h2 class="section-title" style="color: white;">احجز رحلتك الآن</h2>
+        <p style="color: white; opacity: 0.9; font-size: 1.1rem;">تواصل معي مباشرة لحجز جولتك المفضلة</p>
+      </div>
+      
+      <div style="text-align: center;">
+        <a href="https://wa.me/994702555909?text=🏔️ مرحباً! أحتاج معلومات حول الجولات في منطقة كوبة" target="_blank" 
+           style="display: inline-flex; align-items: center; gap: 15px; padding: 20px 40px; background: #25D366; color: white; text-decoration: none; border-radius: 16px; font-size: 1.3rem; font-weight: 600; box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); transition: all 0.3s ease; margin: 20px 0;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+          </svg>
+          <span>احجز عبر واتساب</span>
+        </a>
+        
+        <div style="margin-top: 30px; color: white; opacity: 0.8;">
+          <p style="font-size: 1rem;">🕐 متاح 7 أيام في الأسبوع: 08:00 - 20:00</p>
+          <p style="font-size: 0.9rem; margin-top: 10px;">سيتم الرد عليك في أسرع وقت ممكن</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

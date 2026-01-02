@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage - Azerbaijani (Default) -->
+  <url>
+    <loc>https://quba.rent/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quba.rent/"/>
+  </url>
+  
+  <!-- English Homepage -->
+  <url>
+    <loc>https://quba.rent/en/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/ar/"/>
+  </url>
+  
+  <!-- Russian Homepage -->
+  <url>
+    <loc>https://quba.rent/ru/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/ar/"/>
+  </url>
+  
+  <!-- Arabic Homepage -->
+  <url>
+    <loc>https://quba.rent/ar/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/ar/"/>
+  </url>
+  
+  <!-- Blog Page - Azerbaijani -->
+  <url>
+    <loc>https://quba.rent/blog.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/blog-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/blog-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/blog-ar.html"/>
+  </url>
+  
+  <!-- Blog Page - English -->
+  <url>
+    <loc>https://quba.rent/blog-en.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/blog-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/blog-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/blog-ar.html"/>
+  </url>
+  
+  <!-- Blog Page - Russian -->
+  <url>
+    <loc>https://quba.rent/blog-ru.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/blog-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/blog-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/blog-ar.html"/>
+  </url>
+  
+  <!-- Blog Page - Arabic -->
+  <url>
+    <loc>https://quba.rent/blog-ar.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/blog-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/blog-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/blog-ar.html"/>
+  </url>
+  
+  <!-- Tours Page - Azerbaijani -->
+  <url>
+    <loc>https://quba.rent/tours.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/tours-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/tours-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/tours-ar.html"/>
+  </url>
+  
+  <!-- Tours Page - English -->
+  <url>
+    <loc>https://quba.rent/tours-en.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/tours-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/tours-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/tours-ar.html"/>
+  </url>
+  
+  <!-- Tours Page - Russian -->
+  <url>
+    <loc>https://quba.rent/tours-ru.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/tours-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/tours-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/tours-ar.html"/>
+  </url>
+  
+  <!-- Tours Page - Arabic -->
+  <url>
+    <loc>https://quba.rent/tours-ar.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://quba.rent/tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quba.rent/tours-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://quba.rent/tours-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quba.rent/tours-ar.html"/>
+  </url>
+
+</urlset>

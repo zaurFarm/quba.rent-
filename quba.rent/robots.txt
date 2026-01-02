@@ -1,0 +1,38 @@
+# Quba Cottage Website - Robots.txt
+# Optimized for Google SEO
+
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: *.json$
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+
+# Sitemap - Main XML
+Sitemap: https://quba.rent/sitemap.xml
+
+# Language versions (correct URLs)
+User-agent: *
+Allow: /$
+Allow: /en/$
+Allow: /ru/$
+Allow: /ar/$
+Allow: /index.html$
+Allow: /index-en.html$
+Allow: /index-ru.html$
+Allow: /index-ar.html$
+Allow: /blog.html$
+Allow: /blog-en.html$
+Allow: /blog-ru.html$
+Allow: /blog-ar.html$
+Allow: /tours.html$
+Allow: /tours-en.html$
+Allow: /tours-ru.html$
+Allow: /tours-ar.html$
+
+# Crawl-delay for heavy pages
+Crawl-delay: 10
