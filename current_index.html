@@ -1228,47 +1228,54 @@
     </div>
   </section>
 
-  <!-- Clearfix for proper footer positioning -->
-  <div style="clear: both; display: block; content: ''; width: 100%; height: 0;"></div>
-
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div>
-          <a href="/" class="footer-logo">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
-              <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
-              <path d="M9 14h6v5H9z"/>
+      <div class="footer-grid">
+        <!-- Brand Section -->
+        <div class="footer-brand">
+          <a href="/" class="footer-brand-link">
+            <svg class="footer-logo" viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
             </svg>
-            <span>Quba Cottage</span>
+            <span class="footer-brand-name">Quba Cottage</span>
           </a>
-          <p class="footer-description">Ailələr üçün ideallıqla uyğunlaşdırılmış dinc istirahət yeri</p>
+          <p class="footer-brand-desc">Ekoloji təmiz dağ evi Küsnet Qazma kəndində. Ailələr üçün ideal istirahət yeri.</p>
+          <a href="https://t.me/qubacottage" class="footer-social-link" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.1.201-.9-.5 82 1.23-.696.064-1.225-.46-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.17.331.015.099.034.323.019.498z"/>
+            </svg>
+          </a>
         </div>
         
-        <div class="contact-info">
-          <h4 class="footer-title">Səhifələr</h4>
-          <p><a href="#about">Haqqımızda</a></p>
-          <p><a href="#gallery">Qalereya</a></p>
-          <p><a href="#amenities">İmkanlar</a></p>
-          <p><a href="#contact">Əlaqə</a></p>
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4 class="footer-heading">Keçidlər</h4>
+          <ul class="footer-list">
+            <li><a href="#about">Haqqımızda</a></li>
+            <li><a href="#gallery">Qalereya</a></li>
+            <li><a href="#amenities">İmkanlar</a></li>
+            <li><a href="#booking">Bron</a></li>
+            <li><a href="#contact">Əlaqə</a></li>
+          </ul>
         </div>
         
-        <div class="contact-info">
-          <h4 class="footer-title">Əlaqə</h4>
-          <p>📍 Kusnet Qazma, Quba, Azerbaijan</p>
-          <p>📞 +994 70 255 59 09 (Neriman)</p>
-          <a href="https://t.me/qubacottage" class="footer-telegram-link" target="_blank">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.696.064-1.225-.46-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.17.331.015.099.034.323.019.498z"/>
-            </svg>
-            Telegram
-          </a>
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4 class="footer-heading">Əlaqə</h4>
+          <ul class="footer-list">
+            <li>📍 Kusnet Qazma, Quba, Azerbaijan</li>
+            <li>📞 <a href="tel:+994702555909">+994 70 255 59 09</a></li>
+            <li>📧 <a href="mailto:info@quba.rent">info@quba.rent</a></li>
+            <li>🕐 07:00 - 24:00</li>
+          </ul>
         </div>
       </div>
       
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>© 2024 Quba Cottage. Bütün hüquqlar qorunur.</p>
+        <p>&copy; 2024 Quba Cottage. Bütün hüquqlar qorunur.</p>
+        <p class="footer-credit">Quba Cottage - Dağ Turizmi</p>
       </div>
     </div>
   </footer>
