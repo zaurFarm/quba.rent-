@@ -977,6 +977,185 @@ n      margin-bottom: 0;
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
     
+    /* Booking Widget Styles */
+    .booking-widget {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      width: 320px;
+      max-width: calc(100vw - 40px);
+      z-index: 999;
+      overflow: hidden;
+    }
+    
+    .booking-widget-header {
+      background: var(--forest);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .booking-widget-badge {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .booking-widget-close {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+    
+    .booking-widget-close:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .booking-form {
+      padding: 20px;
+    }
+    
+    .booking-dates {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .booking-field {
+      margin-bottom: 15px;
+    }
+    
+    .booking-field label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    .booking-field input,
+    .booking-field select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      background: #f9fafb;
+      box-sizing: border-box;
+    }
+    
+    .booking-field input:focus,
+    .booking-field select:focus {
+      outline: none;
+      border-color: var(--forest);
+      box-shadow: 0 0 0 3px rgba(47, 82, 51, 0.1);
+      background: white;
+    }
+    
+    .booking-submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .booking-submit-btn:hover {
+      background: #20c05a;
+      transform: translateY(-2px);
+    }
+    
+    .booking-submit-btn svg {
+      width: 22px;
+      height: 22px;
+    }
+    
+    .booking-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 12px;
+    }
+    
+    /* WhatsApp Float Styles */
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 100px;
+      z-index: 998;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .whatsapp-label {
+      background: white;
+      padding: 10px 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+      font-weight: 600;
+      color: var(--forest);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    
+    .whatsapp-btn {
+      width: 55px;
+      height: 55px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+    }
+    
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+    }
+    
+    .whatsapp-btn svg {
+      width: 28px;
+      height: 28px;
+    }
+    
 
     
     /* Responsive */
