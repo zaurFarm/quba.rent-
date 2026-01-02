@@ -1,20 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- House body -->
-  <rect x="20" y="45" width="60" height="45" rx="5" fill="#2F5233"/>
+  <!-- Simple house shape with chimney -->
+  <!-- Main body -->
+  <rect x="20" y="40" width="60" height="50" rx="4" fill="#2F5233"/>
   
   <!-- Roof -->
-  <path d="M10 48 L50 10 L90 48 Z" fill="#febb02"/>
+  <path d="M10 42 L50 8 L90 42 Z" fill="#febb02"/>
   
   <!-- Door -->
-  <rect x="42" y="60" width="16" height="30" rx="2" fill="#ffffff"/>
+  <rect x="42" y="55" width="16" height="35" rx="2" fill="#ffffff"/>
   
   <!-- Door handle -->
-  <circle cx="54" cy="77" r="2" fill="#2F5233"/>
+  <circle cx="54" cy="74" r="2" fill="#2F5233"/>
   
   <!-- Chimney -->
-  <rect x="70" y="22" width="10" height="15" fill="#2F5233"/>
-  
-  <!-- Smoke -->
-  <circle cx="75" cy="15" r="4" fill="rgba(255,255,255,0.4)"/>
-  <circle cx="78" cy="8" r="3" fill="rgba(255,255,255,0.3)"/>
+  <rect x="68" y="18" width="10" height="18" fill="#2F5233"/>
 </svg>

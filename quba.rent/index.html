@@ -221,6 +221,31 @@
       white-space: nowrap;
     }
     
+    /* House icon shaking animation */
+    .house-icon {
+      animation: house-shake 3s ease-in-out infinite;
+      transform-origin: center bottom;
+      cursor: pointer;
+    }
+    
+    .house-icon:hover {
+      animation: house-wiggle 0.5s ease-in-out;
+    }
+    
+    @keyframes house-shake {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-3deg); }
+      75% { transform: rotate(3deg); }
+    }
+    
+    @keyframes house-wiggle {
+      0% { transform: rotate(0deg) scale(1.1); }
+      25% { transform: rotate(-5deg) scale(1.1); }
+      50% { transform: rotate(5deg) scale(1.1); }
+      75% { transform: rotate(-3deg) scale(1.1); }
+      100% { transform: rotate(0deg) scale(1.1); }
+    }
+    
     @media (max-width: 768px) {
       .logo {
         font-size: 0.9rem;
@@ -1349,7 +1374,7 @@ n      margin-bottom: 0;
   <nav>
     <div class="container">
       <a href="/" class="logo">
-        <svg viewBox="0 0 24 24" fill="#2F5233" width="36" height="36">
+        <svg viewBox="0 0 24 24" fill="#2F5233" width="36" height="36" class="house-icon">
           <path d="M12 3L2 10v11h20V10L12 3zM12 5.5L20 10v9H4v-9l8-4.5z"/>
           <path d="M10 14h4v7h-4z"/>
         </svg>
@@ -2692,11 +2717,11 @@ n      margin-bottom: 0;
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-            <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
-            <path d="M9 14h6v5H9z"/>
+          <svg viewBox="0 0 24 24" fill="#ffffff" width="32" height="32" class="house-icon">
+            <path d="M12 3L2 10v11h20V10L12 3zM12 5.5L20 10v9H4v-9l8-4.5z"/>
+            <path d="M10 14h4v7h-4z"/>
           </svg>
-          <span style="color: white; font-size: 1rem;">Quba Cottage</span>
+          <span style="color: white; font-size: 1.1rem;">Quba</span>
         </a>
         <p style="margin-top: 15px; color: #9ca3af;">👨‍👩‍👧‍👦 Ailələr üçün ideallıqla uyğunlaşdırılmış dinc istirahət yeri</p>
       </div>
