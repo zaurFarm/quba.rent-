@@ -13,9 +13,10 @@ files = [
     ('quba.rent/index-en.html', 'index-en.html'),
     ('quba.rent/index-ru.html', 'index-ru.html'),
     ('quba.rent/index-ar.html', 'index-ar.html'),
+    ('quba.rent/index.html', 'public_html/index.html'),
 ]
 
-print("Uploading all language versions to root directory...")
+print("Uploading all language versions with new booking widget...")
 
 try:
     with ftplib.FTP() as ftp:
@@ -30,7 +31,7 @@ try:
             else:
                 print(f"❌ File not found: {local_file}")
 
-        print("\nAll language versions uploaded successfully!")
+        print("\n✅ All language versions uploaded successfully!")
 
 except Exception as e:
     print(f"Error: {e}")
