@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quba Blog | Горный Дом - Туризм и Культура</title>
+  <meta name="description" content="Блог о регионе Куба. Статьи о природе, культуре, приключениях и туризме.">
+  <meta name="keywords" content="Куба блог, туризм, горы, природа, приключения, Кубинский район, Азербайджан">
+  <meta name="author" content="Нерман - Горный Дом Куба">
+  <meta name="language" content="ru">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#2d5a27">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Блог - Горный Дом Куба">
+  <meta property="og:description" content="Статьи о природе, культуре и туризме в Кубе">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --river: #3B82F6;
+      --earth: #ac8f6c;
+      --earth-light: #F4EBD9;
+      --text: #1F2937;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Noto Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.6;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    
+    nav .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    
+    .logo svg {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--forest);
+    }
+    
+    .lang-switch a {
+      padding: 8px 16px;
+      background: var(--forest);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-left: 5px;
+      transition: background 0.3s;
+    }
+    
+    .lang-switch a:hover {
+      background: var(--forest-light);
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: linear-gradient(135deg, var(--forest) 0%, #1a3a20 100%);
+      padding: 120px 20px 80px;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('images/main.jpg') center/cover;
+      opacity: 0.3;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(47, 82, 51, 0.5) 0%, rgba(31, 58, 41, 0.8) 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    /* Blog Section */
+    .blog {
+      padding: 100px 0;
+      background: white;
+    }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-badge {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e8f5e9;
+      color: var(--forest);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--forest);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Blog Grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+    
+    .blog-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .blog-card-image {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+    .blog-card-category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: var(--forest);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    
+    .blog-card-content {
+      padding: 25px;
+    }
+    
+    .blog-card-date {
+      color: #6b7280;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+    
+    .blog-card-title {
+      font-size: 1.3rem;
+      color: var(--forest);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    
+    .blog-card-excerpt {
+      color: #4b5563;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .blog-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--river);
+      text-decoration: none;
+      font-weight: 600;
+      transition: gap 0.3s;
+    }
+    
+    .blog-card:hover .blog-card-link {
+      gap: 12px;
+    }
+    
+    /* Footer */
+    footer {
+      background: #0f2116;
+      color: #9ca3af;
+      padding: 60px 0 30px;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-brand .logo {
+      margin-bottom: 15px;
+      color: white;
+    }
+    
+    footer h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid #1f3a29;
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+          <path d="M9 14h6v5H9z"/>
+        </svg>
+        <span>Горный Дом Куба</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/#about">О нас</a></li>
+        <li><a href="/#gallery">Галерея</a></li>
+        <li><a href="/blog-ru.html" class="active">Блог</a></li>
+        <li><a href="/#location">Местоположение</a></li>
+        <li><a href="/#contact">Контакты</a></li>
+      </ul>
+      
+      <div class="lang-switch">
+        <a href="/blog.html">AZ</a>
+        <a href="/blog-ru.html">RU</a>
+        <a href="/blog-en.html">EN</a>
+        <a href="/blog-ar.html">AR</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Блог Региона Куба</h1>
+      <p>Статьи о природе, культуре и приключениях</p>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">📖 Блог</span>
+        <h2 class="section-title">Читайте о Кубе</h2>
+        <p class="section-subtitle">Откройте для себя природу, культуру и историю региона</p>
+      </div>
+      
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <div class="blog-card" onclick="window.location.href='/blog-qechresh-ru.html'">
+          <div class="blog-card-image" style="background-image: url('images/photo-3.jpg')">
+            <span class="blog-card-category">Природа</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-card-date">📅 15 декабря 2024</p>
+            <h3 class="blog-card-title">Лес Кечреш: Зелёное Сокровище Кубы</h3>
+            <p class="blog-card-excerpt">Познакомьтесь с удивительными туннелями из деревьев и прохладным горным воздухом в лесу Кечреш - самом популярном природном месте региона Куба...</p>
+            <a href="/blog-qechresh-ru.html" class="blog-card-link">
+              Читать подробнее
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Blog Post 2 -->
+        <div class="blog-card" onclick="window.location.href='/blog-red-village-ru.html'">
+          <div class="blog-card-image" style="background-image: url('images/photo-2.jpg')">
+            <span class="blog-card-category">Культура</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-card-date">📅 10 декабря 2024</p>
+            <h3 class="blog-card-title">Красное Село: Уникальное Еврейское Поселение</h3>
+            <p class="blog-card-excerpt">Посетите Красное Село - единственный еврейский городок за пределами Израиля и США, известный своими красными черепичными крышами и богатой историей...</p>
+            <a href="/blog-red-village-ru.html" class="blog-card-link">
+              Читать подробнее
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Blog Post 3 -->
+        <div class="blog-card" onclick="window.location.href='/blog-afurja-ru.html'">
+          <div class="blog-card-image" style="background-image: url('images/photo-4.jpg')">
+            <span class="blog-card-category">Приключения</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-card-date">📅 5 декабря 2024</p>
+            <h3 class="blog-card-title">Поход к Водопаду Афурджа</h3>
+            <p class="blog-card-excerpt">Испытайте силу природы у водопада Афурджа высотой 75 метров. Идеальный однодневный поход для любителей приключений, остановившихся в Кубе...</p>
+            <a href="/blog-afurja-ru.html" class="blog-card-link">
+              Читать подробнее
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+              <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+              <path d="M9 14h6v5H9z"/>
+            </svg>
+            <span style="color: white; font-size: 1.2rem;">Горный Дом Куба</span>
+          </a>
+          <p style="margin-top: 15px;">👨‍👩‍👧‍👦 Идеальное место для семейного отдыха</p>
+        </div>
+        
+        <div>
+          <h4>Страницы</h4>
+          <ul class="footer-links">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/blog-ru.html">Блог</a></li>
+            <li><a href="/#location">Местоположение</a></li>
+            <li><a href="/#contact">Контакты</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Контакты</h4>
+          <p>📍 Кушнет Казма, Куба, Азербайджан</p>
+          <p>📞 +994 70 255 59 09</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 Горный Дом Куба. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Popup -->
+  <div class="whatsapp-popup" style="position: fixed; left: 20px; bottom: 180px; z-index: 1000; display: flex; align-items: center; gap: 15px;">
+    <span style="background: white; padding: 12px 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); font-weight: 600; color: var(--forest);">Напишите в WhatsApp! 📱</span>
+    <a href="https://wa.me/994702555909" target="_blank" style="width: 65px; height: 65px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); animation: pulse 2s infinite;">
+      <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+  
+  <style>
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+  </style>
+</body>
+</html>
