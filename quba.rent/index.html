@@ -977,272 +977,149 @@ n      margin-bottom: 0;
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
     
-    /* Booking.com Style Booking Widget */
+    /* Booking Widget Styles */
     .booking-widget {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      background: #003580;
-      border-radius: 8px;
-      box-shadow: 0 10px 50px rgba(0,0,0,0.3);
-      width: 900px;
-      max-width: 95vw;
-      z-index: 9999;
-      overflow: hidden;
-    }
-    
-    .booking-widget-container {
-      display: flex;
-      flex-direction: column;
-      border: 3px solid #003580;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    
-    .booking-widget-row {
-      display: flex;
-      background: #fff;
-      border-bottom: 2px solid #febb02;
-    }
-    
-    .booking-widget-row:last-of-type {
-      border-bottom: none;
-    }
-    
-    .booking-widget-field {
-      flex: 1;
-      padding: 0;
-      position: relative;
-      background: white;
-      display: flex;
-      align-items: center;
-    }
-    
-    .booking-widget-field:not(:last-child) {
-      border-right: 2px solid #febb02;
-    }
-    
-    .booking-widget-field-icon {
-      width: 50px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f0f0f0;
-      flex-shrink: 0;
-    }
-    
-    .booking-widget-field-icon svg {
-      width: 22px;
-      height: 22px;
-      color: #003580;
-    }
-    
-    .booking-widget-field-content {
-      flex: 1;
-      padding: 12px 15px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-width: 0;
-    }
-    
-    .booking-widget-field-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 2px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    
-    .booking-widget-field-input {
-      border: none;
-      font-size: 0.9rem;
-      color: #1a1a1a;
-      width: 100%;
-      background: transparent;
-      padding: 4px 0 0;
-      outline: none;
-    }
-    
-    .booking-widget-field-input::placeholder {
-      color: #1a1a1a;
-      opacity: 1;
-    }
-    
-    .booking-widget-field-select {
-      appearance: none;
-      background: transparent;
-      border: none;
-      font-size: 0.9rem;
-      color: #1a1a1a;
-      width: 100%;
-      padding: 4px 0 0;
-      outline: none;
-      cursor: pointer;
-    }
-    
-    .booking-widget-submit {
-      background: #febb02;
-      border: none;
-      padding: 18px 35px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #003580;
-      cursor: pointer;
-      transition: background 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      flex-shrink: 0;
-    }
-    
-    .booking-widget-submit:hover {
-      background: #ffcd00;
-    }
-    
-    .booking-widget-submit svg {
-      display: none;
-    }
-    
-    /* Mobile Booking Widget Styles */
-    .booking-widget-mobile {
-      display: none;
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
       background: #003580;
-      z-index: 9998;
-      padding: 15px;
-      border-radius: 20px 20px 0 0;
+      border-radius: 12px 12px 0 0;
       box-shadow: 0 -5px 30px rgba(0,0,0,0.2);
+      z-index: 9999;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
     }
     
-    .booking-widget-mobile-row {
-      display: flex;
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 12px;
+    .booking-widget.active {
+      transform: translateY(0);
     }
     
-    .booking-widget-mobile-field {
-      flex: 1;
-      padding: 12px 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-right: 2px solid #febb02;
-    }
-    
-    .booking-widget-mobile-field:last-child {
-      border-right: none;
-    }
-    
-    .booking-widget-mobile-field-icon {
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-    }
-    
-    .booking-widget-mobile-field-icon svg {
-      width: 100%;
-      height: 100%;
-      color: #003580;
-    }
-    
-    .booking-widget-mobile-field-content {
-      flex: 1;
-      min-width: 0;
-    }
-    
-    .booking-widget-mobile-field-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      color: #666;
-      text-transform: uppercase;
-    }
-    
-    .booking-widget-mobile-field-input {
-      border: none;
-      font-size: 0.85rem;
-      color: #1a1a1a;
-      width: 100%;
-      background: transparent;
-      padding: 2px 0 0;
-      outline: none;
-    }
-    
-    .booking-widget-mobile-field-select {
-      appearance: none;
-      background: transparent;
-      border: none;
-      font-size: 0.85rem;
-      color: #1a1a1a;
-      width: 100%;
-      padding: 2px 0 0;
-      outline: none;
-      cursor: pointer;
-    }
-    
-    .booking-widget-mobile-details {
-      background: white;
-      border-radius: 8px;
-      padding: 12px 15px;
-      margin-bottom: 12px;
-    }
-    
-    .booking-widget-mobile-detail-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 0;
-      border-bottom: 1px solid #eee;
-    }
-    
-    .booking-widget-mobile-detail-row:last-child {
-      border-bottom: none;
-    }
-    
-    .booking-widget-mobile-detail-icon {
-      width: 20px;
-      height: 20px;
-      color: #003580;
-    }
-    
-    .booking-widget-mobile-detail-content {
-      flex: 1;
-    }
-    
-    .booking-widget-mobile-detail-label {
-      font-size: 0.7rem;
-      color: #666;
-      text-transform: uppercase;
-    }
-    
-    .booking-widget-mobile-detail-value {
-      font-size: 0.9rem;
-      color: #1a1a1a;
-      font-weight: 600;
-    }
-    
-    .booking-widget-mobile-submit {
-      width: 100%;
+    .booking-widget-header {
       background: #febb02;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 12px 12px 0 0;
+    }
+    
+    .booking-widget-badge {
+      color: #003580;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .booking-widget-close {
+      background: rgba(0,53,128,0.1);
       border: none;
-      padding: 16px;
+      color: #003580;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+    
+    .booking-widget-close:hover {
+      background: rgba(0,53,128,0.2);
+    }
+    
+    .booking-form {
+      padding: 20px;
+    }
+    
+    .booking-dates {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .booking-field {
+      margin-bottom: 15px;
+    }
+    
+    .booking-field label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .booking-field input,
+    .booking-field select,
+    .booking-field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid #febb02;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      background: white;
+      box-sizing: border-box;
+    }
+    
+    .booking-field input:focus,
+    .booking-field select:focus,
+    .booking-field textarea:focus {
+      outline: none;
+      border-color: #fff;
+      box-shadow: 0 0 0 3px rgba(254,187,2,0.3);
+    }
+    
+    .booking-field textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    
+    .booking-submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: #25D366;
+      color: white;
+      border: none;
       border-radius: 8px;
       font-size: 1rem;
-      font-weight: 700;
-      color: #003580;
+      font-weight: 600;
       cursor: pointer;
-      text-transform: uppercase;
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
     }
     
-    .booking-widget-mobile-submit:hover {
-      background: #ffcd00;
+    .booking-submit-btn:hover {
+      background: #20c05a;
+      transform: translateY(-2px);
+    }
+    
+    .booking-submit-btn svg {
+      width: 22px;
+      height: 22px;
+    }
+    
+    .booking-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 12px;
     }
     
     /* Floating WhatsApp Button */
@@ -1294,11 +1171,7 @@ n      margin-bottom: 0;
     /* Responsive */
     @media (max-width: 768px) {
       .booking-widget {
-        display: none !important;
-      }
-      
-      .booking-widget-mobile {
-        display: block;
+        border-radius: 20px 20px 0 0;
       }
     }
     
@@ -1410,7 +1283,7 @@ n      margin-bottom: 0;
       <p>Təbiətin qoynunda unudulmaz <strong style="color: #ffd700;">ailəvi</strong> istirahət</p>
       <p style="font-size: 1rem; opacity: 0.9; margin-top: -30px; margin-bottom: 30px;">🌿 Səs-küysüz, dinc, təhlükəsiz mühit | Ailələr üçün idealdır</p>
       <div class="hero-buttons">
-        <a href="#contact" class="cta-btn">
+        <a href="#" class="cta-btn" onclick="openBookingWidget(); return false;">
           <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
           </svg>
@@ -1573,7 +1446,7 @@ n      margin-bottom: 0;
       </button>
     </div>
     
-    <form id="booking-form" class="booking-form">
+    <form id="booking-form" class="booking-form" onsubmit="event.preventDefault(); sendBookingToWhatsApp();">
       <div class="booking-dates">
         <div class="booking-field">
           <label for="checkin">
@@ -1691,20 +1564,23 @@ n      margin-bottom: 0;
       });
     });
 
+    // Booking Widget Functions
+    function openBookingWidget() {
+      document.getElementById('booking-widget').classList.add('active');
+    }
+
+    function closeBookingWidget() {
+      document.getElementById('booking-widget').classList.remove('active');
+    }
+
     // WhatsApp booking function
     function sendBookingToWhatsApp() {
-      // Get values from desktop fields first, fall back to mobile fields
-      const checkinEl = document.getElementById('desktop-checkin') || document.getElementById('mobile-checkin');
-      const checkoutEl = document.getElementById('desktop-checkout') || document.getElementById('mobile-checkout');
-      const guestsEl = document.getElementById('desktop-guests') || document.getElementById('mobile-guests');
-      const nameEl = document.getElementById('desktop-name') || document.getElementById('mobile-name');
-      const phoneEl = document.getElementById('desktop-phone') || document.getElementById('mobile-phone');
-      
-      const checkin = checkinEl ? checkinEl.value : '';
-      const checkout = checkoutEl ? checkoutEl.value : '';
-      const guests = guestsEl ? guestsEl.value : '';
-      const name = nameEl ? nameEl.value : '';
-      const phone = phoneEl ? phoneEl.value : '';
+      const checkin = document.getElementById('checkin') ? document.getElementById('checkin').value : '';
+      const checkout = document.getElementById('checkout') ? document.getElementById('checkout').value : '';
+      const guests = document.getElementById('guests') ? document.getElementById('guests').value : '';
+      const name = document.getElementById('guest-name') ? document.getElementById('guest-name').value : '';
+      const phone = document.getElementById('guest-phone') ? document.getElementById('guest-phone').value : '';
+      const notes = document.getElementById('guest-notes') ? document.getElementById('guest-notes').value : '';
       
       // Validate required fields
       if (!checkin || !checkout || !name || !phone) {
@@ -1726,6 +1602,11 @@ n      margin-bottom: 0;
       message += '👥 *Qonaq sayı:* ' + (guests ? guests + ' nəfər' : 'Qeyd edilməyib') + '%0A';
       message += '👤 *Ad:* ' + name + '%0A';
       message += '📞 *Telefon:* ' + phone + '%0A';
+      
+      if (notes) {
+        message += '📝 *Qeydlər:* ' + notes + '%0A';
+      }
+      
       message += '%0A---
 %0A📱 *Bu mesaj veb-saytdan göndərilib*';
       
