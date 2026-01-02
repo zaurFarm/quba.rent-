@@ -1026,6 +1026,8 @@ body {
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    height: auto;
+    align-self: start;
 }
 
 .amenity-card:hover {
