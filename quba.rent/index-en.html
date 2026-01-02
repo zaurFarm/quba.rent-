@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#2F5233">
+  <meta name="msapplication-TileColor" content="#2F5233">
+  
+  <!-- Yandex Meta Tags -->
+  <meta name="yandex-verification" content="yandex_verification_code">
+  <meta name="yandex" content="yandex_ad_format">
   
   <!-- Primary Meta Tags -->
   <title>Quba Mountain Cottage | Eco-Friendly Mountain Stay in Azerbaijan - Book Now</title>
   <meta name="description" content="Quba Mountain Cottage - Eco-friendly mountain retreat in Küsnet Qazma village. Lush forests, spring water, stunning mountain views. Perfect family getaway with WiFi, free parking, fully equipped kitchen. Book via WhatsApp!">
-  <meta name="keywords" content="Quba mountain cottage, eco-friendly stay, Küsnet Qazma village, Azerbaijan mountain tourism, family mountain retreat, river cottage, forest cabin, booking, wi-fi, free parking">
+  <meta name="keywords" content="Quba mountain cottage, eco-friendly stay, Küsnet Qazma village, Azerbaijan mountain tourism, family mountain retreat, river cottage, forest cabin, booking, wi-fi, free parking, mountain house Azerbaijan, eco tourism Caucasus">
   <meta name="author" content="Quba Cottage">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -18,6 +24,9 @@
   <meta name="geo.placename" content="Quba, Azerbaijan">
   <meta name="geo.position" content="41.275389;48.337667">
   <meta name="ICBM" content="41.275389, 48.337667">
+  
+  <!-- Rating -->
+  <meta name="rating" content="general">
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://quba.rent/en/">
@@ -51,13 +60,17 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
   
-  <!-- Schema.org Structured Data -->
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Enhanced Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
+    "@type": ["LodgingBusiness", "TouristAttraction"],
     "name": "Quba Mountain Cottage",
-    "description": "Eco-friendly mountain house in Küsnet Qazma village, Quba district, Azerbaijan. Perfect place for family relaxation.",
+    "description": "Eco-friendly mountain house in Küsnet Qazma village, Quba district, Azerbaijan. Perfect place for family relaxation with lush forests, spring water, and stunning mountain views.",
     "url": "https://quba.rent/en/",
     "telephone": "+994-70-255-59-09",
     "priceRange": "$$",
@@ -78,6 +91,61 @@
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Free WiFi"},
+      {"@type": "LocationFeatureSpecification", "name": "Free Parking"},
+      {"@type": "LocationFeatureSpecification", "name": "Fully Equipped Kitchen"},
+      {"@type": "LocationFeatureSpecification", "name": "Spring Water"},
+      {"@type": "LocationFeatureSpecification", "name": "Mountain Views"},
+      {"@type": "LocationFeatureSpecification", "name": "Forest Setting"}
+    ],
+    "image": ["https://quba.rent/images/photo-main.jpg", "https://quba.rent/images/photo-1.jpg", "https://quba.rent/images/photo-2.jpg"],
+    "hasMap": "https://maps.google.com/?q=41.275389,48.337667"
+  }
+  </script>
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://quba.rent/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "English",
+        "item": "https://quba.rent/en/"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Quba Cottage",
+    "url": "https://quba.rent/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://quba.rent/en/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
       "opens": "00:00",
       "closes": "23:59"
     },
