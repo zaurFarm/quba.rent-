@@ -151,6 +151,36 @@
       padding: 0 20px;
     }
     
+    /* Section padding for symmetry */
+    section {
+      padding: 80px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+      
+      section {
+        padding: 60px 0;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 12px;
+      }
+      
+      section {
+        padding: 50px 0;
+      }
+    }
+    
     /* Navigation */
     nav {
       position: fixed;
@@ -1216,6 +1246,7 @@ n      margin-bottom: 0;
       .location-grid,
       .contact-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
       }
       
       .about-images {
@@ -1224,16 +1255,24 @@ n      margin-bottom: 0;
       
       .amenities-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
       }
       
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
       }
     }
     
     @media (max-width: 768px) {
       .nav-links {
         display: none;
+      }
+      
+      .about-grid,
+      .location-grid,
+      .contact-grid {
+        gap: 30px;
       }
       
       .about-images {
@@ -1246,14 +1285,17 @@ n      margin-bottom: 0;
       
       .features-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
       }
       
       .amenities-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
       }
       
       .gallery-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
       }
       
       .form-row {
@@ -1262,12 +1304,35 @@ n      margin-bottom: 0;
       
       .footer-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
       }
       
       .footer-bottom {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+      }
+      
+      /* Ensure all section content is centered and symmetrical */
+      .about-content,
+      .location-info,
+      .contact-content {
+        text-align: center;
+      }
+      
+      .features-grid {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      
+      .location-cards {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      
+      .contact-links {
+        max-width: 400px;
+        margin: 0 auto;
       }
     }
   </style>
@@ -1278,8 +1343,7 @@ n      margin-bottom: 0;
     <div class="container">
       <a href="/" class="logo">
         <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
-          <path d="M9 14h6v5H9z"/>
+          <path d="M12 3L3 9l9 6 9-6-9-6zM5 13v8h4v-5h6v5h4v-8l-7-4.5L5 13z"/>
         </svg>
         <span>Quba Cottage</span>
       </a>
