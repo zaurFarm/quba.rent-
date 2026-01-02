@@ -1876,86 +1876,238 @@ html[dir="rtl"] .site-footer .footer-bottom {
 }
 
 /* ============================================
-   ИСПРАВЛЕНИЯ ДЛЯ WHATSAPP POPUP
+   СОВРЕМЕННЫЙ ВИДЖЕТ БРОНИРОВАНИЯ
    ============================================ */
-.whatsapp-popup {
-    position: fixed;
-    right: 20px;
-    bottom: 180px;
-    z-index: 1000;
+.booking-widget {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.booking-widget h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.booking-widget form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.booking-widget .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-widget .form-group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.booking-widget .form-group input,
+.booking-widget .form-group select {
+    padding: 12px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1a1a1a;
+    background: #fafafa;
+    transition: all 0.2s ease;
+}
+
+.booking-widget .form-group input:focus,
+.booking-widget .form-group select:focus {
+    outline: none;
+    border-color: #2d5a3d;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.1);
+}
+
+.booking-widget .submit-btn {
+    grid-column: 1 / -1;
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.booking-widget .submit-btn:hover {
+    background: #20bd5a;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+.booking-widget .submit-btn:active {
+    transform: translateY(0);
+}
+
+.booking-widget .submit-btn svg {
+    width: 22px;
+    height: 22px;
 }
 
 @media (max-width: 768px) {
-    .whatsapp-popup {
-        bottom: 140px;
-        right: 15px;
+    .booking-widget {
+        padding: 16px;
+        border-radius: 12px;
+    }
+    
+    .booking-widget form {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-widget .submit-btn {
+        padding: 12px 20px;
     }
 }
 
-.whatsapp-popup-text {
-    background: white;
-    padding: 12px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    font-weight: 600;
-    color: #2F5233;
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: all 0.3s ease;
+/* ============================================
+   СОЦИАЛЬНЫЕ ПЛАВАЮЩИЕ КНОПКИ
+   ============================================ */
+.social-popups {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
 }
 
-.whatsapp-popup:hover .whatsapp-popup-text {
+.social-popups .popup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-popups .popup-text {
+    background: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.25s ease;
+}
+
+.social-popups .popup:hover .popup-text {
     opacity: 1;
     transform: translateX(0);
 }
 
-@media (max-width: 480px) {
-    .whatsapp-popup-text {
-        display: none;
-    }
-}
-
-.whatsapp-popup-btn {
-    width: 60px;
-    height: 60px;
-    background: #25D366;
+.social-popups .popup-btn {
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    text-decoration: none;
     transition: all 0.3s ease;
-    animation: whatsappPulse 2s infinite;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-.whatsapp-popup-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+.social-popups .popup-btn svg {
+    width: 28px;
+    height: 28px;
 }
 
-.whatsapp-popup-btn svg {
-    width: 32px;
-    height: 32px;
+/* Telegram Button */
+.social-popups .telegram-btn {
+    background: #26A5E4;
+    animation: telegramPulse 3s infinite;
+}
+
+.social-popups .telegram-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(38, 165, 228, 0.4);
+}
+
+@keyframes telegramPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(38, 165, 228, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(38, 165, 228, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(38, 165, 228, 0);
+    }
+}
+
+/* WhatsApp Button */
+.social-popups .whatsapp-btn {
+    background: #25D366;
+    animation: whatsappPulse 2.5s infinite;
+}
+
+.social-popups .whatsapp-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
 }
 
 @keyframes whatsappPulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
     }
-    70% {
-        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    50% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
     }
     100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
 }
 
-/* Mobile Sticky CTA */
+@media (max-width: 768px) {
+    .social-popups {
+        right: 16px;
+        bottom: 16px;
+        gap: 10px;
+    }
+    
+    .social-popups .popup-text {
+        display: none;
+    }
+    
+    .social-popups .popup-btn {
+        width: 52px;
+        height: 52px;
+    }
+    
+    .social-popups .popup-btn svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* ============================================
+   МОБИЛЬНАЯ СТИКЕР-КНОПКА
+   ============================================ */
 .mobile-cta {
     position: fixed;
     bottom: 0;
@@ -1994,7 +2146,9 @@ html[dir="rtl"] .site-footer .footer-bottom {
     box-shadow: var(--shadow-glow);
 }
 
-/* Footer Telegram Link */
+/* ============================================
+   ССЫЛКА НА TELEGRAM В ФУТЕРЕ
+   ============================================ */
 .footer-telegram-link {
     display: inline-flex;
     align-items: center;
