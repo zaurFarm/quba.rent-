@@ -50,5 +50,57 @@
       "recommend": true,
       "error": ""
     }
+  },
+  {
+    "query": "Download this SVG file for use as background image",
+    "image_info": {
+      "url": "https://azerbaijan.travel/fit1600x900/center/pages/230/370d8b91-5fc6-4439-aae7-680d193f1266.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 316352,
+      "width": 1600,
+      "height": 900,
+      "total_pixels": 1440000,
+      "basic_score": 0.9070172118170517,
+      "file_name": "azerbaijan_guba_caucasus_mountain_landscape.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 60.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a high-quality, professional landscape photograph capturing the Guba region of Azerbaijan, making it visually highly relevant to the 'Azerbaijan travel' and 'background' aspects of the query. However, the query and prompt specifically request an 'SVG' (Scalable Vector Graphics) file. This image is a raster photograph (likely JPEG or PNG), not a vector file, which represents a significant technical mismatch despite the perfect visual subject matter.",
+      "file_name": "azerbaijan_guba_caucasus_mountain_landscape.jpg",
+      "caption": "A breathtaking aerial view of the Greater Caucasus mountains in the Guba region of Azerbaijan, featuring lush green valleys, rugged cliffs, and majestic snow-capped peaks under a bright blue sky with fluffy white clouds.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Download this SVG file for use as background image",
+    "image_info": {
+      "url": "https://static.vecteezy.com/system/resources/previews/002/101/545/non_2x/city-landscape-of-azerbaijan-with-famous-building-landmark-welcoming-to-azerbaijan-world-vacation-travel-asia-asian-collection-cartoon-style-web-site-illustration-vector.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 90941,
+      "width": 1920,
+      "height": 960,
+      "total_pixels": 1843200,
+      "basic_score": 0.7685117314192207,
+      "file_name": "welcome-to-azerbaijan-baku-skyline-vector-background.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 65.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image provides a high-quality, professional vector-style illustration suitable for a travel background. However, the relevance score is moderated because the search query specifically mentions 'guba' (a distinct region in Azerbaijan known for nature), whereas the image exclusively depicts iconic landmarks from the capital city, Baku (Maiden Tower, Flame Towers, Heydar Aliyev Center). While excellent for general 'Azerbaijan travel' branding, it does not visually represent Guba.",
+      "file_name": "welcome-to-azerbaijan-baku-skyline-vector-background.jpg",
+      "caption": "A panoramic vector illustration featuring the text 'WELCOME TO AZERBAIJAN' above a stylized skyline of Baku landmarks, including the Maiden Tower, Heydar Aliyev Center, the Baku Eye, and the Flame Towers.",
+      "recommend": true,
+      "error": ""
+    }
   }
 ]
