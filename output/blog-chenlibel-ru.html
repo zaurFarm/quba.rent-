@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ченлибель: Озеро в Облаках | Горный Дом Куба</title>
+  <meta name="description" content="Озеро Ченлибель — жемчужина Губинского района. Узнайте, как добраться и почему это место особенное в любое время года.">
+  <meta name="keywords" content="Ченлибель, Chenlibel, озеро Губа, туризм, отдых, природа, Азербайджан">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --lake: #3b82f6;
+      --text: #1F2937;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.8;
+    }
+    
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+    }
+    nav .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--forest); }
+    
+    .hero {
+      height: 50vh;
+      min-height: 380px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('images/photo-city.jpg') center/cover;
+      opacity: 0.3;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(30, 64, 175, 0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 40px 20px;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 10px 24px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50px;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+    
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    
+    .story-block {
+      margin-bottom: 45px;
+      padding: 35px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .story-block h2 {
+      font-size: 1.6rem;
+      color: var(--forest);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .story-block h2 .icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--lake), #1d4ed8);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+    
+    .story-block p {
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+      color: #4b5563;
+    }
+    
+    .pause-moment {
+      background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+      border-left: 4px solid var(--lake);
+      padding: 22px 28px;
+      border-radius: 0 14px 14px 0;
+      margin: 28px 0;
+    }
+    
+    .pause-moment h3 {
+      color: #1e40af;
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+    
+    .secret-tip {
+      background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin: 25px 0;
+    }
+    
+    .secret-tip h4 {
+      color: #9d174d;
+      margin-bottom: 10px;
+    }
+    
+    .checklist-box {
+      background: #f8f5f0;
+      border-radius: 18px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    
+    .checklist-box h3 {
+      color: var(--forest);
+      margin-bottom: 18px;
+      font-size: 1.3rem;
+    }
+    
+    .checklist {
+      list-style: none;
+    }
+    
+    .checklist li {
+      padding: 10px 0;
+      border-bottom: 1px dashed #e5e7eb;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+    }
+    
+    .checklist li::before {
+      content: '✓';
+      color: var(--forest);
+      font-weight: 700;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--forest), var(--forest-light));
+      border-radius: 24px;
+      padding: 45px 35px;
+      text-align: center;
+      color: white;
+      margin: 45px 0;
+    }
+    
+    .cta-section h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    
+    .cta-section p {
+      opacity: 0.9;
+      margin-bottom: 22px;
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: white;
+      color: var(--forest);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    
+    .nav-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 35px;
+    }
+    
+    .nav-card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    
+    .nav-card:hover {
+      border-color: var(--forest);
+      transform: translateY(-3px);
+    }
+    
+    .nav-card h4 {
+      color: var(--forest);
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+    
+    .nav-card p {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    
+    footer {
+      background: #0f2116;
+      color: #9ca3af;
+      padding: 45px 20px 25px;
+      text-align: center;
+    }
+    
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+          <path d="M9 14h6v5H9z"/>
+        </svg>
+        <span>Горный Дом Куба</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/blog-ru.html">Блог</a></li>
+        <li><a href="/#booking">Бронирование</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">💧 Горное озеро</span>
+      <h1>Озеро Ченлибель</h1>
+      <p>Место, где время останавливается, а горы отражаются в кристальной воде</p>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="article-container">
+    
+    <!-- Block 1 -->
+    <div class="story-block">
+      <h2><span class="icon">🌊</span> Зеркало гор</h2>
+      <p>Ченлибель — это не просто озеро. Это окно в другой мир, где горы подходят так близко, что кажется, их можно потрогать. Вода здесь настолько чистая, что видно камешки на дне.</p>
+      <p>Название переводится как «сорок источников» — по легенде, вокруг озера сорок родников питают его кристальной водой. Местные жители верят, что вода из Ченлибеля исцеляет болезни.</p>
+      
+      <div class="pause-moment">
+        <h3>⏸️ Тишина</h3>
+        <p>Здесь нет городского шума. Только ветер в траве, далёкое пение птиц и плеск воды. Закройте глаза. Вы слышите? Это Ченлибель.</p>
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="story-block">
+      <h2><span class="icon">🏔️</span> В любое время года</h2>
+      <p><strong>Весна</strong> — пробуждение. Снег тает, озеро наполняется, вокруг расцветают горные цветы. Идеальное время для первых поездок.</p>
+      <p><strong>Лето</strong> — спасение от жары. Пока в Баку +35, в горах Ченлибеля +22. Прохладно, свежо, идеально для отдыха.</p>
+      <p><strong>Осень</strong> — золото. Октябрьские краски вокруг озера невероятны. Мало туристов — почти полное уединение.</p>
+      <p><strong>Зима</strong> — сказка. Озеро замерзает, покрывается снегом. Для самых смелых и романтичных.</p>
+      
+      <div class="secret-tip">
+        <h4>💎 Секретный сезон</h4>
+        <p>Сентябрь — лучшее время для Ченлибеля. Жара спала, туристов мало, вода ещё тёплая для купания, а горы уже начинают золотиться.</p>
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="story-block">
+      <h2><span class="icon">🚗</span> Как добраться</h2>
+      <p>Озеро Ченлибель находится в горной части Губинского района. Дорога от города Губа занимает примерно 40-50 минут. Часть пути — асфальт, часть — грунтовка.</p>
+      <p>Лучше всего приезжать сюда организованно или на внедорожнике. Местные гиды знают короткие пути и покажут красивые видовые точки.</p>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="checklist-box">
+      <h3>📋 Что взять с собой</h3>
+      <ul class="checklist">
+        <li>Тёплую одежду — в горах прохладно</li>
+        <li>Плед для пикника на берегу</li>
+        <li>Термос с чаем или кофе</li>
+        <li>Фотоаппарат — виды невероятные</li>
+        <li>Удобную обувь для прогулок</li>
+        <li>Перекус — кафе рядом нет</li>
+      </ul>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <h3>Хотите посетить Ченлибель?</h3>
+      <p>Организуем экскурсию из Горного Дома Куба</p>
+      <a href="/#booking" class="cta-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        Забронировать
+      </a>
+    </div>
+
+    <!-- Navigation Cards -->
+    <div class="nav-cards">
+      <a href="/blog-qechresh-ru.html" class="nav-card">
+        <h4>🌲 Лес Кечреш</h4>
+        <p>Зелёный тоннель сказок</p>
+      </a>
+      <a href="/blog-afurja-ru.html" class="nav-card">
+        <h4>💧 Водопад Афурджа</h4>
+        <p>75 метров великолепия</p>
+      </a>
+      <a href="/blog-ru.html" class="nav-card">
+        <h4>📚 Все статьи</h4>
+        <p>Больше мест для открытий</p>
+      </a>
+    </div>
+
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024-2025 <a href="/">Горный Дом Куба</a> — ваш проводник в мир кавказской природы</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
