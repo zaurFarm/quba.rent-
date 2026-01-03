@@ -1298,7 +1298,29 @@
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
     
-  </style>
+  
+    .image-watermark {
+      position: relative;
+      display: block;
+    }
+    .image-watermark img {
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Noto Sans', sans-serif;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -1334,7 +1356,10 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="images/photo-main.jpg" alt="Quba Mountain Cottage" onerror="this.style.display='none'">
+      <div class="image-watermark">
+      <img src="images/photo-main.jpg" alt="Quba Mountain Cottage" onerror="this.style.display='none'" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
     </div>
     <div class="hero-overlay"></div>
     
@@ -1409,7 +1434,10 @@
         
         <div class="about-images">
           <div class="owner-image-container">
-            <img src="images/owner.jpg" alt="Neriman - Cottage Owner" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%232F5233%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 font-size=%2240%22 fill=%22white%22 text-anchor=%22middle%22>N</text></svg>'">
+            <div class="image-watermark">
+      <img src="images/owner.jpg" alt="Neriman - Cottage Owner" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22 class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div><rect fill=%22%232F5233%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 font-size=%2240%22 fill=%22white%22 text-anchor=%22middle%22>N</text></svg>'">
             <div class="owner-caption">👨‍💼 Neriman - Cottage Owner</div>
           </div>
         </div>
@@ -1427,13 +1455,34 @@
       </div>
       
       <div class="gallery-grid">
-        <img src="images/photo-1.jpg" alt="Cottage view">
-        <img src="images/photo-2.jpg" alt="Mountain view">
-        <img src="images/photo-3.jpg" alt="Forest">
-        <img src="images/photo-4.jpg" alt="River view">
-        <img src="images/photo-5.jpg" alt="Interior">
-        <img src="images/photo-6.jpg" alt="Exterior">
-        <img src="images/photo-7.jpg" alt="Yard">
+        <div class="image-watermark">
+      <img src="images/photo-1.jpg" alt="Cottage view" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
+        <div class="image-watermark">
+      <img src="images/photo-2.jpg" alt="Mountain view" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
+        <div class="image-watermark">
+      <img src="images/photo-3.jpg" alt="Forest" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
+        <div class="image-watermark">
+      <img src="images/photo-4.jpg" alt="River view" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
+        <div class="image-watermark">
+      <img src="images/photo-5.jpg" alt="Interior" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
+        <div class="image-watermark">
+      <img src="images/photo-6.jpg" alt="Exterior" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
+        <div class="image-watermark">
+      <img src="images/photo-7.jpg" alt="Yard" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
       </div>
     </div>
   </section>
@@ -1799,7 +1848,29 @@
     text-align: center !important;
   }
 }
-</style>
+
+    .image-watermark {
+      position: relative;
+      display: block;
+    }
+    .image-watermark img {
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Noto Sans', sans-serif;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    </style>
 
 <script>
   function handleBookingSubmit(event) {

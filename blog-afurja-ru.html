@@ -233,7 +233,29 @@
       .hero h1 { font-size: 1.8rem; }
       .nav-links { display: none; }
     }
-  </style>
+  
+    .image-watermark {
+      position: relative;
+      display: block;
+    }
+    .image-watermark img {
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Noto Sans', sans-serif;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    </style>
 </head>
 <body>
   <nav>
@@ -268,7 +290,10 @@
   <article class="content">
     <p>Среди величественных гор Большого Кавказа, в экологически чистом районе Куба, скрывается одна из главных природных достопримечательностей Азербайджана — водопад Афурджа. Этот величественный каскад, срывающийся с высоты 75 метров, по праву считается жемчужиной региона и привлекает тысячи туристов, жаждущих прикоснуться к мощи первозданной природы.</p>
 
-    <img src="images/blog-afurja.jpg" alt="Водопад Афурджа в Азербайджане">
+    <div class="image-watermark">
+      <img src="images/blog-afurja.jpg" alt="Водопад Афурджа в Азербайджане" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
 
     <div class="stats-grid">
       <div class="stat-card">
@@ -308,7 +333,10 @@
       <p><strong>От «Горного Дома Куба»:</strong> наш гостевой дом расположен всего в 15 километрах от начала маршрута. Мы организуем трансфер для наших гостей.</p>
     </div>
 
-    <img src="images/photo-tour-canyon.jpg" alt="Горное ущелье на маршруте к водопаду">
+    <div class="image-watermark">
+      <img src="images/photo-tour-canyon.jpg" alt="Горное ущелье на маршруте к водопаду" class="watermark-img">
+      <div class="watermark">www.Quba.rent</div>
+    </div>
 
     <h2>Лучшее время для посещения</h2>
     <p>Водопад Афурджа прекрасен в любое время года, однако каждый сезон имеет свои особенности:</p>

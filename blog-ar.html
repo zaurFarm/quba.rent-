@@ -328,7 +328,29 @@
     html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
     html[dir="rtl"] .footer-grid { direction: rtl; }
     html[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
-  </style>
+  
+    .image-watermark {
+      position: relative;
+      display: block;
+    }
+    .image-watermark img {
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Noto Sans', sans-serif;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    </style>
 </head>
 <body>
   <nav>
@@ -478,6 +500,28 @@
       70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
-  </style>
+  
+    .image-watermark {
+      position: relative;
+      display: block;
+    }
+    .image-watermark img {
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Noto Sans', sans-serif;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    </style>
 </body>
 </html>
