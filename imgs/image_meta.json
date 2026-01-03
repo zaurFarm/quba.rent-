@@ -1,0 +1,54 @@
+[
+  {
+    "query": "Afurja Waterfall Azerbaijan mountain waterfall scenic nature",
+    "image_info": {
+      "url": "https://eurasia.travel/wp-content/uploads/2025/03/5.-Afurja-waterfall-Quba.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 403083,
+      "width": 800,
+      "height": 1200,
+      "total_pixels": 960000,
+      "basic_score": 0.9304001833701766,
+      "file_name": "afurja-waterfall-quba-azerbaijan-cliff-view.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 80.0,
+      "explanation": "The image accurately depicts the Afurja Waterfall, aligning perfectly with the search query for this specific landmark in Quba, Azerbaijan. The vertical orientation effectively showcases the height of the waterfall against the rocky cliff. The clarity is good, though the harsh midday lighting creates strong shadows. There are no visible watermarks.",
+      "file_name": "afurja-waterfall-quba-azerbaijan-cliff-view.jpg",
+      "caption": "A vertical view of the Afurja Waterfall cascading down a sheer, textured rock face in the Quba district of Azerbaijan, with lush green foliage at the base under a blue sky.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Afurja Waterfall Azerbaijan mountain waterfall scenic nature",
+    "image_info": {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/3d/03/e5/azerbaijanprivatedriverandguid.jpg?w=900&h=500&s=1",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 177959,
+      "width": 900,
+      "height": 500,
+      "total_pixels": 450000,
+      "basic_score": 0.8508810954966324,
+      "file_name": "afurja-waterfall-quba-azerbaijan-cliff.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 70.0,
+      "explanation": "The image accurately depicts the Afurja waterfall in Quba, matching the geological characteristics of the location perfectly. The clarity is sufficient to see the rock textures and water flow, though the lighting is somewhat flat and the composition is standard. There are no watermarks.",
+      "file_name": "afurja-waterfall-quba-azerbaijan-cliff.jpg",
+      "caption": "The slender stream of the Afurja Waterfall cascading down a massive, textured limestone cliff face in the Quba district of Azerbaijan.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]
