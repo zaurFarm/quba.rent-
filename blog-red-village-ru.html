@@ -139,15 +139,29 @@
       position: absolute;
       bottom: 15px;
       right: 15px;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.7);
       color: white;
-      padding: 8px 16px;
-      font-size: 13px;
-      font-weight: 500;
-      font-family: 'Times New Roman', Georgia, serif;
-      letter-spacing: 1px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
       z-index: 10;
-      border-radius: 4px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .watermark::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: url('images/logo-watermark.svg') no-repeat center center;
+      background-size: contain;
     }
     .highlight-box {
       background: linear-gradient(135deg, #fff5f5, white);
