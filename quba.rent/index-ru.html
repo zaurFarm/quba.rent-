@@ -1792,34 +1792,54 @@
 </style>
 
 <script>
+  // Функция форматирования даты
+  function formatDateForWhatsApp(dateStr) {
+    if (!dateStr) return 'Не указано';
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('ru-RU', { day: '2-digit', month: 'long', year: 'numeric' });
+  }
+
+  // Главная функция отправки бронирования
   function handleBookingSubmit(event) {
     event.preventDefault();
     
+    // Получаем данные из формы
     const checkin = document.getElementById('booking-checkin').value;
     const checkout = document.getElementById('booking-checkout').value;
     const guests = document.getElementById('booking-guests').value;
     const name = document.getElementById('booking-name').value;
     
+    // Проверяем заполнение обязательных полей
     if (!checkin || !checkout || !name) {
-      alert('Пожалуйста, заполните все обязательные поля!');
+      alert('Пожалуйста, заполните даты заезда/выезда и ваше имя!');
       return;
     }
     
-    const formatDate = (dateStr) => {
-      if (!dateStr) return 'Не указано';
-      const date = new Date(dateStr);
-      return date.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' });
-    };
+    // Проверяем что дата выезда позже даты заезда
+    if (new Date(checkout) <= new Date(checkin)) {
+      alert('Дата выезда должна быть позже даты заезда!');
+      return;
+    }
     
-    let message = '🏠 *Бронирование Кuba Коттедж*%0A%0A';
-    message += '📅 *Заезд:* ' + formatDate(checkin) + '%0A';
-    message += '📅 *Выезд:* ' + formatDate(checkout) + '%0A';
-    message += '👥 *Гости:* ' + (guests ? guests + ' чел.' : 'Не указано') + '%0A';
+    // Считаем количество ночей
+    const nights = Math.ceil((new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24));
+    
+    // Формируем сообщение для WhatsApp
+    let message = '🏠 *Бронирование - Quba Cottage*%0A%0A';
+    message += '📅 *Заезд:* ' + formatDateForWhatsApp(checkin) + '%0A';
+    message += '🚪 *Выезд:* ' + formatDateForWhatsApp(checkout) + '%0A';
+    message += '🌙 *Ночей:* ' + nights + '%0A';
+    message += '👥 *Гости:* ' + (guests ? guests : 'Не указано') + '%0A';
     message += '👤 *Имя:* ' + name + '%0A';
-    message += '%0A---
-%0A📱 *Сообщение отправлено с quba.rent*';
+    message += '%0A---%0A';
+    message += '📱 Отправлено с quba.rent';
     
-    window.open('https://wa.me/994702555909?text=' + message, '_blank');
+    // Кодируем сообщение для URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Открываем WhatsApp с готовым сообщением
+    const whatsappUrl = 'https://wa.me/994702555909?text=' + encodedMessage;
+    window.open(whatsappUrl, '_blank');
   }
 </script>
 
@@ -1936,47 +1956,6 @@
         widget.style.display = 'none';
         if (trigger) trigger.style.display = 'flex';
       }
-    }
-    
-    // WhatsApp booking function
-    function sendBookingToWhatsApp() {
-      const checkin = document.getElementById('checkin') ? document.getElementById('checkin').value : '';
-      const checkout = document.getElementById('checkout') ? document.getElementById('checkout').value : '';
-      const guests = document.getElementById('guests') ? document.getElementById('guests').value : '';
-      const name = document.getElementById('guest-name') ? document.getElementById('guest-name').value : '';
-      const phone = document.getElementById('guest-phone') ? document.getElementById('guest-phone').value : '';
-      const notes = document.getElementById('guest-notes') ? document.getElementById('guest-notes').value : '';
-      
-      // Validate required fields
-      if (!checkin || !checkout || !name || !phone) {
-        alert('Пожалуйста, заполните все обязательные поля!');
-        return;
-      }
-      
-      // Format dates for display
-      const formatDate = (dateStr) => {
-        if (!dateStr) return 'Не указано';
-        const date = new Date(dateStr);
-        return date.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' });
-      };
-      
-      // Create booking message
-      let message = '🏠 *Бронирование Куба Коттедж*%0A%0A';
-      message += '📅 *Заезд:* ' + formatDate(checkin) + '%0A';
-      message += '📅 *Выезд:* ' + formatDate(checkout) + '%0A';
-      message += '👥 *Гости:* ' + (guests ? guests + ' гостей' : 'Не указано') + '%0A';
-      message += '👤 *Имя:* ' + name + '%0A';
-      message += '📞 *Телефон:* ' + phone + '%0A';
-      
-      if (notes) {
-        message += '📝 *Заметки:* ' + notes + '%0A';
-      }
-      
-      message += '%0A---
-%0A📱 *Отправлено с сайта*';
-      
-      // Redirect to WhatsApp
-      window.open('https://wa.me/994702555909?text=' + message, '_blank');
     }
   </script>
 
