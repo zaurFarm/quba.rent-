@@ -102,5 +102,265 @@
       "recommend": true,
       "error": ""
     }
+  },
+  {
+    "query": "Green forest landscape with sunlight rays, nature forest, trees, hiking trail",
+    "image_info": {
+      "url": "https://media.istockphoto.com/id/498548086/photo/rays-of-sunlight-and-green-forest.jpg?s=612x612&w=0&k=20&c=9RwO17TuPHgCVlwQBPBVgSTrKx2aK_245-hgSWzKP7g=",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 76771,
+      "width": 612,
+      "height": 409,
+      "total_pixels": 250308,
+      "basic_score": 0.7739759721038804,
+      "file_name": "sunlit-green-forest-rays-nature.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 92.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image perfectly aligns with the search query and prompt, featuring a dense green forest with dramatic sunlight rays filtering through the canopy. The visual quality is excellent, with sharp details on the tree bark and leaves contrasted against the soft, atmospheric lighting. There are no visible watermarks.",
+      "file_name": "sunlit-green-forest-rays-nature.jpg",
+      "caption": "Majestic sunbeams streaming through the lush green canopy of a dense forest, illuminating the trees and a faint path below in a serene natural landscape.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Green forest landscape with sunlight rays, nature forest, trees, hiking trail",
+    "image_info": {
+      "url": "https://media.istockphoto.com/id/901134626/photo/sun-shining-in-a-forest.jpg?s=612x612&w=0&k=20&c=Z1GPER9EE6BQK_efVKaSO7WODScQYOMPX3TFFPCZt88=",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 92387,
+      "width": 612,
+      "height": 408,
+      "total_pixels": 249696,
+      "basic_score": 0.7760429476036897,
+      "file_name": "sunlit_green_forest_trees_light_rays.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image perfectly matches the search query for 'forest nature sunlight trees', featuring a stunning sunburst effect through tall trees. While the prompt mentions a 'hiking trail', there is no distinct path visible, though the open forest floor suggests walkability. The image is sharp, vibrant, and free of watermarks.",
+      "file_name": "sunlit_green_forest_trees_light_rays.jpg",
+      "caption": "A vibrant green forest landscape with bright sunlight beams bursting through the trunks of tall trees, illuminating the lush grassy forest floor.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Green forest landscape with sunlight rays, nature forest, trees, hiking trail",
+    "image_info": {
+      "url": "https://media.istockphoto.com/id/494994032/photo/light-beams-through-the-trees-in-the-wood.jpg?s=612x612&w=0&k=20&c=Krcb2uC6772yplRCmUq_B7EfhNGh65wEXgF8Dsb6L9Q=",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 58079,
+      "width": 612,
+      "height": 408,
+      "total_pixels": 249696,
+      "basic_score": 0.7709603791215943,
+      "file_name": "golden-sunlight-rays-forest-trees-mist.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 85.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image captures stunning sunlight rays filtering through trees, aligning perfectly with the search query. While it lacks the specific 'hiking trail' mentioned in the detailed prompt and leans more towards golden/misty tones rather than a purely 'green' landscape, the atmospheric quality and composition are exceptional.",
+      "file_name": "golden-sunlight-rays-forest-trees-mist.jpg",
+      "caption": "Majestic sunbeams bursting through the dense canopy of a large tree on a grassy slope, illuminating the morning mist in a serene forest landscape.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Green forest landscape with sunlight rays, nature forest, trees, hiking trail",
+    "image_info": {
+      "url": "https://thumbs.dreamstime.com/b/summer-forest-trees-nature-green-wood-sunlight-background-light-rays-backgrounds-121118448.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 163561,
+      "width": 600,
+      "height": 900,
+      "total_pixels": 540000,
+      "basic_score": 0.8666700045642358,
+      "file_name": "sunlit_forest_path_with_rays.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 40.0,
+      "overall_score": 75.0,
+      "explanation": "The image creates a stunning visual impact that matches the prompt perfectly, featuring distinct 'god rays' and lush greenery. However, there is a visible stock agency watermark ('dreamstime') overlaid in the center-left area, which affects its immediate usability for professional projects without licensing.",
+      "file_name": "sunlit_forest_path_with_rays.jpg",
+      "caption": "A vertical shot of a tranquil dirt path winding through a dense forest, illuminated by dramatic beams of sunlight filtering through the canopy to create a mystical atmosphere.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Autumn forest in Caucasus, golden leaves, nature forest Azerbaijan",
+    "image_info": {
+      "url": "https://media.istockphoto.com/id/155076012/photo/autumn-sunrise.jpg?s=612x612&w=0&k=20&c=qCD7rEe93aOVwpUulqJOvbphSuCuGPSDDvVOkuYChGc=",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 53428,
+      "width": 612,
+      "height": 408,
+      "total_pixels": 249696,
+      "basic_score": 0.7702592591115187,
+      "file_name": "autumn-forest-mountain-sunset-purple-haze.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image is an excellent match for the search query, vividly depicting an autumn forest with golden and red foliage against a mountainous backdrop. The lighting (sunset or sunrise) adds a beautiful pink and purple gradient to the sky and distant peaks, enhancing the aesthetic appeal. The image is clear, sharp, and free of visible watermarks.",
+      "file_name": "autumn-forest-mountain-sunset-purple-haze.jpg",
+      "caption": "A scenic landscape featuring a lush forest with autumn foliage in shades of gold, red, and green, overlooking layers of hazy purple mountains under a vibrant pink and orange sky.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Autumn forest in Caucasus, golden leaves, nature forest Azerbaijan",
+    "image_info": {
+      "url": "https://www.greenmountainclub.org/wp-content/uploads/2022/09/Owls-Head-Groton-by-Angela-Hilsman.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 6553258,
+      "width": 2000,
+      "height": 1331,
+      "total_pixels": 2662000,
+      "basic_score": 0.4441810723534055,
+      "file_name": "autumn-mountain-forest-lake-view.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image perfectly illustrates an autumn forest and mountain scene, aligning seamlessly with the search query. The composition is aesthetically pleasing, utilizing foreground foliage to frame the central mountain and lake. The colors are vibrant and well-saturated, capturing the 'golden leaves' description accurately. There are no visible watermarks.",
+      "file_name": "autumn-mountain-forest-lake-view.jpg",
+      "caption": "A vibrant landscape photograph featuring a mountain and a serene blue lake surrounded by a dense forest showcasing the golden, orange, and red hues of autumn foliage.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Autumn forest in Caucasus, golden leaves, nature forest Azerbaijan",
+    "image_info": {
+      "url": "https://t4.ftcdn.net/jpg/02/35/97/75/360_F_235977548_7VdfHbxJQ6W1zpEOLcd1piZWPKPVoISm.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 68136,
+      "width": 640,
+      "height": 360,
+      "total_pixels": 230400,
+      "basic_score": 0.7649642727055213,
+      "file_name": "autumn-forest-mountain-mist-caucasus.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image perfectly matches the search query and prompt, showcasing a stunning mountain landscape with vibrant autumn foliage and atmospheric mist. The composition is strong, capturing the mood of the season effectively, and the image is free of visible watermarks.",
+      "file_name": "autumn-forest-mountain-mist-caucasus.jpg",
+      "caption": "A scenic mountain landscape covered in a mix of evergreen and deciduous trees with vibrant golden and orange autumn leaves, partially obscured by rolling mist under a cloudy sky.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Autumn forest in Caucasus, golden leaves, nature forest Azerbaijan",
+    "image_info": {
+      "url": "https://cdn.outsideonline.com/wp-content/uploads/2022/09/whitemountains-nh-foliage_h-scaled.jpg?width=730",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 89759,
+      "width": 730,
+      "height": 411,
+      "total_pixels": 300030,
+      "basic_score": 0.7930289032477306,
+      "file_name": "autumn-forest-mountains-caucasus-foliage.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image perfectly matches the search query and prompt, depicting a vast mountain landscape covered in vibrant autumn foliage. The composition is excellent with dynamic lighting and dramatic clouds. There are no visible watermarks.",
+      "file_name": "autumn-forest-mountains-caucasus-foliage.jpg",
+      "caption": "A scenic landscape view of rolling mountains covered in dense forest showcasing vibrant red, orange, and golden autumn colors under a dramatic sky with puffy clouds.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Autumn forest in Caucasus, golden leaves, nature forest Azerbaijan",
+    "image_info": {
+      "url": "https://www.shutterstock.com/image-photo/beautiful-autumn-afternoon-mountains-trees-260nw-1370323787.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 45170,
+      "width": 390,
+      "height": 280,
+      "total_pixels": 109200,
+      "basic_score": 0.7121751282350822,
+      "file_name": "autumn_forest_mountain_landscape_caucasus.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 90.0,
+      "watermark_score": 20.0,
+      "overall_score": 80.0,
+      "explanation": "The image is an excellent match for the prompt, showcasing a vibrant autumn landscape with high detail and rich colors suitable for the 'Caucasus' and 'golden leaves' description. However, the presence of a distinct stock photo text strip at the bottom significantly impacts the watermark score, though the image itself is high quality and easily croppable.",
+      "file_name": "autumn_forest_mountain_landscape_caucasus.jpg",
+      "caption": "A scenic landscape photograph of rolling mountain hills covered in a dense forest featuring vibrant golden and orange autumn foliage mixed with green conifers under a bright blue sky.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Green forest path in mountains, nature, trees, Azerbaijan Caucasus forest landscape",
+    "image_info": {
+      "url": "https://img.freepik.com/premium-photo/beautiful-mountain-path-through-forest-path-pedestrian-route-through-coniferous-forest-hiking-weekend_705804-4388.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 132352,
+      "width": 626,
+      "height": 417,
+      "total_pixels": 261042,
+      "basic_score": 0.785733474707196,
+      "file_name": "mossy_forest_mountain_path_hiking_trail.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 60.0,
+      "overall_score": 80.0,
+      "explanation": "The image is highly relevant, perfectly capturing a forest mountain path with lush green moss and tall trees. The composition uses the path effectively as a leading line. However, there is visible watermark text in the bottom right corner.",
+      "file_name": "mossy_forest_mountain_path_hiking_trail.jpg",
+      "caption": "A narrow dirt path winds through a dense coniferous forest, flanked by tall dark tree trunks on the left and a vibrant green moss-covered slope on the right.",
+      "recommend": true,
+      "error": ""
+    }
   }
 ]
