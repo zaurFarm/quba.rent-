@@ -395,6 +395,47 @@
         Забронировать
       </a>
     </div>
+
+    <!-- Бронирование -->
+    <section id="booking" style="background: #f8f5f0; padding: 60px 20px; margin-top: 40px;">
+      <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #2F5233; margin-bottom: 20px;">Бронирование</h2>
+        <form onsubmit="sendArticleBooking(event, 'Водопад Афурджа')">
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Ваше имя</label>
+            <input type="text" id="booking-name" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Телефон</label>
+            <input type="tel" id="booking-phone" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+              <label style="display: block; margin-bottom: 5px; font-weight: 500;">Заезд</label>
+              <input type="date" id="booking-checkin" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 5px; font-weight: 500;">Выезд</label>
+              <input type="date" id="booking-checkout" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+            </div>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Гости</label>
+            <select id="booking-guests" style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+              <option value="1">1 гость</option>
+              <option value="2" selected>2 гостя</option>
+              <option value="3">3 гостя</option>
+              <option value="4">4 гостя</option>
+              <option value="5">5 гостей</option>
+            </select>
+          </div>
+          <button type="submit" style="width: 100%; padding: 14px; background: #25D366; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Забронировать
+          </button>
+        </form>
+      </div>
+    </section>
   </article>
 
   <footer>
@@ -402,5 +443,39 @@
       <p style="text-align: center; opacity: 0.7;">© 2024 Горный Дом Куба | Куснет Газма, Куба, Азербайджан</p>
     </div>
   </footer>
+
+  <script>
+  function sendArticleBooking(event, articleName) {
+    event.preventDefault();
+    
+    const name = document.getElementById('booking-name').value;
+    const phone = document.getElementById('booking-phone').value;
+    const checkin = document.getElementById('booking-checkin').value;
+    const checkout = document.getElementById('booking-checkout').value;
+    const guests = document.getElementById('booking-guests').value;
+    
+    if (!name || !phone || !checkin || !checkout) {
+      alert('Пожалуйста, заполните все поля!');
+      return;
+    }
+    
+    const formatDate = (dateStr) => {
+      if (!dateStr) return '';
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('ru-RU', { day: '2-digit', month: 'long', year: 'numeric' });
+    };
+    
+    let message = '🏠 *Бронирование - Quba Cottage*%0A%0A';
+    message += '📝 *Статья:* ' + articleName + '%0A';
+    message += '👤 *Имя:* ' + name + '%0A';
+    message += '📞 *Телефон:* ' + phone + '%0A';
+    message += '📅 *Заезд:* ' + formatDate(checkin) + '%0A';
+    message += '🚪 *Выезд:* ' + formatDate(checkout) + '%0A';
+    message += '👥 *Гости:* ' + guests + '%0A';
+    message += '%0A📱 Отправлено с quba.rent';
+    
+    window.open('https://wa.me/994702555909?text=' + message, '_blank');
+  }
+  </script>
 </body>
 </html>
