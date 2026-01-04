@@ -15,7 +15,7 @@
   </defs>
 
   <!-- Основной дом - максимально крупный -->
-  <g filter="url(#neon-glow)" stroke="#39FF14" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#neon-glow)" stroke="#00FFFF" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <!-- Крыша - треугольник -->
     <path d="M40 200 L256 40 L472 200"/>
 
@@ -36,7 +36,7 @@
   </g>
 
   <!-- Дополнительный слой для максимальной яркости -->
-  <g stroke="#7FFF00" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
+  <g stroke="#00BFFF" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
     <path d="M40 200 L256 40 L472 200"/>
     <rect x="80" y="200" width="352" height="272" rx="10"/>
     <rect x="206" y="300" width="100" height="172" rx="8"/>
