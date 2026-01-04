@@ -1,0 +1,5 @@
+open sftp://www-data:0R6dXU1YnwSEl1OnURos@95.216.232.219:19121
+lcd /workspace
+cd /var/www/html
+mput *.html
+bye
