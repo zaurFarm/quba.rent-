@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kechresh Forest: The Green Tunnel of Fairy Tales | Quba Mountain House</title>
+  <meta name="description" content="Kechresh Forest is a unique green tunnel in Quba. Learn why this place is called a corridor to a fairy tale and how to organize the perfect picnic among centuries-old trees.">
+  <meta name="keywords" content="Kechresh forest, Kechresh, Quba Azerbaijan, picnic, nature, tourism, green tunnel">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --river: #3B82F6;
+      --text: #1F2937;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.8;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+    }
+    nav .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--forest); }
+    
+    /* Hero Section */
+    .hero {
+      height: 55vh;
+      min-height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+      background: linear-gradient(135deg, var(--forest), #1a3a20);
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(47, 82, 51, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 40px 20px;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 10px 24px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50px;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+    
+    /* Article Container */
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    
+    /* Story Blocks */
+    .story-block {
+      margin-bottom: 45px;
+      padding: 35px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .story-block h2 {
+      font-size: 1.6rem;
+      color: var(--forest);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .story-block h2 .icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--forest), var(--forest-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+    
+    .story-block p {
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+      color: #4b5563;
+    }
+    
+    /* Interactive Elements */
+    .pause-moment {
+      background: linear-gradient(135deg, #dcfce7, #e0f2fe);
+      border-left: 4px solid var(--forest);
+      padding: 22px 28px;
+      border-radius: 0 14px 14px 0;
+      margin: 28px 0;
+    }
+    
+    .pause-moment h3 {
+      color: var(--forest);
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+    
+    .secret-tip {
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin: 25px 0;
+    }
+    
+    .secret-tip h4 {
+      color: #92400e;
+      margin-bottom: 10px;
+    }
+    
+    /* Checklist */
+    .checklist-box {
+      background: #f8f5f0;
+      border-radius: 18px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    
+    .checklist-box h3 {
+      color: var(--forest);
+      margin-bottom: 18px;
+      font-size: 1.3rem;
+    }
+    
+    .checklist {
+      list-style: none;
+    }
+    
+    .checklist li {
+      padding: 10px 0;
+      border-bottom: 1px dashed #e5e7eb;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+    }
+    
+    .checklist li::before {
+      content: '✓';
+      color: var(--forest);
+      font-weight: 700;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--forest), var(--forest-light));
+      border-radius: 24px;
+      padding: 45px 35px;
+      text-align: center;
+      color: white;
+      margin: 45px 0;
+    }
+    
+    .cta-section h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    
+    .cta-section p {
+      opacity: 0.9;
+      margin-bottom: 22px;
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: white;
+      color: var(--forest);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    
+    /* Navigation Cards */
+    .nav-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 35px;
+    }
+    
+    .nav-card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    
+    .nav-card:hover {
+      border-color: var(--forest);
+      transform: translateY(-3px);
+    }
+    
+    .nav-card h4 {
+      color: var(--forest);
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+    
+    .nav-card p {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: #0f2116;
+      color: #9ca3af;
+      padding: 45px 20px 25px;
+      text-align: center;
+    }
+    
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .story-block {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+          <path d="M9 14h6v5H9z"/>
+        </svg>
+        <span>Quba Mountain House</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/blog-en.html">Blog</a></li>
+        <li><a href="/#booking">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🌲 Quba District</span>
+      <h1>Kechresh Forest</h1>
+      <p>The green corridor of fairy tales — a place where trees create a living tunnel over the road</p>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="article-container">
+    
+    <!-- Block 1: The Hook -->
+    <div class="story-block">
+      <h2><span class="icon">🌿</span> A Living Tunnel of Greenery</h2>
+      <p>Have you ever driven through a real living tunnel? In Kechresh Forest, this happens literally: mighty trees join their crowns over the road, forming a roof of foliage.</p>
+      <p>This spectacle is mesmerizing in any season. In spring — the delicate green of young leaves. In summer — cool shade and respite from the scorching sun. In autumn — a festival of colors from yellow-orange foliage. In winter — snow caps on branches create a fairy-tale landscape.</p>
+      
+      <figure style="margin: 25px 0; border-radius: 16px; overflow: hidden;">
+        <img src="images/blog-qechresh-real-1.jpg" alt="Green tree tunnel" style="width: 100%; display: block;">
+        <figcaption style="text-align: center; padding: 12px; color: #6b7280; font-size: 0.95rem;">A living tunnel of century-old trees</figcaption>
+      </figure>
+      
+      <div class="pause-moment">
+        <h3>⏸️ Feel the Moment</h3>
+        <p>Imagine: you're driving along a winding mountain road. Around you — high walls of trees. Light breaks through the foliage in patches. The air smells of pine and moss. And suddenly — a sunny clearing with a view of the mountains.</p>
+      </div>
+    </div>
+
+    <!-- Block 2: The Forest -->
+    <div class="story-block">
+      <h2><span class="icon">🏞️</span> The Heart of Quba's Forests</h2>
+      <p>Kechresh Forest is one of the most scenic forests in Azerbaijan. It is located in the Quba District and stretches along the road connecting the city of Quba with mountain villages.</p>
+      <p>Here grow century-old beeches, hornbeams, oaks, and other tree species. The age of some trees is several centuries. They have seen caravans of travelers, wars and peaceful times, the changing of eras.</p>
+      <p>The forest is not just beautiful — it breathes. The air here is so clean that you want to drink it. It's no wonder that locals come here to breathe, relax from the city hustle, and have a picnic in nature.</p>
+      
+      <figure style="margin: 25px 0; border-radius: 16px; overflow: hidden;">
+        <img src="images/blog-qechresh-real-2.jpg" alt="Road through the forest" style="width: 100%; display: block;">
+        <figcaption style="text-align: center; padding: 12px; color: #6b7280; font-size: 0.95rem;">A winding road through the forest</figcaption>
+      </figure>
+      
+      <div class="secret-tip">
+        <h4>💎 Hidden Gem</h4>
+        <p>Drive about 2-3 kilometers after the beginning of the forest — there's a small clearing with a spring there. This is an ideal place for quiet rest where few people stop.</p>
+      </div>
+    </div>
+
+    <!-- Block 3: Activities -->
+    <div class="story-block">
+      <h2><span class="icon">🧺</span> How to Spend Your Time</h2>
+      <p><strong>Picnic among the trees.</strong> There are equipped recreation areas in the forest. Bring a blanket, a basket with food, and good spirits. Locals sell fresh tea made from local herbs right by the road.</p>
+      <p><strong>Photo walks.</strong> Kechresh Forest is a paradise for photographers. The play of light in the tree crowns, morning fog, colorful autumn — each season offers unique shots.</p>
+      <p><strong>Hiking trails.</strong> From the road, paths lead deeper into the forest. They lead to scenic clearings and viewing platforms with views of the mountains.</p>
+      
+      <figure style="margin: 25px 0; border-radius: 16px; overflow: hidden;">
+        <img src="images/blog-qechresh-real-3.jpg" alt="Path in the forest" style="width: 100%; display: block;">
+        <figcaption style="text-align: center; padding: 12px; color: #6b7280; font-size: 0.95rem;">Walking paths lead deeper into the forest</figcaption>
+      </figure>
+    </div>
+
+    <!-- Block 4: Practical Info -->
+    <div class="checklist-box">
+      <h3>📋 Trip Checklist</h3>
+      <ul class="checklist">
+        <li>Comfortable shoes for forest walks</li>
+        <li>A blanket or foldable chairs for picnics</li>
+        <li>A thermos with tea or coffee</li>
+        <li>Light snacks or barbecue (barbecue grills are available)</li>
+        <li>A camera — there's plenty to photograph here</li>
+        <li>A windbreaker — it can be cool in the forest</li>
+      </ul>
+    </div>
+
+    <!-- Block 5: Combine with Other Places -->
+    <div class="story-block">
+      <h2><span class="icon">🗺️</span> Combine Your Route</h2>
+      <p>Kechresh Forest is a great stop on the way to other attractions. Here are ideas for a full day:</p>
+      <p><strong>Classic route:</strong> Quba → Kechresh Forest → Afurja Waterfall → Return to Quba</p>
+      <p><strong>Extended route:</strong> Kechresh Forest → Red Village → Khinalig (for the most adventurous)</p>
+      <p>By staying at Quba Mountain House, you can explore all these places at a relaxed pace. In the morning — the forest, in the afternoon — the waterfall, in the evening — a cozy house with a fireplace.</p>
+      
+      <figure style="margin: 25px 0; border-radius: 16px; overflow: hidden;">
+        <img src="images/blog-qechresh-forest-1.jpg" alt="View of the forest" style="width: 100%; display: block;">
+        <figcaption style="text-align: center; padding: 12px; color: #6b7280; font-size: 0.95rem;">View of the dense Kechresh Forest</figcaption>
+      </figure>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <h3>Want to Live Near the Forest?</h3>
+      <p>Quba Mountain House — the perfect base for exploring Quba's nature</p>
+      <a href="/#booking" class="cta-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        Book Now
+      </a>
+    </div>
+
+    <!-- Navigation Cards -->
+    <div class="nav-cards">
+      <a href="/blog-afurja-en.html" class="nav-card">
+        <h4>💧 Afurja Waterfall</h4>
+        <p>75 meters of water power</p>
+      </a>
+      <a href="/blog-red-village-en.html" class="nav-card">
+        <h4>🏘️ Red Village</h4>
+        <p>A unique historical place</p>
+      </a>
+      <a href="/blog-en.html" class="nav-card">
+        <h4>📚 All Articles</h4>
+        <p>More places to discover</p>
+      </a>
+    </div>
+
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024-2025 <a href="/">Quba Mountain House</a> — your guide to the world of Caucasian nature</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

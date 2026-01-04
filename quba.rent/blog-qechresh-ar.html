@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>غابة كيتشريش: الممر الأخضر لأساطير ما قبل التاريخ | بيت قوبا الجبلي</title>
+  <meta name="description" content="غابة كيتشريش هي نفق أخضر فريد في قوبا. اكتشف لماذا يُسمى هذا المكان ممراً نحو الأساطير وكيفية تنظيم نزهة مثالية بين الأشجار العريقة.">
+  <meta name="keywords" content="غابة كيتشريش، كيتشريش، قوبا أذربيجان، نزهة، طبيعة، سياحة، نفق أخضر">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --river: #3B82F6;
+      --text: #1F2937;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.8;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+    }
+    nav .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--forest); }
+    
+    /* Hero Section */
+    .hero {
+      height: 55vh;
+      min-height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+      background: linear-gradient(135deg, var(--forest), #1a3a20);
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(47, 82, 51, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 40px 20px;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 10px 24px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50px;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+    
+    /* Article Container */
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    
+    /* Story Blocks */
+    .story-block {
+      margin-bottom: 45px;
+      padding: 35px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .story-block h2 {
+      font-size: 1.6rem;
+      color: var(--forest);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .story-block h2 .icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--forest), var(--forest-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+    
+    .story-block p {
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+      color: #4b5563;
+    }
+    
+    /* Interactive Elements */
+    .pause-moment {
+      background: linear-gradient(135deg, #dcfce7, #e0f2fe);
+      border-right: 4px solid var(--forest);
+      padding: 22px 28px;
+      border-radius: 14px 0 0 14px;
+      margin: 28px 0;
+    }
+    
+    .pause-moment h3 {
+      color: var(--forest);
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+    
+    .secret-tip {
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin: 25px 0;
+    }
+    
+    .secret-tip h4 {
+      color: #92400e;
+      margin-bottom: 10px;
+    }
+    
+    /* Checklist */
+    .checklist-box {
+      background: #f8f5f0;
+      border-radius: 18px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    
+    .checklist-box h3 {
+      color: var(--forest);
+      margin-bottom: 18px;
+      font-size: 1.3rem;
+    }
+    
+    .checklist {
+      list-style: none;
+    }
+    
+    .checklist li {
+      padding: 10px 0;
+      border-bottom: 1px dashed #e5e7eb;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+    }
+    
+    .checklist li::before {
+      content: '✓';
+      color: var(--forest);
+      font-weight: 700;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--forest), var(--forest-light));
+      border-radius: 24px;
+      padding: 45px 35px;
+      text-align: center;
+      color: white;
+      margin: 45px 0;
+    }
+    
+    .cta-section h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    
+    .cta-section p {
+      opacity: 0.9;
+      margin-bottom: 22px;
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: white;
+      color: var(--forest);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    
+    /* Navigation Cards */
+    .nav-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 35px;
+    }
+    
+    .nav-card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    
+    .nav-card:hover {
+      border-color: var(--forest);
+      transform: translateY(-3px);
+    }
+    
+    .nav-card h4 {
+      color: var(--forest);
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+    
+    .nav-card p {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: #0f2116;
+      color: #9ca3af;
+      padding: 45px 20px 25px;
+      text-align: center;
+    }
+    
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .story-block {
+        padding: 25px 20px;
+      }
+    }
+    
+    html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
+    html[dir="rtl"] .hero-badge { display: inline-block; }
+    html[dir="rtl"] .checklist li { flex-direction: row-reverse; }
+    html[dir="rtl"] .checklist li::before { margin-left: 10px; margin-right: 0; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/ar/" class="logo">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+          <path d="M9 14h6v5H9z"/>
+        </svg>
+        <span>بيت قوبا الجبلي</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/blog-ar.html">المدونة</a></li>
+        <li><a href="/ar/#booking">احجز الآن</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🌲 منطقة قوبا</span>
+      <h1>غابة كيتشريش</h1>
+      <p>الممر الأخضر لأساطير الطبيعة — المكان الذي تُشكّل فيه الأشجار نفقاً حيوياً فوق الطريق</p>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="article-container">
+    
+    <!-- Block 1: The Hook -->
+    <div class="story-block">
+      <h2><span class="icon">🌿</span> نفق حيوي من الخضرة</h2>
+      <p>هل سبق لك أن مررت عبر نفق حقيقي حي؟ في غابة كيتشريش يحدث هذا حرفياً: الأشجار الضخمة تلتقي أعلاها فوق الطريق، مُشكّلةً سقفاً من أوراق الشجر.</p>
+      <p>هذا المشهد يأسر الناظرين في أي فصل من فصول السنة. في الربيع — الأخضر الرقيق للأوراق الصغيرة. في الصيف — الظل المُنعش والملاذ من الشمس الحارقة. في الخريف — عرضٌ للألوان من أوراق الصفراء والبرتقالية. في الشتاء — قبعات ثلجية على الأغصان تُنشئ منظراً أسطورياً.</p>
+      
+      <figure style="margin: 25px 0; border-radius: 16px; overflow: hidden;">
+        <img src="images/blog-qechresh-real-1.jpg" alt="نفق أخضر من الأشجار" style="width: 100%; display: block;">
+        <figcaption style="text-align: center; padding: 12px; color: #6b7280; font-size: 0.95rem;">نفق حي من الأشجار العريقة</figcaption>
+      </figure>
+      
+      <div class="pause-moment">
+        <h3>⏸️ استمتع باللحظة</h3>
+        <p>تخيّل: أنت تقود على طريق جبلي متعرج. من حولك — جدران عالية من الأشجار. الضوء يتسلّل عبر أوراق الشجر بقعاً. الهواء تفوح منه رائحة الصنوبر والطحالب. وفجأة — م Clearing مشمس مع إطلالة على الجبال.</p>
+      </div>
+    </div>
+
+    <!-- Block 2: The Forest -->
+    <div class="story-block">
+      <h2><span class="icon">🏞️</span> قلب غابات قوبا</h2>
+      <p>غابة كيتشريش هي واحدة من أجمل غابات أذربيجان. تقع في منطقة قوبا وتمتد على طول الطريق الذي يربط مدينة قوبا بالقرى الجبلية.</p>
+      <p>تنمو هنا أشجار الزان والدردار والبلوط وأنواع أخرى من الأشجار. عمر بعض الأشجار — عدة قرون. قد شهدت قوافل المسافرين والحروب والأوقات السلمية وتغيّر العصور.</p>
+      <p>الغابة ليست جميلة فحسب — بل تتنفس. الهواء هنا نقي لدرجة أنك تريد أن تشربه. ليس من المستغرب أن يأتي السكان المحليون هنا للتنفس والاسترخاء من صخب المدينة ونزهة في أحضان الطبيعة.</p>
+      
+      <figure style="margin: 25px 0; border-radius: 16px; overflow: hidden;">
+        <img src="images/blog-qechresh-real-2.jpg" alt="الطريق عبر الغابة" style="width: 100%; display: block;">
+        <figcaption style="text-align: center; padding: 12px; color: #6b7280; font-size: 0.95rem;">طريق متعرج عبر الغابة</figcaption>
+      </figure>
+      
+      <div class="secret-tip">
+        <h4>💎 المكان السري</h4>
+        <p>قُد حوالي 2-3 كيلومترات بعد بداية الغابة — هناك ساحة صغيرة مع نبع ماء هناك. هذا هو المكان المثالي للراحة الهادئة حيث يتوقف قليلون.</p>
+      </div>
+    </div>
+
+    <!-- Block 3: Activities -->
+    <div class="story-block">
+      <h2><span class="icon">🧺</span> كيفية قضاء الوقت</h2>
+      <p><strong>نزهة بين الأشجار.</strong> توجد مناطق مُجهّزة للاسترخاء في الغابة. احضر معك بطانية وسلة طعام ومزاجاً جيداً. يبيع السكان المحليون شاياً طازجاً من الأعشاب المحلية بجانب الطريق.</p>
+      <p><strong>تنزه للتصوير.</strong> غابة كيتشريش هي جنة للمصورين. لعب الضوء في قمم الأشجار، الضباب في الصباح، الخريف الملون — كل موسم يُقدّم لقطات فريدة.</p>
+      <p><strong>مسارات المشي.</strong> من الطريق، تنطلق ممرات أعمق في الغابة. تقود إلى ساحات خلابة ومنصات مراقبة بإطلالات على الجبال.</p>
+      
+      <figure style="margin: 25px 0; border-radius: 16px; overflow: hidden;">
+        <img src="images/blog-qechresh-real-3.jpg" alt="المسار في الغابة" style="width: 100%; display: block;">
+        <figcaption style="text-align: center; padding: 12px; color: #6b7280; font-size: 0.95rem;">مسارات المشي تقود إلى أعماق الغابة</figcaption>
+      </figure>
+    </div>
+
+    <!-- Block 4: Practical Info -->
+    <div class="checklist-box">
+      <h3>📋 قائمة التحقق للرحلة</h3>
+      <ul class="checklist">
+        <li>أحذية مريحة للمشي في الغابة</li>
+        <li>بطانية أو كراسي قابلة للطي للنزهات</li>
+        <li>ترموس مع شاي أو قهوة</li>
+        <li>وجبة خفيفة خفيفة أو شواء (أشواط متاحة)</li>
+        <li>كاميرا — هناك الكثير للتصوير هنا</li>
+        <li>سترة واقية — قد يكون الجو بارداً في الغابة</li>
+      </ul>
+    </div>
+
+    <!-- Block 5: Combine with Other Places -->
+    <div class="story-block">
+      <h2><span class="icon">🗺️</span> اجمع بين الأماكن</h2>
+      <p>غابة كيتشريش هي محطة ممتازة في الطريق إلى المعالم السياحية الأخرى. إليك أفكار ليوم كامل:</p>
+      <p><strong>المسار الكلاسيكي:</strong> قوبا ← غابة كيتشريش ← شلال أفورجا ← العودة إلى قوبا</p>
+      <p><strong>المسار الموسّع:</strong> غابة كيتشريش ← القرية الحمراء ← خيناليغ (للمغامرين الأكثر جرأة)</p>
+      <p>من خلال الإقامة في بيت قوبا الجبلي، يمكنك استكشاف كل هذه الأماكن بوتيرتك الخاصة. في الصباح — الغابة، وبعد الظهر — الشلال، في المساء — منزل دافئ مع مدفأة.</p>
+      
+      <figure style="margin: 25px 0; border-radius: 16px; overflow: hidden;">
+        <img src="images/blog-qechresh-forest-1.jpg" alt="إطلالة على الغابة" style="width: 100%; display: block;">
+        <figcaption style="text-align: center; padding: 12px; color: #6b7280; font-size: 0.95rem;">إطلالة على غابة كيتشريش الكثيفة</figcaption>
+      </figure>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <h3>هل تريد الإقامة بالقرب من الغابة؟</h3>
+      <p>بيت قوبا الجبلي — القاعدة المثالية لاستكشاف طبيعة قوبا</p>
+      <a href="/ar/#booking" class="cta-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        احجز الآن
+      </a>
+    </div>
+
+    <!-- Navigation Cards -->
+    <div class="nav-cards">
+      <a href="/blog-afurja-ar.html" class="nav-card">
+        <h4>💧 شلال أفورجا</h4>
+        <p>75 متراً من قوة الماء</p>
+      </a>
+      <a href="/blog-red-village-ar.html" class="nav-card">
+        <h4>🏘️ القرية الحمراء</h4>
+        <p>مكان تاريخي فريد</p>
+      </a>
+      <a href="/blog-ar.html" class="nav-card">
+        <h4>📚 جميع المقالات</h4>
+        <p>المزيد من الأماكن للاستكشاف</p>
+      </a>
+    </div>
+
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024-2025 <a href="/ar/">بيت قوبا الجبلي</a> — دليلك إلى عالم طبيعة القوقاز</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
