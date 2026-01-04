@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شلال أفورجا: عجائب الطبيعة الخلابة | بيت قوبا الجبلي</title>
+  <meta name="description" content="شلال أفورجا هو أحد أعلى شلالات أذربيجان بارتفاع 75 متراً. اكتشف كيف تصل ومتى تزور وما الذي تحتاج إحضاره.">
+  <meta name="keywords" content="شلال أفورجا، أذربيجان، قوبا، سياحة، مشي، طبيعة، مغامرات، جبال">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --river: #3B82F6;
+      --earth: #ac8f6c;
+      --earth-light: #F4EBD9;
+      --text: #1F2937;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.7;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    nav .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--forest);
+    }
+    .hero {
+      height: 50vh;
+      min-height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('images/blog-afurja.jpg') center/cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.85));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    }
+    .hero-meta {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .content h2 {
+      color: var(--river);
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+    }
+    .content p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    .content img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 30px 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f9ff, white);
+      border-right: 4px solid var(--river);
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 12px 0 0 12px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, var(--river) 0%, #60a5fa 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .tips-list {
+      list-style: none;
+      margin: 20px 0;
+    }
+    .tips-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .tips-list li:last-child {
+      border-bottom: none;
+    }
+    .tip-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--river);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+    .route-info {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+    .route-info h4 {
+      color: var(--river);
+      margin-bottom: 15px;
+    }
+    .cta-section {
+      background: linear-gradient(135deg, var(--river) 0%, #2563eb 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin: 60px 0;
+      border-radius: 16px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #febb02;
+      color: var(--river);
+      padding: 16px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #152a42;
+      color: white;
+      padding: 60px 20px 30px;
+    }
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
+    html[dir="rtl"] .highlight-box { border-right: none; border-left: 4px solid var(--river); border-radius: 0 12px 12px 0; }
+    html[dir="rtl"] .tips-list li { flex-direction: row-reverse; }
+    html[dir="rtl"] .tip-icon { margin-left: 0; margin-right: 0; }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .nav-links { display: none; }
+    }
+  
+    .image-watermark {
+      position: relative;
+      display: block;
+    }
+    .image-watermark img {
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Noto Sans', sans-serif;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/ar/" class="logo">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+          <path d="M9 14h6v5H9z"/>
+        </svg>
+        <span>بيت قوبا الجبلي</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/ar/">الرئيسية</a></li>
+        <li><a href="/ar/#about">من نحن</a></li>
+        <li><a href="/ar/#gallery">المعرض</a></li>
+        <li><a href="/blog-ar.html" class="active">المدونة</a></li>
+        <li><a href="/ar/#location">الموقع</a></li>
+        <li><a href="/ar/#contact">التواصل</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>شلال أفورجا: عجائب الطبيعة الخلابة</h1>
+      <p class="hero-meta">📅 5 ديسمبر 2024 | 👁️ 2.1K مشاهدة | 🏷️ مغامرات</p>
+    </div>
+  </section>
+
+  <article class="content">
+    <p>بين جبال القوقاز الكبرى، في منطقة قوبا الصديقة للبيئة، يوجد أحد أهم المعالم الطبيعية في أذربيجان — شلال أفورجا. هذا السلالة الرائعة، الذي يسقط من ارتفاع 75 متراً، يُعتبر بحق لؤلؤة المنطقة ويجذب آلاف السياح المتحمسين لملامسة قوة الطبيعة البدائية.</p>
+
+    <div class="image-watermark">
+      <img src="images/afurja-waterfall-main.jpg" alt="شلال أفورجا في أذربيجان" class="watermark-img">
+      <div class="watermark">Quba.rent</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">75 م</span>
+        <span class="stat-label">ارتفاع الشلال</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">~3 كم</span>
+        <span class="stat-label">مسار المشي</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">2-3 س</span>
+        <span class="stat-label">وقت الطريق</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">1400 م</span>
+        <span class="stat-label">فوق سطح البحر</span>
+      </div>
+    </div>
+
+    <h2>عجائب الطبيعة في القوقاز</h2>
+    <p>يقع شلال أفورجا في وادي نهر أفورجا تشاي، على بعد 25 كيلومتراً من مدينة قوبا. المياه التي تغذي الشلال تتدفق من الأنهار الجليدية والحقول الثلجية الموجودة على قمم الجبال المحيطة. بفضل هذا، يكون الشلال ممتلئاً بشكل خاص في الربيع وأوائل الصيف، عندما تصل مياه الذوبان إلى أقصى حجم لها.</p>
+    
+    <p>الشلال نفسه هو تيار قوي من الماء يسقط من منحدر عمودي ويشكل في الأسفل سحابة من الرذاذ وغبار قوس قزح. المنظر مثير للإعجاب بشكل خاص في الطقس المشمس، عندما تتشكل أقواس قزح في رذاذ الماء. يمكن سماع صوت الماء الساقط على بعد عدة كيلومترات قبل الوصول إلى الشلال.</p>
+
+    <div class="highlight-box">
+      <h4>أصل الاسم</h4>
+      <p>يأتي اسم «أفورجا» من الكلمة الأذربيجانية «افورجا»، التي تعني «المتناثر». هذا الاسم يصف بشكل مثالي طبيعة الشلال، حيث تتناثر نفاثاته المائية في قطرات صغيرة كثيرة، مما يخلق سحابة مميزة من الرذاذ حول القاعدة.</p>
+    </div>
+
+    <h2>المسار إلى الشلال</h2>
+    <p>يبدأ الطريق إلى شلال أفورجا من طريق قوبا-خاجماز السريع وهو مسار مشي مثير عبر غابة الجبال. يمر الدرب عبر غابة من أشجار الزان الخلابة، حيث يمكنك رؤية أشجار عمرها قرون ونباتات نادرة وطيور الجبال.</p>
+
+    <div class="route-info">
+      <h4>📍 كيف تصل</h4>
+      <p><strong>من مدينة قوبا:</strong> القيادة على الطريق السريع نحو خاجماز، ثم الانعطاف إلى الطريق المؤدي إلى قرية أفورجا. ثم اتبع اللافتات إلى بداية مسار المشي.</p>
+      <p><strong>من «بيت قوبا الجبلي»:</strong> находится наш гостевой дом всего в 15 километрах от начала маршрута. Мы организуем трансфер для我们的客人.</p>
+    </div>
+
+    <div class="image-watermark">
+      <img src="images/afurja-waterfall-canyon.jpg" alt="وادي الجبال على الطريق إلى شلال أفورجا" class="watermark-img">
+      <div class="watermark">Quba.rent</div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 30px 0;">
+      <div class="image-watermark" style="grid-column: span 2; @media (max-width: 600px) { grid-column: span 1; }">
+        <img src="images/afurja-waterfall-eurasia-main.jpg" alt="شلال أفورجا - بانوراما" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+      <div class="image-watermark">
+        <img src="images/afurja-waterfall-eurasia-1.jpg" alt="منظر شلال أفورجا 1" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+      <div class="image-watermark">
+        <img src="images/afurja-waterfall-eurasia-2.jpg" alt="منظر شلال أفورجا 2" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+      <div class="image-watermark">
+        <img src="images/afurja-waterfall-eurasia-3.jpg" alt="منظر شلال أفورجا 3" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+      <div class="image-watermark">
+        <img src="images/afurja-waterfall-eurasia-4.jpg" alt="منظر شلال أفورجا 4" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+    </div>
+
+    <div class="image-watermark">
+      <img src="images/afurja-waterfall-wikipedia.jpg" alt="قرية أفورجا في أذربيجان" class="watermark-img">
+      <div class="watermark">Quba.rent</div>
+    </div>
+
+    <h2>أفضل وقت للزيارة</h2>
+    <p>شلال أفورجا جميل في أي موسم، ومع ذلك، لكل موسم خصائصه الخاصة:</p>
+    
+    <ul class="tips-list">
+      <li>
+        <span class="tip-icon">🌸</span>
+        <div>
+          <strong>الربيع (أبريل-مايو)</strong>
+          <p>أقصى تدفق للشلال بسبب مياه الذوبان. جميل بشكل خاص خلال فترة إزهار زهور الجبال.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tip-icon">☀️</span>
+        <div>
+          <strong>الصيف (يونيو-أغسطس)</strong>
+          <p>طقس دافئ، فرصة للسباحة في حمامات طبيعية عند قاعدة الشلال.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tip-icon">🍂</span>
+        <div>
+          <strong>الخريف (سبتمبر-أكتوبر)</strong>
+          <p>ألوان بنفسجية ذهبية لغابة الجبال، عدد أقل من السياح، طقس مريح للمشي.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tip-icon">❄️</span>
+        <div>
+          <strong>الشتاء (نوفمبر-مارس)</strong>
+          <p>يتجمد الشلال جزئياً، مما يشكل صواعد ثلجية. يتطلب معدات خاصة.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h2>ماذا تحضر معك</h2>
+    <p>لمشي مريح وآمن إلى شلال أفورجا، نوصي بإحضار الأشياء التالية:</p>
+    
+    <div class="highlight-box">
+      <h4>🎒 قائمة الأساسيات</h4>
+      <p>أحذية مشي مريحة مع نعل غير قابل للانزلاق، ملابس دافئة (في الجبال يكون أبرد بـ 5-10 درجات من الوادي)، مطرقة أو سترة مقاومة للماء، ماء ووجبة خفيفة، كريم واقي من الشمس ونظارات شمسية، مصباح يدوي (للخروج المبكر المحتمل)، صندوق إسعافات أولية مع لاصقات ومسكنات للألم.</p>
+    </div>
+
+    <h2>فرص التصوير</h2>
+    <p>شلال أفورجا هو جنة حقيقية للمصورين. يمكنك التقاط صور مذهلة هنا في أي وقت من اليوم. خاصة الفعالة هي الصور الملتقطة في «الساعة الذهبية» — في الساعات الأولى بعد شروق الشمس أو قبل غروبها بساعات، عندما يبرز الضوء الناعم نسيج الماء ويخلق أقواس قزح في الرذاذ.</p>
+
+    <p>لتصوير الشلال، نوصي باستخدام حامل ثلاثي وتعرض طويل، مما سيحول تدفق الماء إلى ستارة حريرية. من المفيد أيضاً الانتباه إلى المشهد المحيط: الصخور المغطاة بالأشجار الدائمة الخضرة وقمم الجبال في الخلفية تخلق خلفية مثالية لصور المناظر الطبيعية.</p>
+
+    <div class="cta-section">
+      <h3>اختبر قوة الطبيعة</h3>
+      <p>احجز غرفة في «بيت قوبا الجبلي» واذهب إلى شلال أفورجا براحة</p>
+      <a href="#booking" class="cta-btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        احجز الآن
+      </a>
+    </div>
+
+    <!-- Booking Section -->
+    <section id="booking" style="background: #f8f5f0; padding: 60px 20px; margin-top: 40px;">
+      <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #2F5233; margin-bottom: 20px;">الحجز</h2>
+        <form onsubmit="sendArticleBooking(event, 'شلال أفورجا')">
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">اسمك</label>
+            <input type="text" id="booking-name" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">الهاتف</label>
+            <input type="tel" id="booking-phone" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+              <label style="display: block; margin-bottom: 5px; font-weight: 500;">تسجيل الوصول</label>
+              <input type="date" id="booking-checkin" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 5px; font-weight: 500;">المغادرة</label>
+              <input type="date" id="booking-checkout" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+            </div>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">الضيوف</label>
+            <select id="booking-guests" style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+              <option value="1">ضيف واحد</option>
+              <option value="2" selected>ضيفان</option>
+              <option value="3">3 ضيوف</option>
+              <option value="4">4 ضيوف</option>
+              <option value="5">5 ضيوف</option>
+            </select>
+          </div>
+          <button type="submit" style="width: 100%; padding: 14px; background: #25D366; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            احجز الآن
+          </button>
+        </form>
+      </div>
+    </section>
+  </article>
+
+  <footer>
+    <div class="container">
+      <p style="text-align: center; opacity: 0.7;">© 2024 بيت قوبا الجبلي | كوسنت غازما، قوبا، أذربيجان</p>
+    </div>
+  </footer>
+
+  <script>
+  function sendArticleBooking(event, articleName) {
+    event.preventDefault();
+    
+    const name = document.getElementById('booking-name').value;
+    const phone = document.getElementById('booking-phone').value;
+    const checkin = document.getElementById('booking-checkin').value;
+    const checkout = document.getElementById('booking-checkout').value;
+    const guests = document.getElementById('booking-guests').value;
+    
+    if (!name || !phone || !checkin || !checkout) {
+      alert('يرجى ملء جميع الحقول!');
+      return;
+    }
+    
+    const formatDate = (dateStr) => {
+      if (!dateStr) return '';
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('ar-SA', { day: '2-digit', month: 'long', year: 'numeric' });
+    };
+    
+    let message = '🏠 *حجز - كوبا كوتاج*%0A%0A';
+    message += '📝 *المقالة:* ' + articleName + '%0A';
+    message += '👤 *الاسم:* ' + name + '%0A';
+    message += '📞 *الهاتف:* ' + phone + '%0A';
+    message += '📅 *تسجيل الوصول:* ' + formatDate(checkin) + '%0A';
+    message += '🚪 *المغادرة:* ' + formatDate(checkout) + '%0A';
+    message += '👥 *الضيوف:* ' + guests + '%0A';
+    message += '%0A📱 تم الإرسال من quba.rent';
+    
+    window.open('https://wa.me/994702555909?text=' + message, '_blank');
+  }
+  </script>
+</body>
+</html>

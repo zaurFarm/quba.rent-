@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afurja Waterfall: Magnificent Natural Wonder | Quba Mountain House</title>
+  <meta name="description" content="Afurja Waterfall is one of the tallest waterfalls in Azerbaijan with a height of 75 meters. Learn how to get there, when to visit, and what to bring.">
+  <meta name="keywords" content="Afurja waterfall, Azerbaijan, Quba, tourism, hiking, nature, adventure, mountains">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --river: #3B82F6;
+      --earth: #ac8f6c;
+      --earth-light: #F4EBD9;
+      --text: #1F2937;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.7;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    nav .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--forest);
+    }
+    .hero {
+      height: 50vh;
+      min-height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('images/blog-afurja.jpg') center/cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.85));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    }
+    .hero-meta {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .content h2 {
+      color: var(--river);
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+    }
+    .content p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    .content img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 30px 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f9ff, white);
+      border-left: 4px solid var(--river);
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 0 12px 12px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, var(--river) 0%, #60a5fa 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .tips-list {
+      list-style: none;
+      margin: 20px 0;
+    }
+    .tips-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .tips-list li:last-child {
+      border-bottom: none;
+    }
+    .tip-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--river);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+    .route-info {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+    .route-info h4 {
+      color: var(--river);
+      margin-bottom: 15px;
+    }
+    .cta-section {
+      background: linear-gradient(135deg, var(--river) 0%, #2563eb 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin: 60px 0;
+      border-radius: 16px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #febb02;
+      color: var(--river);
+      padding: 16px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #152a42;
+      color: white;
+      padding: 60px 20px 30px;
+    }
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .nav-links { display: none; }
+    }
+  
+    .image-watermark {
+      position: relative;
+      display: block;
+    }
+    .image-watermark img {
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Noto Sans', sans-serif;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+          <path d="M9 14h6v5H9z"/>
+        </svg>
+        <span>Quba Rent</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#gallery">Gallery</a></li>
+        <li><a href="/blog-en.html" class="active">Blog</a></li>
+        <li><a href="/#location">Location</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Afurja Waterfall: Magnificent Natural Wonder</h1>
+      <p class="hero-meta">📅 December 5, 2024 | 👁️ 2.1K views | 🏷️ Adventure</p>
+    </div>
+  </section>
+
+  <article class="content">
+    <p>Among the majestic mountains of the Greater Caucasus, in the eco-friendly Quba district, hides one of the main natural attractions of Azerbaijan — the Afurja Waterfall. This magnificent cascade, falling from a height of 75 meters, is rightfully considered the pearl of the region and attracts thousands of tourists eager to touch the power of pristine nature.</p>
+
+    <div class="image-watermark">
+      <img src="images/afurja-waterfall-main.jpg" alt="Afurja Waterfall in Azerbaijan" class="watermark-img">
+      <div class="watermark">Quba.rent</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">75 m</span>
+        <span class="stat-label">Waterfall Height</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">~3 km</span>
+        <span class="stat-label">Hiking Route</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">2-3 h</span>
+        <span class="stat-label">Travel Time</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">1400 m</span>
+        <span class="stat-label">Above Sea Level</span>
+      </div>
+    </div>
+
+    <h2>Natural Wonder of the Caucasus</h2>
+    <p>Afurja Waterfall is located in the gorge of the Afurjachay River, 25 kilometers from the city of Quba. The water feeding the waterfall flows from glaciers and snowfields located on the peaks of the surrounding mountains. Thanks to this, the waterfall is especially full-flowing in spring and early summer, when meltwater reaches its maximum volume.</p>
+    
+    <p>The waterfall itself is a powerful stream of water plunging from a vertical cliff and forming a cloud of spray and rainbow dust at the bottom. The view of the waterfall is especially impressive in sunny weather, when rainbows form in the water spray. The sound of falling water can be heard several kilometers before reaching the waterfall.</p>
+
+    <div class="highlight-box">
+      <h4>Origin of the Name</h4>
+      <p>The name "Afurja" comes from the Azerbaijani word "afurca", which means "spraying". This name perfectly describes the character of the waterfall, whose water jets scatter into many tiny droplets, creating a characteristic cloud of spray around the base.</p>
+    </div>
+
+    <h2>Route to the Waterfall</h2>
+    <p>The path to Afurja Waterfall starts from the Quba-Khachmaz highway and is an exciting hiking route through the mountain forest. The trail passes through a picturesque beech forest, where you can see century-old trees, rare plants, and mountain birds.</p>
+
+    <div class="route-info">
+      <h4>📍 How to Get There</h4>
+      <p><strong>From Quba city:</strong> drive along the highway towards Khachmaz, then turn onto the road to the village of Afurja. Then follow the signs to the beginning of the hiking route.</p>
+      <p><strong>From "Quba Mountain House":</strong> our guest house is located only 15 kilometers from the beginning of the route. We organize transfers for our guests.</p>
+    </div>
+
+    <div class="image-watermark">
+      <img src="images/afurja-waterfall-canyon.jpg" alt="Mountain gorge on the route to Afurja Waterfall" class="watermark-img">
+      <div class="watermark">Quba.rent</div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 30px 0;">
+      <div class="image-watermark" style="grid-column: span 2; @media (max-width: 600px) { grid-column: span 1; }">
+        <img src="images/afurja-waterfall-eurasia-main.jpg" alt="Afurja Waterfall - panorama" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+      <div class="image-watermark">
+        <img src="images/afurja-waterfall-eurasia-1.jpg" alt="Afurja Waterfall view 1" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+      <div class="image-watermark">
+        <img src="images/afurja-waterfall-eurasia-2.jpg" alt="Afurja Waterfall view 2" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+      <div class="image-watermark">
+        <img src="images/afurja-waterfall-eurasia-3.jpg" alt="Afurja Waterfall view 3" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+      <div class="image-watermark">
+        <img src="images/afurja-waterfall-eurasia-4.jpg" alt="Afurja Waterfall view 4" class="watermark-img" style="height: 300px; object-fit: cover;">
+        <div class="watermark">Quba.rent</div>
+      </div>
+    </div>
+
+    <div class="image-watermark">
+      <img src="images/afurja-waterfall-wikipedia.jpg" alt="Village of Afurja in Azerbaijan" class="watermark-img">
+      <div class="watermark">Quba.rent</div>
+    </div>
+
+    <h2>Best Time to Visit</h2>
+    <p>Afurja Waterfall is beautiful in any season, however, each season has its own characteristics:</p>
+    
+    <ul class="tips-list">
+      <li>
+        <span class="tip-icon">🌸</span>
+        <div>
+          <strong>Spring (April-May)</strong>
+          <p>Maximum waterfall due to meltwater. Especially beautiful during the flowering season of mountain flowers.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tip-icon">☀️</span>
+        <div>
+          <strong>Summer (June-August)</strong>
+          <p>Warm weather, opportunity to swim in natural pools at the base of the waterfall.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tip-icon">🍂</span>
+        <div>
+          <strong>Autumn (September-October)</strong>
+          <p>Purple-golden colors of the mountain forest, fewer tourists, comfortable weather for hiking.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tip-icon">❄️</span>
+        <div>
+          <strong>Winter (November-March)</strong>
+          <p>The waterfall partially freezes, forming ice stalactites. Requires special equipment.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h2>What to Bring</h2>
+    <p>For a comfortable and safe hike to Afurja Waterfall, we recommend bringing the following items:</p>
+    
+    <div class="highlight-box">
+      <h4>🎒 Essential Checklist</h4>
+      <p>Comfortable hiking shoes with non-slip sole, warm clothing (in the mountains it's 5-10 degrees cooler than in the valley), raincoat or waterproof jacket, water and snacks, sunscreen and sunglasses, flashlight (for possible early starts), first aid kit with band-aids and painkillers.</p>
+    </div>
+
+    <h2>Photography Opportunities</h2>
+    <p>Afurja Waterfall is a true paradise for photographers. You can take amazing shots here at any time of day. Especially effective are photos taken in the "golden hour" — in the first hours after sunrise or a few hours before sunset, when soft light emphasizes the texture of the water and creates rainbows in the spray.</p>
+
+    <p>For waterfall photography, we recommend using a tripod and long exposure, which will turn the water flow into a silky veil. It's also worth paying attention to the surrounding landscape: moss-covered rocks, evergreen trees, and mountain peaks in the background create the perfect backdrop for landscape photos.</p>
+
+    <div class="cta-section">
+      <h3>Experience the Power of Nature</h3>
+      <p>Book a room at "Quba Mountain House" and head to Afurja Waterfall in comfort</p>
+      <a href="#booking" class="cta-btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        Book Now
+      </a>
+    </div>
+
+    <!-- Booking Section -->
+    <section id="booking" style="background: #f8f5f0; padding: 60px 20px; margin-top: 40px;">
+      <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #2F5233; margin-bottom: 20px;">Booking</h2>
+        <form onsubmit="sendArticleBooking(event, 'Afurja Waterfall')">
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Your Name</label>
+            <input type="text" id="booking-name" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Phone</label>
+            <input type="tel" id="booking-phone" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+              <label style="display: block; margin-bottom: 5px; font-weight: 500;">Check-in</label>
+              <input type="date" id="booking-checkin" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 5px; font-weight: 500;">Check-out</label>
+              <input type="date" id="booking-checkout" required style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+            </div>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Guests</label>
+            <select id="booking-guests" style="width: 100%; padding: 12px; border: 2px solid #febb02; border-radius: 8px; box-sizing: border-box;">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+            </select>
+          </div>
+          <button type="submit" style="width: 100%; padding: 14px; background: #25D366; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Book Now
+          </button>
+        </form>
+      </div>
+    </section>
+  </article>
+
+  <footer>
+    <div class="container">
+      <p style="text-align: center; opacity: 0.7;">© 2024 Quba Mountain House | Kusnet Gazma, Quba, Azerbaijan</p>
+    </div>
+  </footer>
+
+  <script>
+  function sendArticleBooking(event, articleName) {
+    event.preventDefault();
+    
+    const name = document.getElementById('booking-name').value;
+    const phone = document.getElementById('booking-phone').value;
+    const checkin = document.getElementById('booking-checkin').value;
+    const checkout = document.getElementById('booking-checkout').value;
+    const guests = document.getElementById('booking-guests').value;
+    
+    if (!name || !phone || !checkin || !checkout) {
+      alert('Please fill in all fields!');
+      return;
+    }
+    
+    const formatDate = (dateStr) => {
+      if (!dateStr) return '';
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('en-US', { day: '2-digit', month: 'long', year: 'numeric' });
+    };
+    
+    let message = '🏠 *Booking - Quba Cottage*%0A%0A';
+    message += '📝 *Article:* ' + articleName + '%0A';
+    message += '👤 *Name:* ' + name + '%0A';
+    message += '📞 *Phone:* ' + phone + '%0A';
+    message += '📅 *Check-in:* ' + formatDate(checkin) + '%0A';
+    message += '🚪 *Check-out:* ' + formatDate(checkout) + '%0A';
+    message += '👥 *Guests:* ' + guests + '%0A';
+    message += '%0A📱 Sent from quba.rent';
+    
+    window.open('https://wa.me/994702555909?text=' + message, '_blank');
+  }
+  </script>
+</body>
+</html>
