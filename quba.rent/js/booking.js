@@ -93,29 +93,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const lang = getCurrentLang();
     const t = translations[lang];
     
-    // Set guest options
-    const guestsSelect = document.getElementById('guests');
-    if (guestsSelect) {
-        guestsSelect.innerHTML = '';
-        t.guestOptions.forEach((option, index) => {
-            const opt = document.createElement('option');
-            opt.value = index + 1;
-            opt.textContent = option;
-            if (index === 1) opt.selected = true;
-            guestsSelect.appendChild(opt);
-        });
-    }
-    
-    // Set placeholder for comments
-    const commentsField = document.getElementById('comments');
-    if (commentsField) {
-        commentsField.placeholder = t.commentsPlaceholder;
-    }
+    // Get form fields with correct IDs
+    const checkInField = document.getElementById('booking-checkin');
+    const checkOutField = document.getElementById('booking-checkout');
+    const guestsSelect = document.getElementById('booking-guests');
+    const guestNameField = document.getElementById('booking-name');
     
     // Set minimum date to today
     const today = new Date().toISOString().split('T')[0];
-    const checkInField = document.getElementById('checkin');
-    const checkOutField = document.getElementById('checkout');
     
     if (checkInField) {
         checkInField.setAttribute('min', today);
@@ -138,15 +123,13 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         // Collect form data
-        const guestName = document.getElementById('guest-name')?.value.trim();
-        const guestPhone = document.getElementById('guest-phone')?.value.trim();
+        const guestName = guestNameField?.value.trim();
         const checkIn = checkInField?.value;
         const checkOut = checkOutField?.value;
         const guests = guestsSelect?.value;
-        const comments = commentsField?.value.trim();
         
         // Validate required fields
-        if (!guestName || !guestPhone || !checkIn || !checkOut) {
+        if (!guestName || !checkIn || !checkOut) {
             alert(t.validationFillAll);
             return;
         }
@@ -171,8 +154,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return date.toLocaleDateString('en-US', options);
         };
         
-        // Get guest text (always in Azerbaijani)
-        const guestTextAz = ['1 nəfər', '2 nəfər', '3 nəfər', '4 nəfər', '5 nəfər', '6+ nəfər'][parseInt(guests) - 1];
+        // Get guest text in Azerbaijani
+        const guestTextAz = ['1 nəfər', '2 nəfər', '3 nəfər', '4 nəfər', '5 nəfər', '6+ nəfər'][parseInt(guests) - 1] || guests + ' nəfər';
         
         // Language name in Azerbaijani for the comment indicator
         const langNamesAz = {
@@ -185,22 +168,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Build WhatsApp message - ALWAYS in Azerbaijani
         let message = `🏔️ *Quba Dağ Evi - Bron Sorğusu*\n\n`;
         message += `👤 *Ad:* ${guestName}\n`;
-        message += `📞 *Telefon:* ${guestPhone}\n`;
         message += `📅 *Giriş:* ${formatDate(checkIn)}\n`;
         message += `🚪 *Çıxış:* ${formatDate(checkOut)}\n`;
         message += `🌙 *Gecə sayı:* ${nights} gecə\n`;
         message += `👥 *Qonaq sayı:* ${guestTextAz}\n`;
-        
-        if (comments) {
-            message += `\n📝 *Qeydlər (${langNamesAz[lang] || lang}):*\n${comments}`;
-        }
         
         // Add timestamp
         const now = new Date();
         const timestamp = now.toLocaleDateString('az-AZ', {
             year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
         });
-        message += `\n\n⏰ ${timestamp}`;
+        message += `\n⏰ ${timestamp}`;
         
         // Encode message for WhatsApp URL
         const encodedMessage = encodeURIComponent(message);
