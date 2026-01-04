@@ -511,6 +511,17 @@
       box-shadow: 0 10px 40px rgba(139,0,0,0.15);
       background: linear-gradient(180deg, #e8f4f8 0%, #d4e5ed 100%);
     }
+    .google-map-embed {
+      width: 100%;
+      height: 500px;
+      position: relative;
+    }
+    .google-map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
     .map-svg {
       width: 100%;
       height: auto;
@@ -735,6 +746,12 @@
       .hero h1 { font-size: 1.8rem; }
       .nav-links { display: none; }
       .synagogue-gallery { grid-template-columns: 1fr; }
+      .interactive-map-container { flex-direction: column; }
+      .map-wrapper { width: 100%; }
+      .google-map-embed { height: 350px; }
+      .map-section { padding: 40px 15px; margin: 40px 0; }
+      .map-title { font-size: 1.4rem; }
+      .map-subtitle { font-size: 0.9rem; }
     }
 
     /* Satellite Map Styles */
@@ -1254,14 +1271,14 @@
               height="500" 
               frameborder="0" 
               style="border:0; border-radius: 16px;"
-              src="https://maps.google.com/maps?q=41.365000,48.515000&t=s&z=17&ie=UTF8&output=embed"
+              src="https://maps.google.com/maps?q=41.365,48.515&t=s&z=16&ie=UTF8&iwloc=1&output=embed"
               allowfullscreen="" 
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade"
-              title="Красная Слобода - Google Maps">
+              title="Красная Слобода - Google Maps Satellite">
             </iframe>
           </div>
-          <a href="https://www.google.com/maps/search/?api=1&query=41.365,48.515" target="_blank" class="map-link">Открыть в Google Maps 🗺️</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=41.365,48.515" target="_blank" class="map-link">📍 Построить маршрут</a>
         
         <div class="info-panel">
           <!-- Default State -->
