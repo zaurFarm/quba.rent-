@@ -362,5 +362,161 @@
       "recommend": true,
       "error": ""
     }
+  },
+  {
+    "query": "Qechresh forest road with green trees, mountain road, Azerbaijan nature landscape",
+    "image_info": {
+      "url": "https://blog.dookinternational.com/images/post-media/qqSu51719222778.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 794700,
+      "width": 735,
+      "height": 400,
+      "total_pixels": 294000,
+      "basic_score": 0.8315851277750282,
+      "file_name": "qechresh-forest-road-azerbaijan-nature.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image is an excellent representation of the Qechresh forest road, perfectly matching the search query and prompt. It features high resolution, vibrant colors, and strong composition with leading lines created by the road markings drawing the viewer into the scene. There are no visible watermarks.",
+      "file_name": "qechresh-forest-road-azerbaijan-nature.jpg",
+      "caption": "A scenic asphalt road curving through the dense, vibrant green canopy of Qechresh Forest in the Quba district of Azerbaijan.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Qechresh forest road with green trees, mountain road, Azerbaijan nature landscape",
+    "image_info": {
+      "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/86/74/c1.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 122623,
+      "width": 669,
+      "height": 446,
+      "total_pixels": 298374,
+      "basic_score": 0.7973447575299188,
+      "file_name": "qechresh-forest-road-azerbaijan-nature.jpg_70"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 80.0,
+      "watermark_score": 100.0,
+      "overall_score": 88.0,
+      "explanation": "The image perfectly matches the search query, depicting the iconic tree-lined road characteristic of the Qechresh forest region in Azerbaijan. The composition is strong, using the road as a leading line into a misty, atmospheric background. The contrast between the lush green canopy and the fallen red leaves suggests a transition of seasons, adding aesthetic value. There are no visible watermarks.",
+      "file_name": "qechresh-forest-road-azerbaijan-nature.jpg",
+      "caption": "A scenic paved road winding through the dense Qechresh forest in the Quba district of Azerbaijan, featuring a tunnel of vibrant green trees and scattered red autumn leaves along the roadside.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Qechresh forest road with green trees, mountain road, Azerbaijan nature landscape",
+    "image_info": {
+      "url": "https://live.staticflickr.com/677/20576901676_8b72b8eb4a_h.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 889249,
+      "width": 1600,
+      "height": 894,
+      "total_pixels": 1430400,
+      "basic_score": 0.9248677346852059,
+      "file_name": "qechresh-forest-road-azerbaijan-nature.jpg_6c"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 80.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image perfectly illustrates the Qechresh forest road, capturing the iconic tunnel of trees and the specific nature landscape requested in the query. The clarity is good, though the colors appear slightly oversaturated and the highlights on the road are bright. There are no visible watermarks.",
+      "file_name": "qechresh-forest-road-azerbaijan-nature.jpg",
+      "caption": "A scenic view of a paved road winding through the lush green tree tunnel of Qechresh Forest in the Quba district of Azerbaijan, with a white SUV parked on the roadside.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Qechresh forest road with green trees, mountain road, Azerbaijan nature landscape",
+    "image_info": {
+      "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0f/0e/ec/f7.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 131967,
+      "width": 720,
+      "height": 480,
+      "total_pixels": 345600,
+      "basic_score": 0.8143332712555851,
+      "file_name": "qechresh-forest-road-green-tunnel-azerbaijan.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image perfectly illustrates the iconic 'tree tunnel' of Qechresh Forest, matching the search query and prompt with high accuracy. The composition is strong, utilizing leading lines effectively. The image quality is good, though there is slight overexposure at the end of the road tunnel.",
+      "file_name": "qechresh-forest-road-green-tunnel-azerbaijan.jpg",
+      "caption": "A scenic view of a paved road winding through the dense, lush greenery of Qechresh Forest in the Quba district of Azerbaijan, where the tree canopies form a natural tunnel.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Green forest tunnel trees path Qechresh Guba Azerbaijan real nature",
+    "image_info": {
+      "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/0d/9e/2e.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 142909,
+      "width": 720,
+      "height": 480,
+      "total_pixels": 345600,
+      "basic_score": 0.8156870084609835,
+      "file_name": "forest-tunnel-road-qechresh-guba-azerbaijan.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 80.0,
+      "watermark_score": 100.0,
+      "overall_score": 88.0,
+      "explanation": "The image perfectly matches the search query, depicting the well-known forest tunnel road in Qechresh, Azerbaijan. The composition uses a strong central perspective with the road leading into the distance. The lighting is natural, though slightly bright in the canopy, creating a dappled effect on the road. There are no visible watermarks.",
+      "file_name": "forest-tunnel-road-qechresh-guba-azerbaijan.jpg",
+      "caption": "A scenic paved road runs through a dense tunnel of tall green trees in the Qechresh forest of Guba, Azerbaijan, with sunlight filtering through the canopy onto the asphalt.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Green forest tunnel trees path Qechresh Guba Azerbaijan real nature",
+    "image_info": {
+      "url": "https://live.staticflickr.com/677/20576901676_8b72b8eb4a_h.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 889249,
+      "width": 1600,
+      "height": 894,
+      "total_pixels": 1430400,
+      "basic_score": 0.9248677346852059,
+      "file_name": "qechresh-forest-tunnel-road-guba-azerbaijan.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 80.0,
+      "explanation": "The image perfectly matches the search query, depicting the specific location of the forest tunnel in Qechresh, Azerbaijan. The composition is strong with leading lines created by the road. The clarity is decent, though the greens are slightly oversaturated and highlights are a bit bright. There are no visible watermarks.",
+      "file_name": "qechresh-forest-tunnel-road-guba-azerbaijan.jpg",
+      "caption": "A scenic paved road winding through a lush green tunnel of trees in the Qechresh forest near Guba, Azerbaijan, with a white SUV parked on the side.",
+      "recommend": true,
+      "error": ""
+    }
   }
 ]
