@@ -57,8 +57,8 @@
   <meta name="twitter:site" content="@qubacottage">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon333.svg">
+  <link rel="apple-touch-icon" href="/favicon333.svg">
   
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,14 +94,6 @@
       "opens": "00:00",
       "closes": "23:59"
     },
-    "amenityFeature": [
-      {"@type": "LocationFeatureSpecification", "name": "Free WiFi"},
-      {"@type": "LocationFeatureSpecification", "name": "Free Parking"},
-      {"@type": "LocationFeatureSpecification", "name": "Fully Equipped Kitchen"},
-      {"@type": "LocationFeatureSpecification", "name": "Spring Water"},
-      {"@type": "LocationFeatureSpecification", "name": "Mountain Views"},
-      {"@type": "LocationFeatureSpecification", "name": "Forest Setting"}
-    ],
     "image": ["https://quba.rent/images/photo-main.jpg", "https://quba.rent/images/photo-1.jpg", "https://quba.rent/images/photo-2.jpg"],
     "hasMap": "https://maps.google.com/?q=41.275389,48.337667"
   }
@@ -176,28 +168,6 @@
     },
     "openingHours": "Mo-Su 08:00-20:00",
     "priceRange": "$15-45",
-    "amenityFeature": [
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Wi-Fi",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification", 
-        "name": "Parking",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Tours & Activities",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Local Guide Services",
-        "value": true
-      }
-    ],
     "offers": {
       "@type": "Offer",
       "priceCurrency": "USD",
@@ -1298,50 +1268,28 @@
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
     
-  
-    .image-watermark {
-      position: relative;
-      display: block;
-    }
-    .image-watermark img {
-      display: block;
-    }
-    .watermark {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Noto Sans', sans-serif;
-      z-index: 10;
-      backdrop-filter: blur(4px);
-    }
-    </style>
+  </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav>
     <div class="container">
-      <a href="/" class="logo">
+      <a href="/en/" class="logo">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
           <path d="M9 14h6v5H9z"/>
         </svg>
-        <span>Quba Rent</span>
+        <span>Quba Cottage</span>
       </a>
       
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#amenities">Amenities</a></li>
-        <li><a href="/tours-en.html">Tours</a></li>
-        <li><a href="/blog-en.html">Blog</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/en/#about">About</a></li>
+        <li><a href="/en/#gallery">Gallery</a></li>
+        <li><a href="/en/#amenities">Amenities</a></li>
+        <li><a href="/en/tours-en.html">Tours</a></li>
+        <li><a href="/en/blog-en.html">Blog</a></li>
+        <li><a href="/en/#location">Location</a></li>
+        <li><a href="/en/#contact">Contact</a></li>
       </ul>
       
       <div class="lang-switch">
@@ -1356,10 +1304,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg">
-      <div class="image-watermark">
-      <img src="images/photo-main.jpg" alt="Quba Mountain Cottage" onerror="this.style.display='none'" class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div>
+      <img src="images/photo-main.jpg" alt="Quba Mountain Cottage" onerror="this.style.display='none'">
     </div>
     <div class="hero-overlay"></div>
     
@@ -1369,7 +1314,7 @@
       <p>Unforgettable <strong style="color: #ffd700;">family-friendly</strong> relaxation in nature</p>
       <p style="font-size: 1rem; opacity: 0.9; margin-top: -30px; margin-bottom: 30px;">🌿 Quiet, peaceful, safe environment | Ideal for families</p>
       <div class="hero-buttons">
-        <a href="#contact" class="cta-btn">
+        <a href="#booking" class="cta-btn">
           <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
           </svg>
@@ -1434,10 +1379,7 @@
         
         <div class="about-images">
           <div class="owner-image-container">
-            <div class="image-watermark">
-      <img src="images/owner.jpg" alt="Neriman - Cottage Owner" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22 class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div><rect fill=%22%232F5233%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 font-size=%2240%22 fill=%22white%22 text-anchor=%22middle%22>N</text></svg>'">
+            <img src="images/owner.jpg" alt="Neriman - Cottage Owner" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%232F5233%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 font-size=%2240%22 fill=%22white%22 text-anchor=%22middle%22>N</text></svg>'">
             <div class="owner-caption">👨‍💼 Neriman - Cottage Owner</div>
           </div>
         </div>
@@ -1455,34 +1397,13 @@
       </div>
       
       <div class="gallery-grid">
-        <div class="image-watermark">
-      <img src="images/photo-1.jpg" alt="Cottage view" class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div>
-        <div class="image-watermark">
-      <img src="images/photo-2.jpg" alt="Mountain view" class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div>
-        <div class="image-watermark">
-      <img src="images/photo-3.jpg" alt="Forest" class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div>
-        <div class="image-watermark">
-      <img src="images/photo-4.jpg" alt="River view" class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div>
-        <div class="image-watermark">
-      <img src="images/photo-5.jpg" alt="Interior" class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div>
-        <div class="image-watermark">
-      <img src="images/photo-6.jpg" alt="Exterior" class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div>
-        <div class="image-watermark">
-      <img src="images/photo-7.jpg" alt="Yard" class="watermark-img">
-      <div class="watermark">www.Quba.rent</div>
-    </div>
+        <img src="images/photo-1.jpg" alt="Cottage view">
+        <img src="images/photo-2.jpg" alt="Mountain view">
+        <img src="images/photo-3.jpg" alt="Forest">
+        <img src="images/photo-4.jpg" alt="River view">
+        <img src="images/photo-5.jpg" alt="Interior">
+        <img src="images/photo-6.jpg" alt="Exterior">
+        <img src="images/photo-7.jpg" alt="Yard">
       </div>
     </div>
   </section>
@@ -1640,75 +1561,6 @@
   </div>
 </section>
 
-<!-- Location Section -->
-<section id="location" class="location" style="background: #f8f5f0; padding: 60px 0;">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-badge">📍 Location</span>
-      <h2 class="section-title">Our Address</h2>
-      <p class="section-subtitle">Kushnet Qazma, Quba, Azerbaijan</p>
-    </div>
-        <div class="map-container" style="position: relative; background: #F4EBD9; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); margin-top: 30px;">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=41.275389,48.337667" target="_blank" class="map-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
-            <iframe 
-              src="https://maps.google.com/maps?q=41.37035015005354,48.51409202400067&z=17&t=k&hl=en&output=embed"
-              width="100%" 
-              height="400" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <div class="map-overlay" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
-              Построить маршрут
-            </div>
-          </a>
-        </div>
-    </div>
-    <div style="text-align: center; margin-top: 30px;">
-      <p style="font-size: 1.1rem; color: #1F2937;"><strong>📍 Kushnet Qazma, Quba, Azerbaijan</strong></p>
-      <p style="color: #6b7280; margin-top: 10px;">41.275389° N, 48.337667° E</p>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact" style="background: #fff; padding: 60px 0;">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-badge">📞 Contact</span>
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="section-subtitle">We're always here to help</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
-      <div style="background: #f8f5f0; padding: 30px; border-radius: 16px; text-align: center;">
-        <div style="width: 60px; height: 60px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #16a34a;">
-          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-        </div>
-        <h3 style="color: #1F2937; margin-bottom: 10px;">Phone</h3>
-        <p style="color: #6b7280;">+994 70 255 59 09</p>
-        <p style="color: #6b7280; font-size: 0.9rem; margin-top: 5px;">Neriman</p>
-      </div>
-      <div style="background: #f8f5f0; padding: 30px; border-radius: 16px; text-align: center;">
-        <div style="width: 60px; height: 60px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #2563eb;">
-          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <h3 style="color: #1F2937; margin-bottom: 10px;">Email</h3>
-        <p style="color: #6b7280;">info@quba.cottage</p>
-      </div>
-      <div style="background: #f8f5f0; padding: 30px; border-radius: 16px; text-align: center;">
-        <div style="width: 60px; height: 60px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #25D366;">
-          <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </div>
-        <h3 style="color: #1F2937; margin-bottom: 10px;">WhatsApp</h3>
-        <p style="color: #6b7280;">+994 70 255 59 09</p>
-        <a href="https://wa.me/994702555909" target="_blank" style="display: inline-block; margin-top: 10px; background: #25D366; color: white; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-weight: 500;">Message</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Mobile Responsive Styles for Booking Widget -->
 <style>
 @media (max-width: 1024px) {
@@ -1848,29 +1700,7 @@
     text-align: center !important;
   }
 }
-
-    .image-watermark {
-      position: relative;
-      display: block;
-    }
-    .image-watermark img {
-      display: block;
-    }
-    .watermark {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Noto Sans', sans-serif;
-      z-index: 10;
-      backdrop-filter: blur(4px);
-    }
-    </style>
+</style>
 
 <script>
   function handleBookingSubmit(event) {
@@ -1909,12 +1739,12 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo">
+          <a href="/en/" class="logo">
             <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
               <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
               <path d="M9 14h6v5H9z"/>
             </svg>
-            <span style="color: white; font-size: 1.2rem;">Quba Rent</span>
+            <span style="color: white; font-size: 1.2rem;">Quba Cottage</span>
           </a>
           <p style="margin-top: 15px; color: #9ca3af;">👨‍👩‍👧‍👦 Peaceful relaxation spot perfectly suited for families</p>
         </div>
@@ -1953,6 +1783,15 @@
     </a>
   </div>
   
+  <!-- WhatsApp Popup Button -->
+  <div class="whatsapp-popup">
+    <span class="whatsapp-popup-text">Quick Booking via WhatsApp 💬</span>
+    <a href="https://wa.me/994702555909?text=Hello,%20I%20would%20like%20to%20book%20a%20stay%20at%20Quba%20Cottage" target="_blank" class="whatsapp-popup-btn" aria-label="Book via WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
 
   <script src="js/booking.js" defer></script>
 

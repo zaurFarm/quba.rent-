@@ -9,17 +9,6 @@
   <meta name="author" content="Neriman - Quba Dağ Evi">
   <meta name="language" content="az">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="/android-chrome-512x512.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#2d5a27">
-  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -351,53 +340,31 @@
         text-align: center;
       }
     }
-  
-    .image-watermark {
-      position: relative;
-      display: block;
-    }
-    .image-watermark img {
-      display: block;
-    }
-    .watermark {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Noto Sans', sans-serif;
-      z-index: 10;
-      backdrop-filter: blur(4px);
-    }
-    </style>
+  </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav>
     <div class="container">
-      <a href="/" class="logo">
+      <a href="/az/" class="logo">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
           <path d="M9 14h6v5H9z"/>
         </svg>
-        <span>Quba Rent</span>
+        <span>Quba Dağ Evi</span>
       </a>
       
       <ul class="nav-links">
-        <li><a href="/">Ana Səhifə</a></li>
-        <li><a href="/#about">Haqqımızda</a></li>
-        <li><a href="/#gallery">Qalereya</a></li>
+        <li><a href="/az/">Ana Səhifə</a></li>
+        <li><a href="/az/#about">Haqqımızda</a></li>
+        <li><a href="/az/#gallery">Qalereya</a></li>
         <li><a href="/blog.html" class="active">Blog</a></li>
-        <li><a href="/#location">Məkan</a></li>
-        <li><a href="/#contact">Əlaqə</a></li>
+        <li><a href="/az/#location">Məkan</a></li>
+        <li><a href="/az/#contact">Əlaqə</a></li>
       </ul>
       
       <div class="lang-switch">
-        <a href="/blog-ar.html">AZ</a>
+        <a href="/blog.html">AZ</a>
         <a href="/blog-ru.html">RU</a>
         <a href="/blog-en.html">EN</a>
         <a href="/blog-ar.html">AR</a>
@@ -426,7 +393,7 @@
       
       <div class="blog-grid">
         <!-- Blog Post 1 -->
-        <div class="blog-card" onclick="window.location.href='/blog-qechresh-ru.html'">
+        <div class="blog-card" onclick="window.location.href='/blog-qechresh.html'">
           <div class="blog-card-image" style="background-image: url('images/photo-3.jpg')">
             <span class="blog-card-category">Təbiət</span>
           </div>
@@ -434,7 +401,7 @@
             <p class="blog-card-date">📅 15 Dekabr 2024</p>
             <h3 class="blog-card-title">Qəçrəş Meşəsi: Qubanın Yaşıl Dəsti</h3>
             <p class="blog-card-excerpt">Qəçrəş meşəsinin heyrətamiz ağac tunelləri və sərin dağ havası ilə tanış olun. Quba rayonunun ən məşhur təbiət məkanı...</p>
-            <a href="/blog-qechresh-ru.html" class="blog-card-link">
+            <a href="/blog-qechresh.html" class="blog-card-link">
               Ətraflı oxu
               <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -444,7 +411,7 @@
         </div>
         
         <!-- Blog Post 2 -->
-        <div class="blog-card" onclick="window.location.href='/blog-red-village-ru.html'">
+        <div class="blog-card" onclick="window.location.href='/blog-red-village.html'">
           <div class="blog-card-image" style="background-image: url('images/photo-2.jpg')">
             <span class="blog-card-category">Mədəniyyət</span>
           </div>
@@ -452,7 +419,7 @@
             <p class="blog-card-date">📅 10 Dekabr 2024</p>
             <h3 class="blog-card-title">Qırmızı Qəsəbə: Unikal Yəhudi Kəndi</h3>
             <p class="blog-card-excerpt">İsraildən və ABŞ-dan kənarda yeganə yəhudi kəndi olan Qırmızı Qəsəbəni ziyarət edin. Qırmızı dam örtüklü evləri və zəngin tarixi ilə məşhur...</p>
-            <a href="/blog-red-village-ru.html" class="blog-card-link">
+            <a href="/blog-red-village.html" class="blog-card-link">
               Ətraflı oxu
               <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -462,7 +429,7 @@
         </div>
         
         <!-- Blog Post 3 -->
-        <div class="blog-card" onclick="window.location.href='/blog-afurja-ru.html'">
+        <div class="blog-card" onclick="window.location.href='/blog-afurja.html'">
           <div class="blog-card-image" style="background-image: url('images/photo-4.jpg')">
             <span class="blog-card-category">Macəra</span>
           </div>
@@ -470,7 +437,7 @@
             <p class="blog-card-date">📅 5 Dekabr 2024</p>
             <h3 class="blog-card-title">Afurja Şəlaləsinə Gedən Yollar</h3>
             <p class="blog-card-excerpt">75 metr hündürlüyündəki Afurja şələləsinə gedən macəra yolunu kəşf edin. Quba dağlarının ən güclü şələlərindən biri...</p>
-            <a href="/blog-afurja-ru.html" class="blog-card-link">
+            <a href="/blog-afurja.html" class="blog-card-link">
               Ətraflı oxu
               <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -487,12 +454,12 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo">
+          <a href="/az/" class="logo">
             <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
               <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
               <path d="M9 14h6v5H9z"/>
             </svg>
-            <span style="color: white; font-size: 1.2rem;">Quba Rent</span>
+            <span style="color: white; font-size: 1.2rem;">Quba Dağ Evi</span>
           </a>
           <p style="margin-top: 15px;">👨‍👩‍👧‍👦 Ailəvi istirahət üçün ideal yer</p>
         </div>
@@ -500,10 +467,10 @@
         <div>
           <h4>Səhifələr</h4>
           <ul class="footer-links">
-            <li><a href="/">Ana Səhifə</a></li>
+            <li><a href="/az/">Ana Səhifə</a></li>
             <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/#location">Məkan</a></li>
-            <li><a href="/#contact">Əlaqə</a></li>
+            <li><a href="/az/#location">Məkan</a></li>
+            <li><a href="/az/#contact">Əlaqə</a></li>
           </ul>
         </div>
         
@@ -536,28 +503,6 @@
       70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
-  
-    .image-watermark {
-      position: relative;
-      display: block;
-    }
-    .image-watermark img {
-      display: block;
-    }
-    .watermark {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Noto Sans', sans-serif;
-      z-index: 10;
-      backdrop-filter: blur(4px);
-    }
-    </style>
+  </style>
 </body>
 </html>

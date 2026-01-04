@@ -1,34 +1,46 @@
 <?php
+// Redirect to language-specific versions or serve default
+$lang = 'az'; // Default to Azerbaijani
 $uri = $_SERVER['REQUEST_URI'];
-$lang = 'az';
 
+// Handle language prefix - only if explicitly specified in URL
 if (preg_match('#^/(az|en|ru|ar)/#', $uri, $matches)) {
     $lang = $matches[1];
 }
+// If no language prefix and no query parameters, keep default Azerbaijani
 
-$files = ['az' => 'index.html', 'en' => 'index-en.html', 'ru' => 'index-ru.html', 'ar' => 'index-ar.html'];
+// Map language to file
+$files = [
+    'az' => 'index.html',
+    'en' => 'index-en.html',
+    'ru' => 'index-ru.html',
+    'ar' => 'index-ar.html',
+];
 
-if ($uri == '/' || $uri == '') {
-    $file = $files[$lang];
-} else {
-    $path = ltrim($uri, '/');
-    if (preg_match('#\.html$#', $path)) {
-        $file = $path;
-    } else {
-        $file = $files[$lang];
-    }
-}
+$file = isset($files[$lang]) ? $files[$lang] : 'index.html';
+$path = __DIR__ . '/' . $file;
 
-$full_path = __DIR__ . '/' . $file;
-
-if (file_exists($full_path)) {
-    $html = file_get_contents($full_path);
+// Check if file exists
+if (file_exists($path)) {
+    // Read and output the HTML file
+    $html = file_get_contents($path);
+    
+    // Update links to use language prefix
+    $html = preg_replace('#href="/([^"]*)"#', 'href="/$1"', $html);
+    
+    // Fix any relative paths
     $html = str_replace('href="images/', 'href="/images/', $html);
     $html = str_replace('src="images/', 'src="/images/', $html);
-    $html = str_replace('href="./', 'href="/', $html);
+    
     echo $html;
 } else {
     http_response_code(404);
-    echo '<h1>404 Not Found</h1>';
+    echo 'File not found: ' . $path;
 }
 ?>
+
+
+
+
+
+

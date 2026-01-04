@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Горный Дом в Губе | Туры и Достопримечательности</title>
+  <meta name="description" content="Туры и экскурсии по городу Губа и окрестностям. Конные прогулки, поездки на квадроциклах, походы в природу с местным гидом, который покажет скрытые жемчужины с любовью и заботой.">
+  <meta name="keywords" content="туры Губа, экскурсия, конные прогулки, квадроцикл, природа, Азербайджан, Губа">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Горный Дом в Губе - Туры и Достопримечательности">
+  <meta property="og:description" content="Незабываемое путешествие под руководством местных жителей">
+  <meta property="og:image" content="/images/hero-bg.jpg">
+  
+  <!-- Hreflang for SEO -->
+  <link rel="alternate" hreflang="ru" href="/ru/tours/">
+  <link rel="alternate" hreflang="az" href="/az/tours/">
+  <link rel="alternate" hreflang="en" href="/en/tours/">
+  <link rel="alternate" hreflang="ar" href="/ar/tours/">
+  <link rel="alternate" hreflang="x-default" href="/ru/tours/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --river: #3B82F6;
+      --earth: #ac8f6c;
+      --earth-light: #F4EBD9;
+      --text: #1F2937;
+      --accent: #ffd700;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Noto Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    
+    .logo svg {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--forest);
+    }
+    
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .lang-switch a {
+      padding: 8px 16px;
+      background: var(--forest);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    
+    .lang-switch a:hover {
+      background: var(--forest-light);
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--forest) 0%, #1a3a20 100%);
+    }
+    
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(47, 82, 51, 0.3) 0%, rgba(31, 58, 41, 0.7) 50%, rgba(244, 235, 217, 0.9) 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+    
+    .hero p {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: rgba(255,255,255,0.9);
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--river);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+    }
+    
+    /* Sections */
+    section {
+      padding: 100px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-badge {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e8f5e9;
+      color: var(--forest);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--forest);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Activities Grid */
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .activity-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    
+    .activity-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .activity-content {
+      padding: 30px;
+    }
+    
+    .activity-title {
+      font-size: 1.5rem;
+      color: var(--forest);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .activity-description {
+      color: #6b7280;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .activity-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    
+    .activity-features li {
+      padding: 8px 0;
+      color: #4b5563;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .activity-features li::before {
+      content: "✅";
+      font-size: 1.1rem;
+    }
+    
+    .activity-price {
+      font-size: 1.8rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .activity-btn {
+      width: 100%;
+      padding: 12px 24px;
+      background: var(--forest);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.3s;
+      display: block;
+    }
+    
+    .activity-btn:hover {
+      background: var(--forest-light);
+    }
+    
+    /* Local Guide Section */
+    .local-guide {
+      background: linear-gradient(135deg, var(--forest) 0%, #1a3a20 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    .local-guide h2 {
+      color: white;
+      margin-bottom: 30px;
+    }
+    
+    .local-guide p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+    
+    .guide-benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .benefit-item {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .benefit-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .benefit-description {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .activities-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .guide-benefits {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/ru/" class="logo">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
+          <path d="M9 14h6v5H9z"/>
+        </svg>
+        <span>Quba Cottage</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="/ru/">Главная</a></li>
+        <li><a href="/ru/tours-ru.html#activities">Активности</a></li>
+        <li><a href="/ru/tours-ru.html#guide">Гид</a></li>
+        <li><a href="/ru/">Главная</a></li>
+      </ul>
+      
+      <div class="lang-switch">
+        <a href="/ru/tours/" class="lang-btn" data-lang="ru">RU</a>
+        <a href="/az/tours/" class="lang-btn" data-lang="az">AZ</a>
+        <a href="/en/tours/" class="lang-btn" data-lang="en">EN</a>
+        <a href="/ar/tours/" class="lang-btn" data-lang="ar">عربي</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/images/hero-bg.jpg" alt="Горы Губа" onerror="this.style.display='none'">
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <h1>Незабываемые Путешествия в Регионе Губа</h1>
+      <p>Безопасные и увлекательные туры и экскурсии с <strong style="color: #ffd700;">местным гидом</strong></p>
+      <p style="font-size: 1rem; opacity: 0.9; margin-top: -30px; margin-bottom: 30px;">🏔️ Конные прогулки | Приключения на квадроциклах | Походы в природу</p>
+      <a href="#activities" class="cta-btn">
+        Открыть Туры
+      </a>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="activities" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">🏔️ Туры и Активности</span>
+        <h2 class="section-title">Приключенческий Туризм</h2>
+        <p class="section-subtitle">Разнообразные увлекательные активности в Губе и окрестностях</p>
+      </div>
+      
+      <div class="activities-grid">
+        <!-- Horse Riding -->
+        <div class="activity-card">
+          <img src="/images/photo-2.jpg" alt="Конные прогулки" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏇 Конные Прогулки</h3>
+            <p class="activity-description">Исследуйте красоту природы верхом на лошади. Безопасное путешествие с профессиональным гидом.</p>
+            <ul class="activity-features">
+              <li>Профессиональные лошади и снаряжение</li>
+              <li>Руководство опытного гида</li>
+              <li>Туры продолжительностью 2-6 часов</li>
+              <li>Подходит для всех уровней подготовки</li>
+            </ul>
+            <div class="activity-price">150-250 ₽</div>
+            <a href="https://wa.me/994702555909?text=🏔️ Привет! Мне нужна информация о турах в регионе Губа" target="_blank" class="activity-btn">Забронировать</a>
+          </div>
+        </div>
+
+        <!-- ATV Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-7.jpg" alt="Приключения на квадроциклах" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏍️ Приключения на Квадроциклах</h3>
+            <p class="activity-description">Насыщенное адреналином путешествие по горным районам на квадроциклах.</p>
+            <ul class="activity-features">
+              <li>Профессиональное снаряжение ATV</li>
+              <li>Предоставляются шлемы и защитное снаряжение</li>
+              <li>Туры продолжительностью 1-4 часа</li>
+              <li>Различные уровни сложности</li>
+            </ul>
+            <div class="activity-price">120-200 ₽</div>
+            <a href="https://wa.me/994702555909?text=🏔️ Привет! Мне нужна информация о турах в регионе Губа" target="_blank" class="activity-btn">Забронировать</a>
+          </div>
+        </div>
+
+        <!-- Nature Hiking -->
+        <div class="activity-card">
+          <img src="/images/photo-3.jpg" alt="Походы в природу" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🥾 Походы в Природу</h3>
+            <p class="activity-description">Пешие туры к скрытым уголкам гор Губа.</p>
+            <ul class="activity-features">
+              <li>Руководство местного гида</li>
+              <li>Скрытые родники и виды</li>
+              <li>Места для фотографий</li>
+              <li>Пикниковые и места отдыха</li>
+            </ul>
+            <div class="activity-price">80-150 ₽</div>
+            <a href="https://wa.me/994702555909?text=🏔️ Привет! Мне нужна информация о турах в регионе Губа" target="_blank" class="activity-btn">Забронировать</a>
+          </div>
+        </div>
+
+        <!-- City Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-4.jpg" alt="Городские туры" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏛️ Городские Экскурсии</h3>
+            <p class="activity-description">Откройте исторические места города Губа и окрестных сел.</p>
+            <ul class="activity-features">
+              <li>Исторические памятники и культура</li>
+              <li>Местные традиции и обычаи</li>
+              <li>Ремесла</li>
+              <li>Знакомство с местной кухней</li>
+            </ul>
+            <div class="activity-price">100-180 ₽</div>
+            <a href="https://wa.me/994702555909?text=🏔️ Привет! Мне нужна информация о турах в регионе Губа" target="_blank" class="activity-btn">Забронировать</a>
+          </div>
+        </div>
+
+        <!-- Photography Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-6.jpg" alt="Фототур" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">📸 Фототуры</h3>
+            <p class="activity-description">Путешествие к лучшим локациям для съемки с профессиональным фотографом.</p>
+            <ul class="activity-features">
+              <li>Съемка на закате и рассвете</li>
+              <li>Помощь профессионального фотографа</li>
+              <li>Лучшие обзорные точки</li>
+              <li>Советы по редактированию фото</li>
+            </ul>
+            <div class="activity-price">130-220 ₽</div>
+            <a href="https://wa.me/994702555909?text=🏔️ Привет! Мне нужна информация о турах в регионе Губа" target="_blank" class="activity-btn">Забронировать</a>
+          </div>
+        </div>
+
+        <!-- Cultural Experience -->
+        <div class="activity-card">
+          <img src="/images/photo-5.jpg" alt="Культурный опыт" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🎭 Культурный Опыт</h3>
+            <p class="activity-description">Познакомьтесь с местными традициями и попробуйте аутентичную азербайджанскую культуру.</p>
+            <ul class="activity-features">
+              <li>Встречи с местными семьями</li>
+              <li>Традиционные кулинарные мастер-классы</li>
+              <li>Ковроткачество и искусство</li>
+              <li>Музыкальные и танцевальные представления</li>
+            </ul>
+            <div class="activity-price">110-190 ₽</div>
+            <a href="https://wa.me/994702555909?text=🏔️ Привет! Мне нужна информация о турах в регионе Губа" target="_blank" class="activity-btn">Забронировать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Guide Section -->
+  <section id="guide" class="local-guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">👨‍💼 Местный Гид</span>
+        <h2 class="section-title">С Сердцем и Любовью Местных Жителей</h2>
+      </div>
+      
+      <p>Меня зовут <strong>Нерiman</strong>, я местный житель гор Губа. Знаю эти прекрасные места уже 25 лет и с удовольствием показываю красоты моего родного края каждому гостю с любовью и заботой.</p>
+      
+      <div class="guide-benefits">
+        <div class="benefit-item">
+          <div class="benefit-icon">🗺️</div>
+          <h3 class="benefit-title">Знает Скрытые Места</h3>
+          <p class="benefit-description">Скрытые природные уголки и исторические места, о которых не знают туристы.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">🛡️</div>
+          <h3 class="benefit-title">Безопасность и Забота</h3>
+          <p class="benefit-description">Полностью отвечаю за безопасность и комфорт каждого гостя.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">❤️</div>
+          <h3 class="benefit-title">Любовь и Искренность</h3>
+          <p class="benefit-description">Каждая поездка оставляет приятные воспоминания в сердцах наших гостей.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">🏛️</div>
+          <h3 class="benefit-title">История и Культура</h3>
+          <p class="benefit-description">Расскажу вам о богатой истории и традициях этой земли.</p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 50px;">
+        <a href="https://wa.me/994702555909?text=🏔️ Привет! Мне нужна информация о турах в регионе Губа" target="_blank" class="cta-btn">Свяжитесь Со Мной</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background: var(--forest);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background: rgba(255,255,255,0.1); color: white;">📞 Контакты для Туров</span>
+        <h2 class="section-title" style="color: white;">Бронирование и Информация</h2>
+      </div>
+      
+      <div style="max-width: 800px; margin: 0 auto; text-align: center; color: white;">
+        <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">
+          Свяжитесь со мной для получения подробной информации о турах и бронирования
+        </p>
+        
+        <!-- WhatsApp Booking Button -->
+        <div style="text-align: center;">
+          <a href="https://wa.me/994702555909?text=🏔️ Привет! Мне нужна информация о турах в регионе Губа" target="_blank" 
+             style="display: inline-flex; align-items: center; gap: 15px; padding: 20px 40px; background: #25D366; color: white; text-decoration: none; border-radius: 16px; font-size: 1.3rem; font-weight: 600; box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); transition: all 0.3s ease;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>Бронирование через WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

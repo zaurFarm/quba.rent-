@@ -1,46 +1,44 @@
-# Quba Cottage Website - Robots.txt
-# Optimized for Google SEO
-
+# Robots.txt for Quba Cottage - SEO Optimized for Yandex and Google
 User-agent: *
 Allow: /
 
-# Explicitly allow favicon files for all crawlers
-Allow: /favicon.ico$
-Allow: /favicon.svg$
-Allow: /favicon-*.png$
-Allow: /apple-touch-icon.png$
-Allow: /android-chrome-*.png$
-Allow: /mstile-*.png$
-
-# Disallow admin/private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: *.json$
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /cgi-bin/
-
-# Sitemap - Main XML
+# Sitemap locations for all languages
 Sitemap: https://quba.rent/sitemap.xml
+Sitemap: https://quba.rent/sitemap-az.xml
+Sitemap: https://quba.rent/sitemap-en.xml
+Sitemap: https://quba.rent/sitemap-ru.xml
+Sitemap: https://quba.rent/sitemap-ar.xml
 
-# Language versions (correct URLs)
-User-agent: *
-Allow: /$
-Allow: /en/$
-Allow: /ru/$
-Allow: /ar/$
-Allow: /index.html$
-Allow: /index-en.html$
-Allow: /index-ru.html$
-Allow: /index-ar.html$
-Allow: /blog.html$
-Allow: /blog-en.html$
-Allow: /blog-ru.html$
-Allow: /blog-ar.html$
-Allow: /tours.html$
-Allow: /tours-en.html$
-Allow: /tours-ru.html$
-Allow: /tours-ar.html$
-
-# Crawl-delay for heavy pages
+# Crawl-delay for Yandex
 Crawl-delay: 10
+
+# Host definition
+Host: quba.rent
+
+# Disallow admin/private directories
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /?s=
+Disallow: /*?
+
+# Allow specific file types for caching
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+
+# Yandex-specific rules
+User-agent: Yandex
+Allow: /
+Crawl-delay: 10
+Host: quba.rent
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /

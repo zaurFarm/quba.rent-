@@ -9,17 +9,6 @@
   <meta name="author" content="Нерман - Горный Дом Куба">
   <meta name="language" content="ru">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="/android-chrome-512x512.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#2d5a27">
-  
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Блог - Горный Дом Куба">
@@ -356,54 +345,32 @@
         text-align: center;
       }
     }
-  
-    .image-watermark {
-      position: relative;
-      display: block;
-    }
-    .image-watermark img {
-      display: block;
-    }
-    .watermark {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Noto Sans', sans-serif;
-      z-index: 10;
-      backdrop-filter: blur(4px);
-    }
-    </style>
+  </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav>
     <div class="container">
-      <a href="/index-ru.html" class="logo">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
-          <path d="M9 14h6v5H9z"/>
+      <a href="/ru/" class="logo">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:48px;height:48px;">
+          <path d="M30 6L6 26V54H22V38H38V54H54V26L30 6Z" fill="#2F5233" stroke="#2F5233" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="24" y="30" width="12" height="18" fill="white" stroke="#2F5233" stroke-width="2"/>
+          <circle cx="30" cy="16" r="5" fill="#F4EBD9"/>
         </svg>
-        <span>Quba Rent</span>
+        <span style="font-size:1.4rem;font-weight:700;color:#2F5233;">Quba<span style="color:#F4EBD9;background:#2F5233;padding:2px 6px;border-radius:4px;margin-left:2px;">.rent</span></span>
       </a>
       
       <ul class="nav-links">
-        <li><a href="/index-ru.html">Главная</a></li>
-        <li><a href="/#about">О нас</a></li>
-        <li><a href="/#gallery">Галерея</a></li>
+        <li><a href="/ru/">Главная</a></li>
+        <li><a href="/ru/#about">О нас</a></li>
+        <li><a href="/ru/#gallery">Галерея</a></li>
         <li><a href="/blog-ru.html" class="active">Блог</a></li>
         <li><a href="/#location">Местоположение</a></li>
-        <li><a href="#booking">Бронирование</a></li>
-        <li><a href="/#contact">Контакты</a></li>
+        <li><a href="/ru/#contact">Контакты</a></li>
       </ul>
       
       <div class="lang-switch">
-        <a href="/blog-ar.html">AZ</a>
+        <a href="/blog.html">AZ</a>
         <a href="/blog-ru.html">RU</a>
         <a href="/blog-en.html">EN</a>
         <a href="/blog-ar.html">AR</a>
@@ -469,7 +436,7 @@
         
         <!-- Blog Post 3 -->
         <div class="blog-card" onclick="window.location.href='/blog-afurja-ru.html'">
-          <div class="blog-card-image" style="background-image: url('images/afurja-waterfall-wikipedia.jpg')">
+          <div class="blog-card-image" style="background-image: url('images/afurja-waterfall-main.jpg')">
             <span class="blog-card-category">Приключения</span>
           </div>
           <div class="blog-card-content">
@@ -493,12 +460,13 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/index-ru.html" class="logo">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
-              <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
-              <path d="M9 14h6v5H9z"/>
+          <a href="/ru/" class="logo">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:48px;height:48px;">
+              <path d="M30 6L6 26V54H22V38H38V54H54V26L30 6Z" fill="#ffffff" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+              <rect x="24" y="30" width="12" height="18" fill="#0f2116" stroke="#ffffff" stroke-width="2"/>
+              <circle cx="30" cy="16" r="5" fill="#F4EBD9"/>
             </svg>
-            <span style="color: white; font-size: 1.2rem;">Quba Rent</span>
+            <span style="font-size:1.4rem;font-weight:700;color:#ffffff;">Quba<span style="color:#2F5233;background:#ffffff;padding:2px 6px;border-radius:4px;margin-left:2px;">.rent</span></span>
           </a>
           <p style="margin-top: 15px;">👨‍👩‍👧‍👦 Идеальное место для семейного отдыха</p>
         </div>
@@ -506,11 +474,10 @@
         <div>
           <h4>Страницы</h4>
           <ul class="footer-links">
-            <li><a href="/index-ru.html">Главная</a></li>
+            <li><a href="/ru/">Главная</a></li>
             <li><a href="/blog-ru.html">Блог</a></li>
-            <li><a href="/#location">Местоположение</a></li>
-            <li><a href="#booking">Бронирование</a></li>
-            <li><a href="/#contact">Контакты</a></li>
+            <li><a href="/ru/#location">Местоположение</a></li>
+            <li><a href="/ru/#contact">Контакты</a></li>
           </ul>
         </div>
         
@@ -543,28 +510,6 @@
       70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
-  
-    .image-watermark {
-      position: relative;
-      display: block;
-    }
-    .image-watermark img {
-      display: block;
-    }
-    .watermark {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Noto Sans', sans-serif;
-      z-index: 10;
-      backdrop-filter: blur(4px);
-    }
-    </style>
+  </style>
 </body>
 </html>

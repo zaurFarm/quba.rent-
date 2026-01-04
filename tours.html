@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="az" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quba Dağ Evi | Turlar və Görməli Yerlər</title>
+  <meta name="description" content="Quba şəhəri və ətrafında ekskursiyalar, turlar, at səyahətləri, ATV səyahətləri. Yerli sakinlərin gözlənilməz gözəllikləri aşkarlaması.">
+  <meta name="keywords" content="Quba turları, ekskursiya, atla səyahət, ATV, təbiət, Azərbaycan, Quba">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quba Dağ Evi - Turlar və Görməli Yerlər">
+  <meta property="og:description" content="Yerli sakinlərin göstərdiyi unudulmaz səyahət təcrübəsi">
+  <meta property="og:image" content="/images/hero-bg.jpg">
+  
+  <!-- Hreflang for SEO -->
+  <link rel="alternate" hreflang="az" href="/az/tours/">
+  <link rel="alternate" hreflang="en" href="/en/tours/">
+  <link rel="alternate" hreflang="ar" href="/ar/tours/">
+  <link rel="alternate" hreflang="ru" href="/ru/tours/">
+  <link rel="alternate" hreflang="x-default" href="/az/tours/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon333.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileImage" content="/favicon-32x32.png">
+  <meta name="msapplication-TileColor" content="#2F5233">
+  
+  <style>
+    :root {
+      --forest: #2F5233;
+      --forest-light: #3f8555;
+      --river: #3B82F6;
+      --earth: #ac8f6c;
+      --earth-light: #F4EBD9;
+      --text: #1F2937;
+      --accent: #ffd700;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Noto Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: #F4EBD9;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 15px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    
+    .logo img,
+    .logo svg {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+    
+    .logo span {
+      white-space: nowrap;
+    }
+    
+    @media (max-width: 768px) {
+      .logo {
+        font-size: 0.9rem;
+        gap: 6px;
+      }
+      
+      .logo img,
+      .logo svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 0.85rem;
+      }
+      
+      .logo img,
+      .logo svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--forest);
+    }
+    
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .lang-switch a {
+      padding: 8px 16px;
+      background: var(--forest);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    
+    .lang-switch a:hover {
+      background: var(--forest-light);
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, #87CEEB 0%, #98D8C8 50%, #7CB342 100%);
+    }
+    
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+    
+    /* Animated Nature Background Elements */
+    .nature-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    /* Sun with gentle glow */
+    .sun {
+      position: absolute;
+      top: 8%;
+      right: 12%;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #FFD700 0%, #FFA500 50%, transparent 70%);
+      border-radius: 50%;
+      animation: sun-pulse 4s ease-in-out infinite;
+      opacity: 0.8;
+    }
+    
+    @keyframes sun-pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 40px rgba(255, 215, 0, 0.5); }
+      50% { transform: scale(1.1); opacity: 0.9; box-shadow: 0 0 60px rgba(255, 215, 0, 0.7); }
+    }
+    
+    /* Animated mountains */
+    .mountains {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      z-index: 2;
+    }
+    
+    .mountain {
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      opacity: 0.6;
+    }
+    
+    .mountain-1 {
+      left: 5%;
+      border-width: 0 200px 300px 200px;
+      border-color: transparent transparent #4a6741 transparent;
+      animation: mountain-float 8s ease-in-out infinite;
+    }
+    
+    .mountain-2 {
+      left: 25%;
+      border-width: 0 250px 380px 250px;
+      border-color: transparent transparent #3d5636 transparent;
+      animation: mountain-float 10s ease-in-out infinite 1s;
+    }
+    
+    .mountain-3 {
+      left: 55%;
+      border-width: 0 180px 280px 180px;
+      border-color: transparent transparent #4a6741 transparent;
+      animation: mountain-float 9s ease-in-out infinite 2s;
+    }
+    
+    .mountain-4 {
+      left: 75%;
+      border-width: 0 220px 350px 220px;
+      border-color: transparent transparent #3d5636 transparent;
+      animation: mountain-float 11s ease-in-out infinite 0.5s;
+    }
+    
+    .mountain-snow {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    
+    .mountain-1 .mountain-snow {
+      left: 25%;
+      bottom: 300px;
+      border-width: 0 40px 60px 40px;
+      border-color: transparent transparent white transparent;
+    }
+    
+    .mountain-2 .mountain-snow {
+      left: 30%;
+      bottom: 380px;
+      border-width: 0 50px 75px 50px;
+      border-color: transparent transparent white transparent;
+    }
+    
+    .mountain-3 .mountain-snow {
+      left: 28%;
+      bottom: 280px;
+      border-width: 0 35px 55px 35px;
+      border-color: transparent transparent white transparent;
+    }
+    
+    .mountain-4 .mountain-snow {
+      left: 32%;
+      bottom: 350px;
+      border-width: 0 45px 70px 45px;
+      border-color: transparent transparent white transparent;
+    }
+    
+    @keyframes mountain-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    /* Animated birds */
+    .birds-container {
+      position: absolute;
+      top: 15%;
+      left: -100px;
+      z-index: 3;
+    }
+    
+    .bird {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0.7;
+      animation: bird-fly 25s linear infinite;
+    }
+    
+    .bird:nth-child(1) { top: 0; animation-delay: 0s; }
+    .bird:nth-child(2) { top: 20px; animation-delay: 3s; }
+    .bird:nth-child(3) { top: 40px; animation-delay: 6s; }
+    .bird:nth-child(4) { top: 10px; animation-delay: 9s; }
+    .bird:nth-child(5) { top: 30px; animation-delay: 12s; }
+    
+    @keyframes bird-fly {
+      0% { transform: translateX(0) translateY(0); }
+      25% { transform: translateX(25vw) translateY(-20px); }
+      50% { transform: translateX(50vw) translateY(10px); }
+      75% { transform: translateX(75vw) translateY(-15px); }
+      100% { transform: translateX(calc(100vw + 100px)) translateY(0); }
+    }
+    
+    /* Animated trees */
+    .trees-container {
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      z-index: 4;
+    }
+    
+    .tree {
+      position: absolute;
+      bottom: 0;
+      opacity: 0.5;
+    }
+    
+    .tree svg {
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+    }
+    
+    .tree-1 { left: 3%; animation: tree-sway 4s ease-in-out infinite; }
+    .tree-2 { left: 12%; animation: tree-sway 5s ease-in-out infinite 0.5s; }
+    .tree-3 { left: 85%; animation: tree-sway 4.5s ease-in-out infinite 1s; }
+    .tree-4 { left: 92%; animation: tree-sway 5s ease-in-out infinite 1.5s; }
+    .tree-5 { left: 45%; animation: tree-sway 4s ease-in-out infinite 2s; }
+    .tree-6 { left: 55%; animation: tree-sway 5s ease-in-out infinite 0.8s; }
+    
+    @keyframes tree-sway {
+      0%, 100% { transform: rotate(-1deg); }
+      50% { transform: rotate(1deg); }
+    }
+    
+    /* Animated river */
+    .river {
+      position: absolute;
+      bottom: 5%;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      z-index: 5;
+      overflow: hidden;
+    }
+    
+    .river-water {
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        #4FC3F7 0%, #29B6F6 20%, #4FC3F7 40%, 
+        #29B6F6 60%, #4FC3F7 80%, #29B6F6 100%);
+      animation: river-flow 15s linear infinite;
+      opacity: 0.6;
+    }
+    
+    .river-wave {
+      position: absolute;
+      width: 200%;
+      height: 30px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath fill='%234FC3F7' d='M0,60 C150,120 350,0 600,60 C850,120 1050,0 1200,60 L1200,120 L0,120 Z'/%3E%3C/svg%3E") repeat-x;
+      background-size: 600px 30px;
+      animation: river-wave 8s linear infinite;
+      opacity: 0.7;
+    }
+    
+    .river-wave:nth-child(2) {
+      top: 20px;
+      animation: river-wave 10s linear infinite reverse;
+      opacity: 0.5;
+    }
+    
+    .river-wave:nth-child(3) {
+      top: 40px;
+      animation: river-wave 12s linear infinite;
+      opacity: 0.3;
+    }
+    
+    @keyframes river-flow {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    @keyframes river-wave {
+      0% { transform: translateX(0); background-position: 0 0; }
+      100% { transform: translateX(-600px); background-position: 600px 0; }
+    }
+    
+    /* Clouds */
+    .cloud-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    
+    .cloud-bg-item {
+      position: absolute;
+      font-size: 48px;
+      opacity: 0.4;
+      animation: cloud-drift 60s linear infinite;
+    }
+    
+    .cloud-bg-item:nth-child(1) { top: 5%; left: -100px; animation-delay: 0s; font-size: 56px; }
+    .cloud-bg-item:nth-child(2) { top: 12%; left: -100px; animation-delay: 15s; font-size: 40px; }
+    .cloud-bg-item:nth-child(3) { top: 20%; left: -100px; animation-delay: 30s; font-size: 64px; }
+    .cloud-bg-item:nth-child(4) { top: 8%; left: -100px; animation-delay: 45s; font-size: 44px; }
+    
+    @keyframes cloud-drift {
+      0% { transform: translateX(0); opacity: 0.4; }
+      50% { opacity: 0.6; }
+      100% { transform: translateX(calc(100vw + 100px)); opacity: 0.4; }
+    }
+    
+    /* Leaves floating */
+    .leaf-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 6;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    
+    .leaf-bg-item {
+      position: absolute;
+      font-size: 18px;
+      opacity: 0.5;
+      animation: leaf-float 20s linear infinite;
+    }
+    
+    .leaf-bg-item:nth-child(1) { left: 5%; top: 30%; animation-delay: 0s; }
+    .leaf-bg-item:nth-child(2) { left: 20%; top: 40%; animation-delay: 5s; }
+    .leaf-bg-item:nth-child(3) { left: 40%; top: 25%; animation-delay: 10s; }
+    .leaf-bg-item:nth-child(4) { left: 60%; top: 35%; animation-delay: 3s; }
+    .leaf-bg-item:nth-child(5) { left: 80%; top: 28%; animation-delay: 8s; }
+    .leaf-bg-item:nth-child(6) { left: 15%; top: 50%; animation-delay: 12s; }
+    .leaf-bg-item:nth-child(7) { left: 35%; top: 45%; animation-delay: 7s; }
+    .leaf-bg-item:nth-child(8) { left: 55%; top: 55%; animation-delay: 15s; }
+    .leaf-bg-item:nth-child(9) { left: 75%; top: 48%; animation-delay: 2s; }
+    .leaf-bg-item:nth-child(10) { left: 90%; top: 52%; animation-delay: 9s; }
+    
+    @keyframes leaf-float {
+      0% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.5; }
+      90% { opacity: 0.5; }
+      100% { transform: translateX(calc(100vw + 50px)) translateY(-100px) rotate(720deg); opacity: 0; }
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(47, 82, 51, 0.1) 0%, rgba(31, 58, 41, 0.2) 30%, rgba(244, 235, 217, 0.7) 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+    
+    .hero p {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: rgba(255,255,255,0.9);
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--river);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+    }
+    
+    /* Sections */
+    section {
+      padding: 100px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-badge {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e8f5e9;
+      color: var(--forest);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--forest);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Activities Grid */
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .activity-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    
+    .activity-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .activity-content {
+      padding: 30px;
+    }
+    
+    .activity-title {
+      font-size: 1.5rem;
+      color: var(--forest);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .activity-description {
+      color: #6b7280;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .activity-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    
+    .activity-features li {
+      padding: 8px 0;
+      color: #4b5563;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .activity-features li::before {
+      content: "✅";
+      font-size: 1.1rem;
+    }
+    
+    .activity-price {
+      font-size: 1.8rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .activity-btn {
+      width: 100%;
+      padding: 12px 24px;
+      background: var(--forest);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.3s;
+      display: block;
+    }
+    
+    .activity-btn:hover {
+      background: var(--forest-light);
+    }
+    
+    /* Local Guide Section */
+    .local-guide {
+      background: linear-gradient(135deg, var(--forest) 0%, #1a3a20 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    .local-guide h2 {
+      color: white;
+      margin-bottom: 30px;
+    }
+    
+    .local-guide p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+    
+    .guide-benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .benefit-item {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .benefit-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .benefit-description {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+    
+    /* Wind/Nature Interactive Section */
+    .wind-section {
+      background: linear-gradient(180deg, #87CEEB 0%, #98D8C8 50%, #7CB342 100%);
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .wind-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    .leaf {
+      position: absolute;
+      font-size: 24px;
+      animation: float-leaf 15s linear infinite;
+      opacity: 0.7;
+    }
+    
+    @keyframes float-leaf {
+      0% {
+        transform: translateX(-100px) translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.7;
+      }
+      90% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateX(calc(100vw + 100px)) translateY(-100px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    
+    .cloud {
+      position: absolute;
+      font-size: 48px;
+      animation: float-cloud 40s linear infinite;
+      opacity: 0.5;
+    }
+    
+    @keyframes float-cloud {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateX(calc(100vw + 100px));
+        opacity: 0.3;
+      }
+    }
+    
+    .interactive-activities {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    .interactive-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #2F5233;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+    }
+    
+    .interactive-subtitle {
+      font-size: 1.2rem;
+      color: #1a5f2a;
+      margin-bottom: 50px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .activity-cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .interactive-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      padding: 25px;
+      width: 200px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transform: translateY(0);
+    }
+    
+    .interactive-card:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 20px 50px rgba(47, 82, 51, 0.3);
+      background: white;
+    }
+    
+    .interactive-card:hover .card-icon {
+      transform: scale(1.2) rotate(10deg);
+    }
+    
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: block;
+    }
+    
+    .interactive-card h4 {
+      color: #2F5233;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    
+    .interactive-card p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    
+    .season-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ffd700;
+      color: #2F5233;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    }
+    
+    .wind-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.8);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: #2F5233;
+    }
+    
+    .wind-arrow {
+      font-size: 1.5rem;
+      animation: wind-blow 2s ease-in-out infinite;
+    }
+    
+    @keyframes wind-blow {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .activities-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .guide-benefits {
+        grid-template-columns: 1fr;
+      }
+      
+      .interactive-card {
+        width: 150px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:48px;height:48px;">
+          <path d="M30 6L6 26V54H22V38H38V54H54V26L30 6Z" fill="#2F5233" stroke="#2F5233" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="24" y="30" width="12" height="18" fill="white" stroke="#2F5233" stroke-width="2"/>
+          <circle cx="30" cy="16" r="5" fill="#F4EBD9"/>
+        </svg>
+        <span style="font-size:1.4rem;font-weight:700;color:#2F5233;">Quba<span style="color:#F4EBD9;background:#2F5233;padding:2px 6px;border-radius:4px;margin-left:2px;">.rent</span></span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="/">Əsas Səhifə</a></li>
+        <li><a href="#activities">Fəaliyyətlər</a></li>
+        <li><a href="#guide">Bələdçi</a></li>
+      </ul>
+      
+      <div class="lang-switch">
+        <a href="/az/tours/" class="lang-btn" data-lang="az">AZ</a>
+        <a href="/en/tours/" class="lang-btn" data-lang="en">EN</a>
+        <a href="/ru/tours/" class="lang-btn" data-lang="ru">RU</a>
+        <a href="/ar/tours/" class="lang-btn" data-lang="ar">عربي</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/images/hero-bg-new.png" alt="Quba Dağları" onerror="this.style.display='none'">
+    </div>
+    
+    <!-- Animated Nature Background -->
+    <div class="nature-bg">
+      <!-- Animated Sun -->
+      <div class="sun"></div>
+      
+      <!-- Animated Clouds -->
+      <div class="cloud-bg">
+        <span class="cloud-bg-item">☁️</span>
+        <span class="cloud-bg-item">☁️</span>
+        <span class="cloud-bg-item">☁️</span>
+        <span class="cloud-bg-item">☁️</span>
+      </div>
+      
+      <!-- Animated Birds -->
+      <div class="birds-container">
+        <span class="bird">🦅</span>
+        <span class="bird">🦅</span>
+        <span class="bird">🦅</span>
+        <span class="bird">🦅</span>
+        <span class="bird">🦅</span>
+      </div>
+      
+      <!-- Animated Mountains -->
+      <div class="mountains">
+        <div class="mountain mountain-1"><div class="mountain-snow"></div></div>
+        <div class="mountain mountain-2"><div class="mountain-snow"></div></div>
+        <div class="mountain mountain-3"><div class="mountain-snow"></div></div>
+        <div class="mountain mountain-4"><div class="mountain-snow"></div></div>
+      </div>
+      
+      <!-- Animated Trees -->
+      <div class="trees-container">
+        <div class="tree tree-1">
+          <svg width="80" height="120" viewBox="0 0 80 120">
+            <rect x="35" y="80" width="10" height="40" fill="#5D4037"/>
+            <polygon points="40,0 10,80 70,80" fill="#2E7D32"/>
+            <polygon points="40,20 5,90 75,90" fill="#388E3C"/>
+            <polygon points="40,40 0,100 80,100" fill="#43A047"/>
+          </svg>
+        </div>
+        <div class="tree tree-2">
+          <svg width="100" height="150" viewBox="0 0 100 150">
+            <rect x="45" y="100" width="12" height="50" fill="#5D4037"/>
+            <polygon points="50,0 10,100 90,100" fill="#2E7D32"/>
+            <polygon points="50,25 0,115 100,115" fill="#388E3C"/>
+            <polygon points="50,50 5,125 95,125" fill="#43A047"/>
+          </svg>
+        </div>
+        <div class="tree tree-3">
+          <svg width="70" height="110" viewBox="0 0 70 110">
+            <rect x="30" y="70" width="10" height="40" fill="#5D4037"/>
+            <polygon points="35,0 5,70 65,70" fill="#2E7D32"/>
+            <polygon points="35,20 0,80 70,80" fill="#388E3C"/>
+            <polygon points="35,40 5,90 65,90" fill="#43A047"/>
+          </svg>
+        </div>
+        <div class="tree tree-4">
+          <svg width="90" height="140" viewBox="0 0 90 140">
+            <rect x="40" y="90" width="12" height="50" fill="#5D4037"/>
+            <polygon points="45,0 10,90 80,90" fill="#2E7D32"/>
+            <polygon points="45,25 5,105 85,105" fill="#388E3C"/>
+            <polygon points="45,50 0,120 90,120" fill="#43A047"/>
+          </svg>
+        </div>
+        <div class="tree tree-5">
+          <svg width="75" height="115" viewBox="0 0 75 115">
+            <rect x="32" y="75" width="10" height="40" fill="#5D4037"/>
+            <polygon points="37,0 8,75 66,75" fill="#2E7D32"/>
+            <polygon points="37,20 3,85 71,85" fill="#388E3C"/>
+            <polygon points="37,40 8,95 66,95" fill="#43A047"/>
+          </svg>
+        </div>
+        <div class="tree tree-6">
+          <svg width="85" height="130" viewBox="0 0 85 130">
+            <rect x="38" y="85" width="10" height="45" fill="#5D4037"/>
+            <polygon points="42,0 8,85 76,85" fill="#2E7D32"/>
+            <polygon points="42,22 3,95 81,95" fill="#388E3C"/>
+            <polygon points="42,45 8,105 76,105" fill="#43A047"/>
+          </svg>
+        </div>
+      </div>
+      
+      <!-- Animated River -->
+      <div class="river">
+        <div class="river-water">
+          <div class="river-wave"></div>
+          <div class="river-wave"></div>
+          <div class="river-wave"></div>
+        </div>
+      </div>
+      
+      <!-- Floating Leaves -->
+      <div class="leaf-bg">
+        <span class="leaf-bg-item">🍃</span>
+        <span class="leaf-bg-item">🌿</span>
+        <span class="leaf-bg-item">🍀</span>
+        <span class="leaf-bg-item">🌱</span>
+        <span class="leaf-bg-item">🍃</span>
+        <span class="leaf-bg-item">🌿</span>
+        <span class="leaf-bg-item">🍀</span>
+        <span class="leaf-bg-item">🌱</span>
+        <span class="leaf-bg-item">🍃</span>
+        <span class="leaf-bg-item">🌿</span>
+      </div>
+    </div>
+    
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <h1>Quba Bölgəsində Unudulmaz Səyahətlər</h1>
+      <p>Yerli bələdçi ilə <strong style="color: #ffd700;">təhlükəsiz və maraqlı</strong> turlar və ekskursiyalar</p>
+      <p style="font-size: 1rem; opacity: 0.9; margin-top: -30px; margin-bottom: 30px;">🏔️ At səyahətləri | ATV macəraları | Təbiət gəzintiləri</p>
+      <a href="#activities" class="cta-btn">
+        Turları Kəşf Edin
+      </a>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="activities" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">🏔️ Turlar və Fəaliyyətlər</span>
+        <h2 class="section-title">Macəralı Səyahətlər</h2>
+        <p class="section-subtitle">Quba və ətraf rayonlarında çox çeşidli əyləncəli fəaliyyətlər</p>
+      </div>
+      
+      <div class="activities-grid">
+        <!-- Horse Riding -->
+        <div class="activity-card">
+          <img src="/images/photo-horse.jpg" alt="Atla səyahət" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏇 Atla Səyahət</h3>
+            <p class="activity-description">Təbiətin gözəlliyini atla kəşf edin. Peşəkar bələdçi ilə təhlükəsiz səyahət.</p>
+            <ul class="activity-features">
+              <li>Peşəkar atlar və avadanlıq</li>
+              <li>Təcrübəli bələdçi rəhbərliyi</li>
+              <li>2-6 saatlıq turlar</li>
+              <li>Başlanğıc səviyyələrə uyğun</li>
+            </ul>
+            <div class="activity-price">45-80 AZN</div>
+            <a href="https://wa.me/994702555909?text=🏇 Salam! Mən Quba bölgəsində at sürmək turu üçün rezervasiya etmək istəyirəm" target="_blank" class="activity-btn">Rezervasiya et</a>
+          </div>
+        </div>
+
+        <!-- ATV Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-atv.jpg" alt="ATV səyahət" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏍️ ATV Macəraları</h3>
+            <p class="activity-description">Kvadrotsikl ilə dağlıq ərazilərdə adrenalın dolu səyahət.</p>
+            <ul class="activity-features">
+              <li>Peşəkar ATV avadanlığı</li>
+              <li>Helmet və təhlükəsizlik avadanlığı</li>
+              <li>1-4 saatlıq turlar</li>
+              <li>Müxtəlif çətinlik dərəcələri</li>
+            </ul>
+            <div class="activity-price">35-70 AZN</div>
+            <a href="https://wa.me/994702555909?text=🏍️ Salam! Mən Quba bölgəsində ATV turu üçün rezervasiya etmək istəyirəm" target="_blank" class="activity-btn">Rezervasiya et</a>
+          </div>
+        </div>
+
+        <!-- Nature Hiking -->
+        <div class="activity-card">
+          <img src="/images/photo-3.jpg" alt="Təbiət gəzintisi" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🥾 Təbiət Gəzintiləri</h3>
+            <p class="activity-description">Quba dağlarının gizli guşələrinə piyada səyahət.</p>
+            <ul class="activity-features">
+              <li>Yerli bələdçi rəhbərliyi</li>
+              <li>Gizli bulaqlar və mənzərələr</li>
+              <li>Fotoçəkiliş nöqtələri</li>
+              <li>Picnic və istirahət dayanqları</li>
+            </ul>
+            <div class="activity-price">25-50 AZN</div>
+            <a href="https://wa.me/994702555909?text=🏔️ Salam! Mən Quba bölgəsində at sürmək turu üçün rezervasiya etmək istəyirəm" target="_blank" class="activity-btn">Rezervasiya et</a>
+          </div>
+        </div>
+
+        <!-- City Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-city.jpg" alt="Şəhər turları" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🏛️ Şəhər Ekskursiyaları</h3>
+            <p class="activity-description">Quba şəhəri və ətraf kəndlərin tarixi yerlərini kəşf edin. Qırmızı kənd və yerli mədəniyyət.</p>
+            <ul class="activity-features">
+              <li>Tarixi abidələr və mədəniyyət</li>
+              <li>Qırmızı kənd ekskursiyası</li>
+              <li>Yerli ənənə və adətlər</li>
+              <li>Əl işi sənətkarlıq</li>
+              <li>Yerli mətbəx dadaşları</li>
+            </ul>
+            <div class="activity-price">30-60 AZN</div>
+            <a href="https://wa.me/994702555909?text=🏛️ Salam! Mən Quba bölgəsində şəhər ekskursiyası üçün rezervasiya etmək istəyirəm" target="_blank" class="activity-btn">Rezervasiya et</a>
+          </div>
+        </div>
+
+        <!-- Photography Tours -->
+        <div class="activity-card">
+          <img src="/images/photo-tour-canyon.jpg" alt="Fotoqrafiya turları" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">📸 Fotoqrafiya Turları</h3>
+            <p class="activity-description">Professional fotoqraf ilə ən yaxşı çəkiliş nöqtələrinə səyahət. Möhtəşəm dağ mənzərələri və gizli kanyonlar.</p>
+            <ul class="activity-features">
+              <li>Sunset və sunrise çəkilişləri</li>
+              <li>Möhtəşəm dağ kanyonları</li>
+              <li>Peşəkar fotoqraf köməyi</li>
+              <li>Ən yaxşı baxış nöqtələri</li>
+            </ul>
+            <div class="activity-price">40-75 AZN</div>
+            <a href="https://wa.me/994702555909?text=📸 Salam! Mən Quba bölgəsində fotoqrafiya turu üçün rezervasiya etmək istəyirəm" target="_blank" class="activity-btn">Rezervasiya et</a>
+          </div>
+        </div>
+
+        <!-- Cultural Experience -->
+        <div class="activity-card">
+          <img src="/images/photo-culture.jpg" alt="Mədəni təcrübə" class="activity-image">
+          <div class="activity-content">
+            <h3 class="activity-title">🎭 Mədəni Təcrübə</h3>
+            <p class="activity-description">Yerli ənənələri yaşayın və əsl Azərbaycan mədəniyyətini dadın.</p>
+            <ul class="activity-features">
+              <li>Yerli ailələrlə görüş</li>
+              <li>Ənənəvi mətbəx dadaşları</li>
+              <li>Xalça toxuma və sənət</li>
+              <li>Musiqi və rəqs nümunələri</li>
+            </ul>
+            <div class="activity-price">35-65 AZN</div>
+            <a href="https://wa.me/994702555909?text=🎭 Salam! Mən Quba bölgəsində mədəni təcrübə üçün rezervasiya etmək istəyirəm" target="_blank" class="activity-btn">Rezervasiya et</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Guide Section -->
+  <section id="guide" class="local-guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">👨‍💼 Yerli Bələdçi</span>
+        <h2 class="section-title">Yerli Sakinlərin Qəlbi və Sevgisi ilə</h2>
+      </div>
+      
+      <p>Mən <strong>Neriman</strong>, Quba dağlarının yerli sakiniyəm. 25 ildir bu gözəl yerləri tanıyıram və hər qonağa öz diyarımın gözəlliklərini sevgi və qayğı ilə göstərməkdən məmnunam.</p>
+      
+      <div class="guide-benefits">
+        <div class="benefit-item">
+          <div class="benefit-icon">🗺️</div>
+          <h3 class="benefit-title">Gizli Guşələri Bilirəm</h3>
+          <p class="benefit-description">Turistlərin tanımadığı, lakin ən gözəl təbiət nöqtələri və tarixi yerlər.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">🛡️</div>
+          <h3 class="benefit-title">Təhlükəsizlik və Qayğı</h3>
+          <p class="benefit-description">Hər qonağın təhlükəsizliyi və rahatı üçün tam məsuliyyət daşıyıram.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">❤️</div>
+          <h3 class="benefit-title">Sevgi və Səmimiyyət</h3>
+          <p class="benefit-description">Hər səyahət qonaqlarımın qəlbində xoş xatirələr buraxır.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">🏛️</div>
+          <h3 class="benefit-title">Tarix və Mədəniyyət</h3>
+          <p class="benefit-description">Bu torpağın zəngin tarixini və ənənələrini sizə danışacam.</p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 50px;">
+        <a href="https://wa.me/994702555909?text=🏔️ Salam! Mən Quba bölgəsində turlar üçün məlumat almaq istəyirəm" target="_blank" class="cta-btn">Mənimlə Əlaqə Saxlayın</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Wind/Nature Section -->
+  <section class="wind-section" id="interactive">
+    <span class="season-badge">🌸 Yaz Mövsümü</span>
+    
+    <!-- Animated particles -->
+    <div class="wind-particles">
+      <span class="leaf" style="left: 5%; animation-delay: 0s;">🍃</span>
+      <span class="leaf" style="left: 15%; animation-delay: 3s;">🌿</span>
+      <span class="leaf" style="left: 25%; animation-delay: 6s;">🍀</span>
+      <span class="leaf" style="left: 35%; animation-delay: 9s;">🌱</span>
+      <span class="leaf" style="left: 45%; animation-delay: 12s;">🌿</span>
+      <span class="leaf" style="left: 55%; animation-delay: 2s;">🍃</span>
+      <span class="leaf" style="left: 65%; animation-delay: 5s;">🌱</span>
+      <span class="leaf" style="left: 75%; animation-delay: 8s;">🍀</span>
+      <span class="leaf" style="left: 85%; animation-delay: 11s;">🌿</span>
+      <span class="leaf" style="left: 95%; animation-delay: 14s;">🍃</span>
+      
+      <span class="cloud" style="top: 10%; animation-delay: 0s;">☁️</span>
+      <span class="cloud" style="top: 20%; animation-delay: 10s;">☁️</span>
+      <span class="cloud" style="top: 15%; animation-delay: 20s;">☁️</span>
+      
+      <span class="leaf" style="left: 10%; animation-delay: 1s; font-size: 18px;">🦋</span>
+      <span class="leaf" style="left: 30%; animation-delay: 4s;">🦋</span>
+      <span class="leaf" style="left: 50%; animation-delay: 7s;">🦋</span>
+      <span class="leaf" style="left: 70%; animation-delay: 10s;">🦋</span>
+      <span class="leaf" style="left: 90%; animation-delay: 13s;">🦋</span>
+    </div>
+    
+    <div class="interactive-activities">
+      <h2 class="interactive-title">🌬️ Təbiət İlə Qovuşun</h2>
+      <p class="interactive-subtitle">
+        Quba dağlarının təmiz havasını udun, möhtəşəm mənzərələrin dadını çıxarın. 
+        Hər fəsil öz unudulmaz təcrübəsini gətirir!
+      </p>
+      
+      <div class="activity-cards-wrapper">
+        <div class="interactive-card" onclick="this.querySelector('a').click()">
+          <span class="card-icon">🏔️</span>
+          <h4>Dağ Zirvələri</h4>
+          <p>İldırım vadisinin zirvələrinə qalxın</p>
+          <a href="#activities" style="display:none;"></a>
+        </div>
+        
+        <div class="interactive-card" onclick="this.querySelector('a').click()">
+          <span class="card-icon">🌲</span>
+          <h4>Meşə Yolları</h4>
+          <p>Hündür ağaclar arasında gəzinti</p>
+          <a href="#activities" style="display:none;"></a>
+        </div>
+        
+        <div class="interactive-card" onclick="this.querySelector('a').click()">
+          <span class="card-icon">💧</span>
+          <h4>Bulaqlar</h4>
+          <p>Təmiz bulaq suyundan içmək</p>
+          <a href="#activities" style="display:none;"></a>
+        </div>
+        
+        <div class="interactive-card" onclick="this.querySelector('a').click()">
+          <span class="card-icon">🌸</span>
+          <h4>Yaz Çiçəkləri</h4>
+          <p>Rəngarəng çiçək bağları</p>
+          <a href="#activities" style="display:none;"></a>
+        </div>
+        
+        <div class="interactive-card" onclick="this.querySelector('a').click()">
+          <span class="card-icon">🍂</span>
+          <h4>Payız Yarpızı</h4>
+          <p>Qızılı yarpaqlar arasında</p>
+          <a href="#activities" style="display:none;"></a>
+        </div>
+        
+        <div class="interactive-card" onclick="this.querySelector('a').click()">
+          <span class="card-icon">❄️</span>
+          <h4>Qış Mənzərələri</h4>
+          <p>Ağ qarla örtülü dağlar</p>
+          <a href="#activities" style="display:none;"></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="wind-indicator">
+      <span class="wind-arrow">💨</span>
+      <span>Təmiz dağ havası - Həmişə təravətli!</span>
+      <span class="wind-arrow">💨</span>
+    </div>
+  </section>
+
+  <!-- Booking Section - Booking.com Style -->
+  <section id="booking" style="background: #f5f5f5; padding: 80px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background: #003580; color: white;">📅 Tur Rezervasiyası</span>
+        <h2 class="section-title" style="color: #1a1a1a;">Unudulmaz Təcrübə Üçün Bron Edin</h2>
+        <p class="section-subtitle">Quba dağlarında macəra sizi gözləyir!</p>
+      </div>
+      
+      <!-- Booking Widget - Booking.com Style -->
+      <div style="max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden;">
+        <!-- Search Bar -->
+        <div style="display: flex; flex-wrap: wrap; padding: 20px; gap: 15px; background: linear-gradient(135deg, #003580 0%, #0056b3 100%);">
+          
+          <!-- Destination -->
+          <div style="flex: 1; min-width: 200px; background: white; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: #003580; font-size: 1.2rem;">📍</span>
+            <div style="flex: 1;">
+              <label style="display: block; font-size: 0.75rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">MƏKAN</label>
+              <input type="text" value="Quba, Azerbaijan" style="width: 100%; border: none; outline: none; font-size: 1rem; color: #333; font-weight: 500; background: transparent;" readonly>
+            </div>
+          </div>
+          
+          <!-- Check-in Date -->
+          <div style="flex: 1; min-width: 180px; background: white; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: #003580; font-size: 1.2rem;">📅</span>
+            <div style="flex: 1;">
+              <label style="display: block; font-size: 0.75rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">GİRİŞ TARİXİ</label>
+              <input type="date" id="booking-checkin" style="width: 100%; border: none; outline: none; font-size: 1rem; color: #333; background: transparent;" required>
+            </div>
+          </div>
+          
+          <!-- Check-out Date -->
+          <div style="flex: 1; min-width: 180px; background: white; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: #003580; font-size: 1.2rem;">🚪</span>
+            <div style="flex: 1;">
+              <label style="display: block; font-size: 0.75rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">ÇIXIŞ TARİXİ</label>
+              <input type="date" id="booking-checkout" style="width: 100%; border: none; outline: none; font-size: 1rem; color: #333; background: transparent;" required>
+            </div>
+          </div>
+          
+          <!-- Guests -->
+          <div style="flex: 1; min-width: 150px; background: white; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: #003580; font-size: 1.2rem;">👥</span>
+            <div style="flex: 1;">
+              <label style="display: block; font-size: 0.75rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">QONAQLAR</label>
+              <select id="booking-guests" style="width: 100%; border: none; outline: none; font-size: 1rem; color: #333; background: transparent; cursor: pointer;">
+                <option value="1">1 Nəfər</option>
+                <option value="2" selected>2 Nəfər</option>
+                <option value="3">3 Nəfər</option>
+                <option value="4">4 Nəfər</option>
+                <option value="5">5+ Nəfər</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Search Button -->
+          <button onclick="bookingSearch()" style="background: #003580; color: white; border: none; border-radius: 8px; padding: 12px 30px; font-size: 1rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0, 53, 128, 0.3);">
+            🔍 AXTAR
+          </button>
+        </div>
+        
+        <!-- Features Row -->
+        <div style="display: flex; justify-content: center; gap: 40px; padding: 20px; background: white; border-top: 1px solid #eee; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 8px; color: #333; font-size: 0.9rem;">
+            <span style="color: #00a698; font-size: 1.2rem;">✓</span>
+            <span>Pulsuz ləğv etmə</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: #333; font-size: 0.9rem;">
+            <span style="color: #00a698; font-size: 1.2rem;">✓</span>
+            <span>Onlayn ödəniş</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: #333; font-size: 0.9rem;">
+            <span style="color: #00a698; font-size: 1.2rem;">✓</span>
+            <span>24/7 Dəstək</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quick Contact Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        
+        <!-- WhatsApp Card -->
+        <div style="background: white; border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; cursor: pointer;" onclick="window.open('https://wa.me/994702555909', '_blank')">
+          <div style="width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.8rem;">💬</div>
+          <h4 style="color: #1a1a1a; margin-bottom: 10px; font-size: 1.1rem;">WhatsApp</h4>
+          <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">Sürətli cavab</p>
+          <span style="background: #25D366; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">Yazın</span>
+        </div>
+        
+        <!-- Phone Card -->
+        <div style="background: white; border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; cursor: pointer;" onclick="window.open('tel:+994702555909', '_blank')">
+          <div style="width: 60px; height: 60px; background: #003580; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.8rem;">📞</div>
+          <h4 style="color: #1a1a1a; margin-bottom: 10px; font-size: 1.1rem;">Zəng Edin</h4>
+          <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">+994 70 255 59 09</p>
+          <span style="background: #003580; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">Zəng</span>
+        </div>
+        
+        <!-- Email Card -->
+        <div style="background: white; border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; cursor: pointer;" onclick="window.location.href='#contact'">
+          <div style="width: 60px; height: 60px; background: #00a698; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.8rem;">✉️</div>
+          <h4 style="color: #1a1a1a; margin-bottom: 10px; font-size: 1.1rem;">E-poçt</h4>
+          <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">neriman@quba-villa.com</p>
+          <span style="background: #00a698; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">Göndərin</span>
+        </div>
+      </div>
+      
+      <!-- Trust Badges -->
+      <div style="display: flex; justify-content: center; gap: 30px; margin-top: 50px; flex-wrap: wrap; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 8px; color: #666; font-size: 0.85rem;">
+          <span style="font-size: 1.5rem;">🛡️</span>
+          <span>Təhlükəsiz bron</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: #666; font-size: 0.85rem;">
+          <span style="font-size: 1.5rem;">💯</span>
+          <span>100% müştəri məmnuniyyəti</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: #666; font-size: 0.85rem;">
+          <span style="font-size: 1.5rem;">⭐</span>
+          <span>4.9/5 reytinq</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Set minimum dates
+    document.addEventListener('DOMContentLoaded', function() {
+      const today = new Date().toISOString().split('T')[0];
+      const checkin = document.getElementById('booking-checkin');
+      const checkout = document.getElementById('booking-checkout');
+      
+      if (checkin) {
+        checkin.setAttribute('min', today);
+        checkin.addEventListener('change', function() {
+          if (checkout) {
+            const nextDay = new Date(this.value);
+            nextDay.setDate(nextDay.getDate() + 1);
+            checkout.setAttribute('min', nextDay.toISOString().split('T')[0]);
+          }
+        });
+      }
+      
+      if (checkout) {
+        checkout.setAttribute('min', today);
+      }
+    });
+    
+    function bookingSearch() {
+      const checkin = document.getElementById('booking-checkin')?.value;
+      const checkout = document.getElementById('booking-checkout')?.value;
+      const guests = document.getElementById('booking-guests')?.value;
+      
+      if (!checkin || !checkout) {
+        alert('Zəhmət olmasa tarixləri seçin!');
+        return;
+      }
+      
+      if (new Date(checkout) <= new Date(checkin)) {
+        alert('Çıxış tarixi giriş tarixindən sonra olmalıdır!');
+        return;
+      }
+      
+      const message = `🏔️ Salam! Mən Quba bölgəsində tur bron etmək istəyirəm.\n\n📅 Giriş: ${checkin}\n🚪 Çıxış: ${checkout}\n👥 Qonaq sayı: ${guests} nəfər\n\nZəhmət olmasa məlumat verin.`;
+      
+      window.open(`https://wa.me/994702555909?text=${encodeURIComponent(message)}`, '_blank');
+    }
+  </script>
+
+  <!-- Contact Section - Simple Footer -->
+  <section id="contact" style="background: #1a1a1a; color: white; padding: 40px 0;">
+    <div class="container" style="text-align: center;">
+      <p style="opacity: 0.8; margin-bottom: 20px;">© 2024 Quba Cottage. Bütün hüquqlar qorunur.</p>
+      <p style="opacity: 0.6; font-size: 0.9rem;">Quba şəhəri, Küsnet Qazma kəndi, Azərbaycan</p>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

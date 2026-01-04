@@ -9,17 +9,6 @@
   <meta name="author" content="Neriman - Quba Mountain House">
   <meta name="language" content="en">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="/android-chrome-512x512.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#2d5a27">
-  
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Blog - Quba Mountain House">
@@ -329,52 +318,28 @@
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
     }
-  
-    .image-watermark {
-      position: relative;
-      display: block;
-    }
-    .image-watermark img {
-      display: block;
-    }
-    .watermark {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Noto Sans', sans-serif;
-      z-index: 10;
-      backdrop-filter: blur(4px);
-    }
-    </style>
+  </style>
 </head>
 <body>
   <nav>
     <div class="container">
-      <a href="/index-en.html" class="logo">
+      <a href="/en/" class="logo">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
           <path d="M9 14h6v5H9z"/>
         </svg>
-        <span>Quba Rent</span>
+        <span>Quba Mountain House</span>
       </a>
       <ul class="nav-links">
-        <li><a href="/index-en.html">Home</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#gallery">Gallery</a></li>
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/#about">About</a></li>
+        <li><a href="/en/#gallery">Gallery</a></li>
         <li><a href="/blog-en.html" class="active">Blog</a></li>
-        <li><a href="/#location">Location</a></li>
-        <li><a href="#booking">Booking</a></li>
-        <li><a href="#booking">Booking</a></li>
-            <li><a href="/#contact">Contact</a></li>
+        <li><a href="/en/#location">Location</a></li>
+        <li><a href="/en/#contact">Contact</a></li>
       </ul>
       <div class="lang-switch">
-        <a href="/blog-ar.html">AZ</a>
+        <a href="/blog.html">AZ</a>
         <a href="/blog-ru.html">RU</a>
         <a href="/blog-en.html">EN</a>
         <a href="/blog-ar.html">AR</a>
@@ -400,7 +365,7 @@
       </div>
       
       <div class="blog-grid">
-        <div class="blog-card" onclick="window.location.href='/blog-qechresh-ru.html'">
+        <div class="blog-card" onclick="window.location.href='/blog-qechresh-en.html'">
           <div class="blog-card-image" style="background-image: url('images/photo-3.jpg')">
             <span class="blog-card-category">Nature</span>
           </div>
@@ -408,7 +373,7 @@
             <p class="blog-card-date">📅 December 15, 2024</p>
             <h3 class="blog-card-title">Qechresh Forest: Quba's Green Gem</h3>
             <p class="blog-card-excerpt">Discover the breathtaking tree tunnels and cool mountain air in Qechresh, the most popular natural attraction in the Quba region...</p>
-            <a href="/blog-qechresh-ru.html" class="blog-card-link">
+            <a href="/blog-qechresh-en.html" class="blog-card-link">
               Read more
               <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -417,7 +382,7 @@
           </div>
         </div>
         
-        <div class="blog-card" onclick="window.location.href='/blog-red-village-ru.html'">
+        <div class="blog-card" onclick="window.location.href='/blog-red-village-en.html'">
           <div class="blog-card-image" style="background-image: url('images/photo-2.jpg')">
             <span class="blog-card-category">Culture</span>
           </div>
@@ -425,7 +390,7 @@
             <p class="blog-card-date">📅 December 10, 2024</p>
             <h3 class="blog-card-title">The Red Village: Unique Jewish Settlement</h3>
             <p class="blog-card-excerpt">Visit Qırmızı Qəsəbə (Red Village), the only all-Jewish town outside of Israel and the USA, known for its distinct red-tiled roofs...</p>
-            <a href="/blog-red-village-ru.html" class="blog-card-link">
+            <a href="/blog-red-village-en.html" class="blog-card-link">
               Read more
               <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -434,7 +399,7 @@
           </div>
         </div>
         
-        <div class="blog-card" onclick="window.location.href='/blog-afurja-ru.html'">
+        <div class="blog-card" onclick="window.location.href='/blog-afurja-en.html'">
           <div class="blog-card-image" style="background-image: url('images/photo-4.jpg')">
             <span class="blog-card-category">Adventure</span>
           </div>
@@ -442,7 +407,7 @@
             <p class="blog-card-date">📅 December 5, 2024</p>
             <h3 class="blog-card-title">Hiking to Afurja Waterfall</h3>
             <p class="blog-card-excerpt">Experience the power of nature at Afurja Waterfall, standing 75 meters tall. A perfect day trip for adventure lovers staying in Quba...</p>
-            <a href="/blog-afurja-ru.html" class="blog-card-link">
+            <a href="/blog-afurja-en.html" class="blog-card-link">
               Read more
               <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -458,24 +423,22 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/index-en.html" class="logo">
+          <a href="/en/" class="logo">
             <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
               <path d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/>
               <path d="M9 14h6v5H9z"/>
             </svg>
-            <span style="color: white; font-size: 1.2rem;">Quba Rent</span>
+            <span style="color: white; font-size: 1.2rem;">Quba Mountain House</span>
           </a>
           <p style="margin-top: 15px;">👨‍👩‍👧‍👦 Perfect place for family relaxation</p>
         </div>
         <div>
           <h4>Pages</h4>
           <ul class="footer-links">
-            <li><a href="/index-en.html">Home</a></li>
+            <li><a href="/en/">Home</a></li>
             <li><a href="/blog-en.html">Blog</a></li>
-            <li><a href="/#location">Location</a></li>
-        <li><a href="#booking">Booking</a></li>
-            <li><a href="#booking">Booking</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/en/#location">Location</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -505,28 +468,6 @@
       70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
-  
-    .image-watermark {
-      position: relative;
-      display: block;
-    }
-    .image-watermark img {
-      display: block;
-    }
-    .watermark {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'Noto Sans', sans-serif;
-      z-index: 10;
-      backdrop-filter: blur(4px);
-    }
-    </style>
+  </style>
 </body>
 </html>
