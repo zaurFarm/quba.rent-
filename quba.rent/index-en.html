@@ -1726,8 +1726,7 @@
     message += '📅 *Check-out:* ' + formatDate(checkout) + '%0A';
     message += '👥 *Guests:* ' + (guests ? guests + ' guest(s)' : 'Not specified') + '%0A';
     message += '👤 *Name:* ' + name + '%0A';
-    message += '%0A---
-%0A📱 *Message sent from quba.rent*';
+    message += '%0A' + '-'.repeat(3) + '%0A📱 *Message sent from quba.rent*';
     
     window.open('https://wa.me/994702555909?text=' + message, '_blank');
   }
@@ -1862,8 +1861,7 @@
         message += '📝 *Notes:* ' + notes + '%0A';
       }
       
-      message += '%0A---
-%0A📱 *Sent from website*';
+      message += '%0A' + '-'.repeat(3) + '%0A📱 *Sent from website*';
       
       // Redirect to WhatsApp
       window.open('https://wa.me/994702555909?text=' + message, '_blank');

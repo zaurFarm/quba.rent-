@@ -1830,8 +1830,7 @@
     message += '🌙 *Ночей:* ' + nights + '%0A';
     message += '👥 *Гости:* ' + (guests ? guests : 'Не указано') + '%0A';
     message += '👤 *Имя:* ' + name + '%0A';
-    message += '%0A---%0A';
-    message += '📱 Отправлено с quba.rent';
+    message += '%0A' + '-'.repeat(3) + '%0A📱 Отправлено с quba.rent';
     
     // Кодируем сообщение для URL
     const encodedMessage = encodeURIComponent(message);

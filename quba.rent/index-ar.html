@@ -1688,8 +1688,7 @@
     message += '📅 *تاريخ المغادرة:* ' + formatDate(checkout) + '%0A';
     message += '👥 *الضيوف:* ' + (guests ? guests + ' ضيف' : 'غير محدد') + '%0A';
     message += '👤 *الاسم:* ' + name + '%0A';
-    message += '%0A---
-%0A📱 *تم إرسال الرسالة من quba.rent*';
+    message += '%0A' + '-'.repeat(3) + '%0A📱 *تم إرسال الرسالة من quba.rent*';
     
     window.open('https://wa.me/994702555909?text=' + message, '_blank');
   }

@@ -1655,8 +1655,7 @@ n      margin-bottom: 0;
         message += '📝 *Qeydlər:* ' + notes + '%0A';
       }
       
-      message += '%0A---
-%0A📱 *Bu mesaj veb-saytdan göndərilib*';
+      message += '%0A' + '-'.repeat(3) + '%0A📱 *Bu mesaj veb-saytdan göndərilib*';
       
       // Redirect to WhatsApp
       window.open('https://wa.me/994702555909?text=' + message, '_blank');
@@ -2668,8 +2667,7 @@ n      margin-bottom: 0;
     message += '📅 *Çıxış:* ' + formatDate(checkout) + '%0A';
     message += '👥 *Qonaq sayı:* ' + (guests ? guests + ' nəfər' : 'Qeyd edilməyib') + '%0A';
     message += '👤 *Ad:* ' + name + '%0A';
-    message += '%0A---
-%0A📱 *Bu mesaj veb-saytdan göndərilib*';
+    message += '%0A' + '-'.repeat(3) + '%0A📱 *Bu mesaj veb-saytdan göndərilib*';
     
     // Redirect to WhatsApp
     window.open('https://wa.me/994702555909?text=' + message, '_blank');
