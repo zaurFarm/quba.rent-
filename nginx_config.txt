@@ -3,6 +3,11 @@ listen 80;
 server_name 95.216.232.219 176-99-12-156.cloudvps.regruhosting.ru www.176-99-12-156.cloudvps.regruhosting.ru;
 root /var/www/176-99-12-156.cloudvps.regruhosting.ru;
 index index.html index.htm;
+
+location /ru/ { rewrite ^/ru/(.*)$ /index-ru.html break; }
+location /en/ { rewrite ^/en/(.*)$ /index-en.html break; }
+location /ar/ { rewrite ^/ar/(.*)$ /index-ar.html break; }
+
 location / {
     try_files $uri $uri/ /index.html;
 }
