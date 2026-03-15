@@ -1,16 +1,13 @@
-# Robots.txt for Quba Cottage - SEO Optimized for Yandex and Google
+# Robots.txt for Quba Cottage - SEO Optimized
 User-agent: *
 Allow: /
 
-# Sitemap locations for all languages
+# Sitemap locations
 Sitemap: https://quba.rent/sitemap.xml
 Sitemap: https://quba.rent/sitemap-az.xml
 Sitemap: https://quba.rent/sitemap-en.xml
 Sitemap: https://quba.rent/sitemap-ru.xml
 Sitemap: https://quba.rent/sitemap-ar.xml
-
-# Crawl-delay for Yandex
-Crawl-delay: 10
 
 # Host definition
 Host: quba.rent
@@ -23,7 +20,7 @@ Disallow: /private/
 Disallow: /?s=
 Disallow: /*?
 
-# Allow specific file types for caching
+# Allow specific file types
 Allow: /*.js$
 Allow: /*.css$
 Allow: /*.png$
@@ -32,13 +29,3 @@ Allow: /*.jpeg$
 Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.ico$
-
-# Yandex-specific rules
-User-agent: Yandex
-Allow: /
-Crawl-delay: 10
-Host: quba.rent
-
-# Google-specific rules
-User-agent: Googlebot
-Allow: /
